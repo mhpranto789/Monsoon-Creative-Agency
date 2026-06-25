@@ -89,7 +89,7 @@ export default function Values() {
                   damping: 15,
                   delay: idx * 0.1
                 }}
-                className="group relative bg-white dark:bg-[#0E0F12] border border-gray-150 dark:border-white/10 p-8 flex flex-col justify-between hover:border-[#1E3A8A] dark:hover:border-[#1E3A8A] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-none overflow-hidden"
+                className="group relative bg-white dark:bg-[#0E0F12] border border-gray-150 dark:border-white/10 p-8 flex flex-col justify-between hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 rounded-none overflow-hidden"
               >
                 {/* Visual Background decorative stamp */}
                 <div className="absolute -right-6 -top-6 text-gray-150 dark:text-white/5 font-display font-black text-8xl pointer-events-none select-none group-hover:text-brand-primary/5 dark:group-hover:text-brand-primary/10 transition-colors">
@@ -98,13 +98,13 @@ export default function Values() {
 
                 <div className="space-y-6 relative z-10">
                   {/* Floating Icon Box */}
-                  <div className="w-12 h-12 bg-black dark:bg-[#1C1C1C] text-white dark:text-gray-250 group-hover:bg-[#1E3A8A] dark:group-hover:bg-[#1E3A8A] duration-300 flex items-center justify-center rounded-none">
+                  <div className="w-12 h-12 bg-black dark:bg-[#1C1C1C] text-white dark:text-gray-250 group-hover:bg-[#FF2B5E] dark:group-hover:bg-[#FF2B5E] duration-300 flex items-center justify-center rounded-none">
                     <IconComponent size={24} className="group-hover:rotate-12 transition-transform duration-300" />
                   </div>
 
                   {/* Text Container */}
                   <div className="space-y-2">
-                    <h3 className="font-display font-black text-2xl text-black dark:text-white group-hover:text-[#1E3A8A] transition-colors">
+                    <h3 className="font-display font-black text-2xl text-black dark:text-white group-hover:text-[#FF2B5E] transition-colors">
                       {value.title}
                     </h3>
                     <p className="font-sans text-sm text-gray-500 dark:text-gray-400 font-light leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
@@ -126,7 +126,7 @@ export default function Values() {
         {/* Creative Statement Banner */}
         <div className="mt-20 border border-neutral-200 dark:border-white/10 bg-[#121212] dark:bg-[#0E0F12] p-10 md:p-16 flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden transition-colors shadow-lg">
           <div className="space-y-3 relative z-10 max-w-xl text-center md:text-left">
-            <span className="font-mono text-[9px] text-[#1E3A8A] tracking-widest font-bold uppercase py-1 px-3 bg-white/10 dark:bg-white/5 rounded-none inline-block">
+            <span className="font-mono text-[9px] text-[#FF2B5E] tracking-widest font-bold uppercase py-1 px-3 bg-white/10 dark:bg-white/5 rounded-none inline-block">
               HUMAN BRANDING MANIFESTO
             </span>
             <h3 className="font-display font-black text-2xl sm:text-3xl text-white dark:text-white leading-snug">

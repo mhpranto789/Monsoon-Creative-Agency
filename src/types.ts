@@ -29,6 +29,7 @@ export interface Client {
   name: string;
   logoText: string;
   industry: string;
+  bgImage?: string;
 }
 
 export interface CoreValue {

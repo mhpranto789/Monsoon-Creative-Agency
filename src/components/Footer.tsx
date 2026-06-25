@@ -7,6 +7,7 @@ import {
   Phone, 
   Send, 
   CheckCircle,
+  XCircle,
   ArrowUp,
   Instagram,
   Twitter
@@ -26,29 +27,57 @@ export default function Footer() {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      // Soft reset
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        projectType: "Creative Strategy",
-        message: ""
+    setSubmitError(null);
+    setSubmitSuccess(false);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xjgqyypa", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          projectType: formData.projectType,
+          message: formData.message
+        })
       });
-      
-      // Clear toast after 5s
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1200);
+
+      if (response.ok) {
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        // Soft reset
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          projectType: "Creative Strategy",
+          message: ""
+        });
+        
+        // Clear toast after 5s
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 5000);
+      } else {
+        const data = await response.json().catch(() => ({}));
+        const errorMessage = data.error || (data.errors && data.errors.map((err: { message: string }) => err.message).join(", ")) || "Failed to submit form.";
+        throw new Error(errorMessage);
+      }
+    } catch (err: any) {
+      setIsSubmitting(false);
+      setSubmitError(err.message || "An unexpected error occurred. Please try again.");
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -77,7 +106,7 @@ export default function Footer() {
           <div className="lg:col-span-5 space-y-10">
             <div className="space-y-4">
               <h2 className="font-display text-4xl sm:text-6xl font-black text-black dark:text-white leading-tight">
-                Let's build something awesome <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E3A8A] to-[#3B82F6]/80">together</span>
+                Let's build something awesome <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF2B5E] to-[#FF5E85]/80">together</span>
               </h2>
               <p className="font-sans text-gray-500 dark:text-gray-400 text-sm font-light max-w-md leading-relaxed">
                 Have an inquiry or want to launch Dhaka's next massive brand activation? Drop us a prompt. We answer within 12 hours with structured execution routes.
@@ -149,7 +178,7 @@ export default function Footer() {
                     aria-label="Follow Monsoon on Facebook"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#1E3A8A] dark:hover:bg-[#1E3A8A] hover:border-[#1E3A8A] dark:hover:border-[#1E3A8A] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Facebook size={18} />
                   </a>
@@ -158,7 +187,7 @@ export default function Footer() {
                     aria-label="Connect with Monsoon on LinkedIn"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#1E3A8A] dark:hover:bg-[#1E3A8A] hover:border-[#1E3A8A] dark:hover:border-[#1E3A8A] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Linkedin size={18} />
                   </a>
@@ -167,7 +196,7 @@ export default function Footer() {
                     aria-label="Follow Monsoon on Instagram"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-15 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#1E3A8A] dark:hover:bg-[#1E3A8A] hover:border-[#1E3A8A] dark:hover:border-[#1E3A8A] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-15 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Instagram size={18} />
                   </a>
@@ -176,7 +205,7 @@ export default function Footer() {
                     aria-label="Follow Monsoon on Twitter"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#1E3A8A] dark:hover:bg-[#1E3A8A] hover:border-[#1E3A8A] dark:hover:border-[#1E3A8A] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Twitter size={18} />
                   </a>
@@ -339,6 +368,34 @@ export default function Footer() {
                       className="btn-liquid-glass-primary font-sans text-xs py-2.5 px-6 rounded-full font-bold transition-all duration-200 hover:scale-[1.04] active:scale-[0.96] cursor-pointer"
                     >
                       Reforge Another Form
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Error Toast Popup */}
+              <AnimatePresence>
+                {submitError && (
+                  <motion.div
+                    id="toast-error"
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute inset-0 bg-white dark:bg-black/95 flex flex-col items-center justify-center text-center p-8 z-20 border border-red-300 dark:border-red-500/20"
+                  >
+                    <XCircle size={48} className="text-red-500 mb-4 animate-bounce" />
+                    <h4 className="font-display font-black text-2xl text-black dark:text-white mb-2">
+                      Submission Failed
+                    </h4>
+                    <p className="font-sans text-xs text-red-500 dark:text-red-400 max-w-sm leading-relaxed mb-6">
+                      {submitError}
+                    </p>
+                    <button
+                      id="close-error-toast"
+                      onClick={() => setSubmitError(null)}
+                      className="btn-liquid-glass-primary font-sans text-xs py-2.5 px-6 rounded-full font-bold transition-all duration-200 hover:scale-[1.04] active:scale-[0.96] cursor-pointer bg-red-500 hover:bg-red-600 border-red-500 text-white"
+                    >
+                      Try Again
                     </button>
                   </motion.div>
                 )}

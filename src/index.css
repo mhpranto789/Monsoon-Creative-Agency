@@ -10,7 +10,7 @@
   --font-mono: "JetBrains Mono", monospace;
 
   /* Custom high contrast brand identity palettes */
-  --color-brand-primary: #1E3A8A; /* Premium Midnight Blue */
+  --color-brand-primary: #FF2B5E; /* Modern Warm/Active Magenta Crimson */
   --color-brand-secondary: #0A0B0D; /* Pitch Black Editorial Backing */
   --color-brand-accent: #2A48DF; /* Royal Tech Blue */
 
@@ -42,7 +42,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1E3A8A;
+  background: #FF2B5E;
 }
 
 /* Dark mode scrollbars */
@@ -56,7 +56,7 @@
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #1E3A8A;
+  background: #FF2B5E;
 }
 
 /* Base interactive transitions */
@@ -95,23 +95,23 @@ html {
 }
 
 .btn-liquid-glass-primary {
-  background: rgba(30, 58, 138, 0.12);
+  background: rgba(255, 43, 94, 0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(30, 58, 138, 0.3);
-  color: #1E3A8A;
+  border: 1px solid rgba(255, 43, 94, 0.3);
+  color: #FF2B5E;
   box-shadow: 
-    0 4px 24px rgba(30, 58, 138, 0.1), 
+    0 4px 24px rgba(255, 43, 94, 0.1), 
     inset 0 1px 2px rgba(255, 255, 255, 0.3), 
-    inset 0 -1px 2px rgba(30, 58, 138, 0.2);
+    inset 0 -1px 2px rgba(255, 43, 94, 0.2);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
 
 .dark .btn-liquid-glass-primary {
-  background: rgba(30, 58, 138, 0.18);
-  border: 1px solid rgba(30, 58, 138, 0.4);
+  background: rgba(255, 43, 94, 0.18);
+  border: 1px solid rgba(255, 43, 94, 0.4);
 }
 
 /* Hover Liquid Sheen Animation */
@@ -167,18 +167,18 @@ html {
 }
 
 .btn-liquid-glass-primary:hover {
-  background: rgba(30, 58, 138, 0.25);
-  border-color: rgba(30, 58, 138, 0.6);
+  background: rgba(255, 43, 94, 0.25);
+  border-color: rgba(255, 43, 94, 0.6);
   transform: translateY(-2px);
   box-shadow: 
-    0 8px 32px rgba(30, 58, 138, 0.2), 
+    0 8px 32px rgba(255, 43, 94, 0.2), 
     inset 0 1px 2px rgba(255, 255, 255, 0.45), 
-    inset 0 -1px 2px rgba(30, 58, 138, 0.3);
+    inset 0 -1px 2px rgba(255, 43, 94, 0.3);
 }
 
 .dark .btn-liquid-glass-primary:hover {
-  background: rgba(30, 58, 138, 0.35);
-  border-color: rgba(30, 58, 138, 0.7);
+  background: rgba(255, 43, 94, 0.35);
+  border-color: rgba(255, 43, 94, 0.7);
 }
 
 .btn-liquid-glass:active,

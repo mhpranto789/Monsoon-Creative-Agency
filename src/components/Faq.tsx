@@ -73,7 +73,7 @@ export default function Faq() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
           <div className="lg:col-span-5 space-y-4">
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-none">
-              Answers and Truths<span className="text-[#1E3A8A]">.</span>
+              Answers and Truths<span className="text-[#FF2B5E]">.</span>
             </h2>
           </div>
           <div className="lg:col-span-7">
@@ -122,26 +122,26 @@ export default function Faq() {
                     id={`faq-item-${faq.id}`}
                     className={`border transition-all duration-300 rounded-none overflow-hidden ${
                       isOpen
-                        ? "border-[#1E3A8A] bg-white dark:bg-[#121212] shadow-md scale-[1.01]"
+                        ? "border-[#FF2B5E] bg-white dark:bg-[#121212] shadow-md scale-[1.01]"
                         : "border-gray-150 dark:border-white/10 bg-white/80 dark:bg-[#121212]/65 hover:border-gray-300 dark:hover:border-white/20"
                     }`}
                   >
                     {/* Accordion Header Action button */}
                     <button
-                       onClick={() => toggleItem(faq.id)}
+                      onClick={() => toggleItem(faq.id)}
                       className="w-full px-6 py-5 flex items-center justify-between text-left cursor-pointer group focus:outline-none"
                       aria-expanded={isOpen}
                     >
                       <div className="flex items-center space-x-4 pr-4">
                         <span className={`font-mono text-[9px] font-bold px-2 py-0.5 rounded-none border leading-none ${
                           isOpen 
-                            ? "border-[#1E3A8A] text-[#1E3A8A] bg-[#1E3A8A]/5" 
+                            ? "border-[#FF2B5E] text-[#FF2B5E] bg-[#FF2B5E]/5" 
                             : "border-gray-200 dark:border-white/15 text-gray-400 dark:text-gray-500"
                         }`}>
                           {faq.category}
                         </span>
                         <h3 className={`font-display font-bold text-sm md:text-base leading-snug transition-colors duration-250 ${
-                          isOpen ? "text-[#1E3A8A]" : "text-black dark:text-white group-hover:text-black dark:group-hover:text-white"
+                          isOpen ? "text-[#FF2B5E]" : "text-black dark:text-white group-hover:text-black dark:group-hover:text-white"
                         }`}>
                           {faq.question}
                         </h3>
@@ -149,7 +149,7 @@ export default function Faq() {
                       
                       <div className={`p-1.5 transition-transform duration-300 border rounded-none shrink-0 ${
                         isOpen 
-                          ? "border-[#1E3A8A] text-[#1E3A8A] rotate-180" 
+                          ? "border-[#FF2B5E] text-[#FF2B5E] rotate-180" 
                           : "border-gray-200 dark:border-white/15 text-gray-400 dark:text-gray-500"
                       }`}>
                         <ChevronDown size={14} />
@@ -183,7 +183,7 @@ export default function Faq() {
           <div className="lg:col-span-4">
             <div className="bg-[#121212] dark:bg-[#0E0F12] border border-neutral-800 dark:border-white/10 p-8 text-white relative overflow-hidden shadow-lg space-y-6">
               <div className="space-y-2">
-                <span className="font-mono text-[9px] text-[#1E3A8A] tracking-widest font-bold uppercase block">
+                <span className="font-mono text-[9px] text-[#FF2B5E] tracking-widest font-bold uppercase block">
                   CRAFT FIRST PHILOSOPHY
                 </span>
                 <h3 className="font-display font-black text-xl sm:text-2xl leading-tight">
@@ -196,7 +196,7 @@ export default function Faq() {
 
               <div className="pt-4 border-t border-white/5 space-y-4">
                 <div className="flex items-center space-x-3 text-xs text-gray-400">
-                  <div className="w-1.5 h-1.5 bg-[#1E3A8A] rounded-full animate-ping" />
+                  <div className="w-1.5 h-1.5 bg-[#FF2B5E] rounded-full animate-ping" />
                   <span className="font-mono">Banani HQ Workspace Active</span>
                 </div>
                 

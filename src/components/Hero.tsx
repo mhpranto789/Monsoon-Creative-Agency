@@ -13,13 +13,22 @@ export default function Hero({ onLearnMore }: HeroProps) {
     >
       {/* High-contrast fluid background optimized across devices */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Ambient premium background image */}
-        <img
-          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80"
-          alt="Monsoon Fluid Flow Backdrop"
-          className="w-full h-full object-cover scale-[1.03] select-none transition-opacity duration-1000 grayscale-[30%] opacity-15 dark:opacity-25"
-          referrerPolicy="no-referrer"
-        />
+        {/* Ambient premium background video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover scale-[1.03] select-none transition-opacity duration-1000 opacity-20 dark:opacity-30"
+          poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80"
+        >
+          <source src="https://videos.pexels.com/video-files/3578233/3578233-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/3578233/3578233-hd_1920_1080_25fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/3578233/3578233-hd_1280_720_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/3578233/3578233-hd_1280_720_25fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/3578233/3578233-sd_640_360_30fps.mp4" type="video/mp4" />
+          <p>Your browser does not support the video tag.</p>
+        </video>
 
         {/* Ambient color gradient mesh overlays */}
         <div 
@@ -104,10 +113,10 @@ export default function Hero({ onLearnMore }: HeroProps) {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.4 }}
-                className="relative w-full max-w-sm aspect-square bg-[#121212] p-8 flex flex-col justify-between text-white border-2 border-black dark:border-white/10 shadow-[8px_8px_0_0_#1E3A8A] group hover:shadow-[12px_12px_0_0_#1E3A8A] transition-all duration-300"
+                className="relative w-full max-w-sm aspect-square bg-[#121212] p-8 flex flex-col justify-between text-white border-2 border-black dark:border-white/10 shadow-[8px_8px_0_0_#FF2B5E] group hover:shadow-[12px_12px_0_0_#FF2B5E] transition-all duration-300"
               >
                 <div className="absolute top-0 right-0 p-4">
-                  <span className="font-mono text-[9px] text-[#1E3A8A] tracking-widest uppercase font-bold px-2 py-1 bg-white/10">
+                  <span className="font-mono text-[9px] text-[#FF2B5E] tracking-widest uppercase font-bold px-2 py-1 bg-white/10">
                     Dhaka, BD
                   </span>
                 </div>
@@ -123,7 +132,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                     Monsoon delivers end-to-end strategy, massive experiential activation, and digital-first creative masterpieces that stand out in crowded industries.
                   </p>
                   
-                  <div className="flex justify-between items-center text-xs text-[#1E3A8A] font-mono">
+                  <div className="flex justify-between items-center text-xs text-[#FF2B5E] font-mono">
                     <span>99% Client Trust</span>
                     <span>150+ Mil Views</span>
                   </div>

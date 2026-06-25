@@ -12,7 +12,7 @@ const PROJECTS_DATA: Project[] = [
     type: "Experiential & Live Brand Campaign",
     year: "2023",
     description: "Re-imagined the live music experience across Bangladesh, executing multi-touchpoint sound stages, immersive venue setups, and cultural art fusions that gathered over 20,000 passionate music fans in-person.",
-    imageUrl: "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=1200&q=80",
     stats: { label: "Footfall & Digital Organic Reach", value: "11M" },
     campaignGoals: [
       "Full Ground Stage Production for 20K live audience",
@@ -23,9 +23,9 @@ const PROJECTS_DATA: Project[] = [
     timeline: "8-Week Live Build-up",
     channelsUsed: ["Soundstage Scenography", "RFID Crowd Control", "Traditional Alpona Art Activations", "OOH Broadcasts"],
     galleryImages: [
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1514306191717-452ec28c7814?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80"
     ],
     metricsDetail: [
@@ -602,7 +602,7 @@ export default function Projects() {
                   />
                   {/* Category Badge & Year */}
                   <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">
-                    <span className="font-mono text-[9px] font-bold tracking-widest text-white bg-black dark:bg-[#1E3A8A] px-2.5 py-1 z-10">
+                    <span className="font-mono text-[9px] font-bold tracking-widest text-white bg-black dark:bg-[#FF2B5E] px-2.5 py-1 z-10">
                       {project.category.toUpperCase()}
                     </span>
                     <span className="font-mono text-xs font-bold text-white drop-shadow-md z-10">
@@ -611,7 +611,7 @@ export default function Projects() {
                   </div>
 
                   {project.youtubeId && (
-                    <div className="absolute bottom-4 right-4 bg-[#1E3A8A] text-white text-[8px] font-mono font-black tracking-widest uppercase py-1.5 px-3.5 z-10 flex items-center space-x-1.5 shadow-md border border-white/10 rounded-none">
+                    <div className="absolute bottom-4 right-4 bg-[#FF2B5E] text-white text-[8px] font-mono font-black tracking-widest uppercase py-1.5 px-3.5 z-10 flex items-center space-x-1.5 shadow-md border border-white/10 rounded-none">
                       <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                       </svg>
@@ -626,11 +626,11 @@ export default function Projects() {
                     <span className="font-mono text-[10px] text-gray-400 dark:text-gray-500 block tracking-wider uppercase mb-1">
                       {project.type}
                     </span>
-                    <h3 className="font-display font-black text-lg text-black dark:text-white group-hover:text-[#1E3A8A] dark:group-hover:text-[#1E3A8A] transition-colors leading-snug">
+                    <h3 className="font-display font-black text-lg text-black dark:text-white group-hover:text-[#FF2B5E] dark:group-hover:text-[#FF2B5E] transition-colors leading-snug">
                       {project.title}
                     </h3>
                   </div>
-                  <div className="ml-4 p-2 bg-gray-100 dark:bg-white/5 text-black dark:text-white group-hover:bg-black dark:group-hover:bg-[#1E3A8A] group-hover:text-white transition-all">
+                  <div className="ml-4 p-2 bg-gray-100 dark:bg-white/5 text-black dark:text-white group-hover:bg-black dark:group-hover:bg-[#FF2B5E] group-hover:text-white transition-all">
                     <ArrowUpRight size={18} />
                   </div>
                 </div>
