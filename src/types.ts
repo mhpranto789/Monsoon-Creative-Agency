@@ -56,5 +56,6 @@ export interface Leader {
   imageUrl: string;
   linkedinUrl?: string;
   tag?: string;
+  location?: string;
 }
 

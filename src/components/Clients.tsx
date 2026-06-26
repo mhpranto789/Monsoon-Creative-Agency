@@ -7,119 +7,119 @@ const CLIENTS_DATA: Client[] = [
     name: "Coca-Cola Bangladesh", 
     logoText: "Coca-Cola", 
     industry: "Beverage",
-    bgImage: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1dn5AVzuRBIwujDOMX1i50ufM4iiLzLxW" 
   },
   { 
     id: "honda", 
     name: "Honda Bangladesh", 
     logoText: "Honda", 
     industry: "Automotive",
-    bgImage: "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/158HYjtU3n0hdgBARyGppp4ZYS02PzpyW" 
   },
   { 
     id: "bkash", 
     name: "bKash Limited", 
     logoText: "bKash", 
     industry: "Fintech & MFS",
-    bgImage: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/18hYVE2ZOQ9ZM3Vd5tOEOQVKjGVTeus6P" 
   },
   { 
     id: "gp", 
     name: "Grameenphone", 
     logoText: "Grameenphone", 
     industry: "Telecom",
-    bgImage: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/17X867uw8FZdDpS5zFFVksIKVR-pz0075" 
   },
   { 
     id: "unilever", 
     name: "Unilever Bangladesh", 
     logoText: "Unilever", 
     industry: "FMCG",
-    bgImage: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1u4CQoevJs4Qu_BC8V9FZ1jSecQT5i4Hq" 
   },
   { 
     id: "aarong", 
     name: "Aarong BRAC", 
     logoText: "Aarong", 
     industry: "Premium Fashion",
-    bgImage: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/18duZWdkhgK8iRTYzdTbc4a37PJNImahr" 
   },
   { 
     id: "pepsi", 
     name: "PepsiCo Bangladesh", 
     logoText: "Pepsi", 
     industry: "Beverage",
-    bgImage: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/11f_YmAEcetF2zQgWVxOupjqGWqeOl2F6" 
   },
   { 
     id: "robi", 
     name: "Robi Axiata", 
     logoText: "Robi", 
     industry: "Telecom",
-    bgImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1JN42KgMQV_-WIDyhfnvmeCdtT0OYkvfE" 
   },
   { 
     id: "nido", 
     name: "Nestlé Bangladesh", 
     logoText: "Nestlé Nido", 
     industry: "Nutrition",
-    bgImage: "https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1dycqk_d5EP0KijIIyvh0UGHA02UI1W6d" 
   },
   { 
     id: "pathao", 
     name: "Pathao BD", 
     logoText: "Pathao", 
     industry: "Logistics Tech",
-    bgImage: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1lwTFZYNZhIFf-FEPBtQiKO4juKNnOsZT" 
   },
   { 
     id: "cineplex", 
     name: "Star Cineplex", 
     logoText: "Cineplex", 
     industry: "Entertainment",
-    bgImage: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1x64czdrpqn_XqPeQiBsiAqnXkdKi2GJH" 
   },
   { 
     id: "radhuni", 
     name: "Square Food & Beverage", 
     logoText: "Radhuni", 
     industry: "FMCG Food",
-    bgImage: "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1nyy3E_j1K2Tsk-fVNqalYSS-HoAhsjLi" 
   },
   { 
     id: "airtel", 
     name: "Airtel Bangladesh", 
     logoText: "Airtel", 
     industry: "Telecom",
-    bgImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1K5eET922-sEGb4VgatxeJu6515zMNzWi" 
   },
   { 
     id: "apex", 
     name: "Apex Footwear", 
     logoText: "Apex", 
     industry: "Fashion Retail",
-    bgImage: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1vz7AjkSADvWxjJriUWJZFzHaaP92U3EY" 
   },
   { 
     id: "sheba", 
     name: "Sheba Platform", 
     logoText: "Sheba.xyz", 
     industry: "Service Tech",
-    bgImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1wjHZAJ9Q8_zuWqQY3DRm_FyAVvs-QX3N" 
   },
   { 
     id: "british-council", 
     name: "British Council BD", 
     logoText: "British Council", 
     industry: "Culture & Ed",
-    bgImage: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1ACpyp6H8fdQM8HekVRVWfeuaPhS-QmJm" 
   },
   { 
     id: "ipdc", 
     name: "IPDC Finance", 
     logoText: "IPDC", 
     industry: "Financial Services",
-    bgImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" 
+    bgImage: "https://lh3.googleusercontent.com/d/1ZOXR1zppGd5R-ykO1St3_Mox0KtlEqmf" 
   }
 ];
 
@@ -211,7 +211,7 @@ export default function Clients() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <div className="max-w-xl space-y-4">
           <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-none">
-            Our Client Roster<span className="text-[#FF2B5E]">.</span>
+            Our Client Roster<span className="text-[#FF2B5E] animate-pulse">.</span>
           </h2>
           <p className="font-sans text-gray-500 dark:text-gray-400 text-sm font-light">
             We are trusted by global conglomerates and high-impact local giants to disrupt markets, trigger emotions, and execute massive ground activations.
@@ -231,11 +231,20 @@ export default function Clients() {
             {CLIENTS_DATA.map((client) => (
               <div
                 key={`${client.id}-marquee1`}
-                className="flex items-center bg-white dark:bg-[#121212] border border-gray-200 dark:border-white/15 px-6 py-3 hover:bg-[#FF2B5E]/5 dark:hover:bg-[#FF2B5E]/20 hover:border-[#FF2B5E]/40 hover:shadow-sm transition-all duration-300"
+                className="flex items-center justify-center bg-white dark:bg-white border border-gray-200 dark:border-gray-100/20 px-6 py-3 hover:bg-[#FF2B5E]/5 hover:border-[#FF2B5E]/40 hover:shadow-md transition-all duration-300 h-16 w-36 rounded-md shadow-xs"
               >
-                <span className="font-display font-medium text-xs tracking-widest text-black dark:text-white uppercase">
-                  {client.logoText}
-                </span>
+                {client.bgImage ? (
+                  <img 
+                    src={client.bgImage} 
+                    alt={client.name} 
+                    className="h-10 w-auto object-contain max-w-full filter dark:brightness-100" 
+                    referrerPolicy="no-referrer"
+                  />
+                ) : (
+                  <span className="font-display font-semibold text-xs tracking-widest text-black uppercase">
+                    {client.logoText}
+                  </span>
+                )}
               </div>
             ))}
           </div>
@@ -244,11 +253,20 @@ export default function Clients() {
             {CLIENTS_DATA.map((client) => (
               <div
                 key={`${client.id}-marquee2`}
-                className="flex items-center bg-white dark:bg-[#121212] border border-gray-200 dark:border-white/15 px-6 py-3 hover:bg-[#FF2B5E]/5 dark:hover:bg-[#FF2B5E]/20 hover:border-[#FF2B5E]/40 hover:shadow-sm transition-all duration-300"
+                className="flex items-center justify-center bg-white dark:bg-white border border-gray-200 dark:border-gray-100/20 px-6 py-3 hover:bg-[#FF2B5E]/5 hover:border-[#FF2B5E]/40 hover:shadow-md transition-all duration-300 h-16 w-36 rounded-md shadow-xs"
               >
-                <span className="font-display font-medium text-xs tracking-widest text-black dark:text-white uppercase">
-                  {client.logoText}
-                </span>
+                {client.bgImage ? (
+                  <img 
+                    src={client.bgImage} 
+                    alt={client.name} 
+                    className="h-10 w-auto object-contain max-w-full filter dark:brightness-100" 
+                    referrerPolicy="no-referrer"
+                  />
+                ) : (
+                  <span className="font-display font-semibold text-xs tracking-widest text-black uppercase">
+                    {client.logoText}
+                  </span>
+                )}
               </div>
             ))}
           </div>
@@ -262,32 +280,20 @@ export default function Clients() {
             <div
               key={client.id}
               id={`client-card-${client.id}`}
-              className="relative overflow-hidden bg-white dark:bg-[#0E0F12] border border-gray-150 dark:border-white/10 p-6 flex flex-col justify-between aspect-[4/3] group hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="relative overflow-hidden bg-white dark:bg-[#0E0F12] border border-gray-150 dark:border-white/10 p-5 sm:p-6 flex flex-col justify-end aspect-[4/3] group hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
               {/* Brand-specific Background Image */}
               {client.bgImage && (
-                <>
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center scale-100 group-hover:scale-110 transition-transform duration-700 opacity-95 pointer-events-none z-0" 
-                    style={{ backgroundImage: `url(${client.bgImage})` }}
-                  />
-                  {/* Smooth card-wide gradient to guarantee text readability without boxed overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-white/10 dark:from-[#0E0F12] dark:via-[#0E0F12]/70 dark:to-[#0E0F12]/10 pointer-events-none z-1" />
-                </>
+                <div 
+                  className="absolute inset-x-5 sm:inset-x-6 top-5 sm:top-6 bottom-14 sm:bottom-16 bg-contain bg-no-repeat bg-center scale-100 group-hover:scale-105 transition-transform duration-700 opacity-95 pointer-events-none z-0" 
+                  style={{ 
+                    backgroundImage: `url(${client.bgImage})`
+                  }}
+                />
               )}
 
-              {/* Graphic Logo representation - elevated above background with crisp high-contrast glassmorphic containers */}
-              <div className="relative z-10 flex justify-between items-start">
-                <span className="font-mono text-[9px] text-[#FF2B5E] tracking-wider uppercase font-bold bg-white/90 dark:bg-[#0E0F12]/90 border border-gray-200 dark:border-white/10 px-2.5 py-1 rounded-sm shadow-sm backdrop-blur-md">
-                  {client.industry}
-                </span>
-              </div>
-
-              <div className="relative z-10 space-y-1 mt-6">
-                <h3 className="font-display font-bold text-base text-black dark:text-white group-hover:text-[#FF2B5E] transition-colors leading-snug">
-                  {client.logoText}
-                </h3>
-                <p className="font-sans text-xs text-gray-800 dark:text-gray-200 font-medium">
+              <div className="relative z-10 mt-auto">
+                <p className="font-sans text-[11px] sm:text-xs text-gray-800 dark:text-gray-200 font-semibold tracking-wide">
                   {client.name}
                 </p>
               </div>

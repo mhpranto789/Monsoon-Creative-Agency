@@ -165,88 +165,34 @@ export default function ProjectSpotlight({
             
             {/* LARGE HERO VIEW PORT */}
             <div className="space-y-3">
-              {project.youtubeId && showVideo ? (
-                <div className="relative aspect-[16/10] w-full bg-black border border-gray-150 dark:border-white/10 overflow-hidden group">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${project.youtubeId}?autoplay=1&mute=0&rel=0&modestbranding=1`}
-                    title={`${project.title} Video Campaign`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="w-full h-full absolute inset-0 min-h-full"
-                  ></iframe>
-                  
-                  <div className="absolute top-4 right-4 flex items-center space-x-2 z-10">
-                    <button
-                      onClick={() => setShowVideo(false)}
-                      className="btn-liquid-glass-primary text-[9px] font-sans tracking-wide uppercase px-3.5 py-1.5 flex items-center space-x-1.5 cursor-pointer transition-all duration-200 hover:scale-105 shadow-md font-bold rounded-full"
-                    >
-                      <span>Show Photos</span>
-                    </button>
-                  </div>
+              <div 
+                className="relative aspect-[16/10] w-full bg-slate-900/10 dark:bg-slate-900/50 border border-gray-150 dark:border-white/10 overflow-hidden cursor-zoom-in group"
+                onClick={() => setIsZoomed(true)}
+              >
+                <img
+                  src={activeImage}
+                  alt={project.title}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                />
+                
+                <div className="absolute top-4 right-4 flex items-center space-x-2 z-10">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsZoomed(true);
+                    }}
+                    className="btn-liquid-glass text-white text-[9px] font-sans tracking-wide uppercase px-3.5 py-1.5 flex items-center space-x-1.5 cursor-pointer transition-all duration-200 hover:scale-105 font-bold rounded-full shadow-md"
+                  >
+                    <Search size={10} />
+                    <span>ZOOM</span>
+                  </button>
                 </div>
-              ) : (
-                <div 
-                  className="relative aspect-[16/10] w-full bg-slate-900/10 dark:bg-slate-900/50 border border-gray-150 dark:border-white/10 overflow-hidden cursor-zoom-in group"
-                  onClick={() => setIsZoomed(true)}
-                >
-                  <img
-                    src={activeImage}
-                    alt={project.title}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                  />
-                  
-                  <div className="absolute top-4 right-4 flex items-center space-x-2 z-10">
-                    {project.youtubeId && (
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setShowVideo(true);
-                        }}
-                        className="btn-liquid-glass-primary text-[9px] font-sans tracking-wide uppercase px-3.5 py-1.5 flex items-center space-x-1.5 cursor-pointer transition-all duration-200 hover:scale-105 shadow-md font-bold rounded-full"
-                      >
-                        <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
-                        </svg>
-                        <span>PLAY CAMPAIGN</span>
-                      </button>
-                    )}
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setIsZoomed(true);
-                      }}
-                      className="btn-liquid-glass text-white text-[9px] font-sans tracking-wide uppercase px-3.5 py-1.5 flex items-center space-x-1.5 cursor-pointer transition-all duration-200 hover:scale-105 font-bold rounded-full shadow-md"
-                    >
-                      <Search size={10} />
-                      <span>ZOOM</span>
-                    </button>
-                  </div>
 
-                  {project.youtubeId && (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setShowVideo(true);
-                      }}
-                      className="absolute inset-0 flex items-center justify-center bg-black/15 hover:bg-black/35 transition-colors group cursor-pointer"
-                      aria-label="Play Video Campaign"
-                    >
-                      <div className="btn-liquid-glass-primary w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110 relative text-[#FF2B5E]">
-                        <div className="absolute inset-0 rounded-full border border-white/35 animate-ping opacity-60 pointer-events-none" />
-                        <svg className="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </button>
-                  )}
-
-                  <div className="absolute bottom-4 left-4 bg-[#FF2B5E] text-white text-[9px] font-mono tracking-widest uppercase px-2 py-0.5 pointer-events-none z-10">
-                    {project.category} / {project.year}
-                  </div>
+                <div className="absolute bottom-4 left-4 bg-[#FF2B5E] text-white text-[9px] font-mono tracking-widest uppercase px-2 py-0.5 pointer-events-none z-10">
+                  {project.category} / {project.year}
                 </div>
-              )}
+              </div>
 
               {/* THUMBNAIL TRACK */}
               <div className="grid grid-cols-4 gap-2">

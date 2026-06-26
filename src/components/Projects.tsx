@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Project } from "../types";
 import ProjectSpotlight from "./ProjectSpotlight";
@@ -38,7 +38,7 @@ const PROJECTS_DATA: Project[] = [
       author: "Lead Experiential Officer",
       role: "Coke Studio Bangla Portfolio"
     },
-    youtubeId: "VNo9V7SPhYk"
+    youtubeId: "Ta943n1xZPk"
   },
   {
     id: "honda-sp125",
@@ -73,7 +73,7 @@ const PROJECTS_DATA: Project[] = [
       author: "Marketing Strategist",
       role: "Bangladesh Honda Private Ltd."
     },
-    youtubeId: "WId_3Y7T004"
+    youtubeId: "99DVbQJQomE"
   },
   {
     id: "bkash-boishakh",
@@ -108,7 +108,7 @@ const PROJECTS_DATA: Project[] = [
       author: "Corporate PR Director",
       role: "bKash Brand Core Committee"
     },
-    youtubeId: "g-tSHe7gqoo"
+    youtubeId: "N1-9_e-d6kY"
   },
   {
     id: "gp-future",
@@ -143,7 +143,7 @@ const PROJECTS_DATA: Project[] = [
       author: "Head of Experiential Events",
       role: "Grameenphone Corporate Marketing"
     },
-    youtubeId: "HkKq2eS805U"
+    youtubeId: "uiIK9jQbhRA"
   },
   {
     id: "aarong-fashion",
@@ -178,7 +178,7 @@ const PROJECTS_DATA: Project[] = [
       author: "Creative Director",
       role: "Aarong Luxury Division"
     },
-    youtubeId: "n_2Z16-a944"
+    youtubeId: "nOreGhU2Ddw"
   },
   {
     id: "pepsi-soundwave",
@@ -213,7 +213,7 @@ const PROJECTS_DATA: Project[] = [
       author: "Brand Lead BD Division",
       role: "PepsiCo International Group"
     },
-    youtubeId: "lYfK-9p7E7g"
+    youtubeId: "hVICqoOHOPM"
   },
   {
     id: "sunsilk-divas",
@@ -530,15 +530,16 @@ const PROJECTS_DATA: Project[] = [
     },
     youtubeId: "b-FstjK8q3U"
   }
-];
-
-export default function Projects() {
+];export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState<'All' | 'Creative' | 'Experiential'>('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const filteredProjects = selectedCategory === 'All' 
     ? PROJECTS_DATA 
     : PROJECTS_DATA.filter(p => p.category === selectedCategory);
+
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
     <section id="projects" className="py-24 bg-[#FAFAF9] dark:bg-[#050505] border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
@@ -548,11 +549,8 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="space-y-4">
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-none">
-              Featured Projects<span className="text-brand-primary">.</span>
+              Featured Projects<span className="text-brand-primary animate-pulse">.</span>
             </h2>
-            <p className="font-sans text-gray-500 dark:text-gray-400 max-w-lg text-sm font-light">
-              We connect brands to audiences through outstanding storytelling, impactful visuals, and multi-sensory ground setups. Explore our campaigns.
-            </p>
           </div>
 
           {/* Tab Filters */}
@@ -561,7 +559,10 @@ export default function Projects() {
               <button
                 key={cat}
                 id={`filter-${cat}`}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setShowAll(false);
+                }}
                 className={`px-5 py-2 text-xs font-sans font-semibold tracking-normal rounded-full cursor-pointer transition-all duration-200 hover:scale-[1.03] active:scale-[0.97] ${
                   (selectedCategory === cat) 
                     ? "btn-liquid-glass-primary shadow-sm" 
@@ -577,10 +578,10 @@ export default function Projects() {
         {/* Projects Grid */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {displayedProjects.map((project) => (
               <motion.div
                 key={project.id}
                 id={`project-card-${project.id}`}
@@ -594,30 +595,51 @@ export default function Projects() {
               >
                 {/* Image Wrapper */}
                 <div className="relative aspect-video sm:aspect-[4/3] w-full bg-gray-100 dark:bg-zinc-805 overflow-hidden">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
-                  />
-                  {/* Category Badge & Year */}
-                  <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">
-                    <span className="font-mono text-[9px] font-bold tracking-widest text-white bg-black dark:bg-[#FF2B5E] px-2.5 py-1 z-10">
-                      {project.category.toUpperCase()}
-                    </span>
-                    <span className="font-mono text-xs font-bold text-white drop-shadow-md z-10">
-                      {project.year}
-                    </span>
-                  </div>
-
-                  {project.youtubeId && (
-                    <div className="absolute bottom-4 right-4 bg-[#FF2B5E] text-white text-[8px] font-mono font-black tracking-widest uppercase py-1.5 px-3.5 z-10 flex items-center space-x-1.5 shadow-md border border-white/10 rounded-none">
-                      <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                      <span>CAMP_VIDEO</span>
+                  {project.id === "coke-studio" || project.id === "honda-sp125" || project.id === "bkash-boishakh" || project.id === "gp-future" || project.id === "aarong-fashion" || project.id === "pepsi-soundwave" ? (
+                    <div className="w-full h-full absolute inset-0 z-0 overflow-hidden" onClick={(e) => e.stopPropagation()}>
+                      <iframe
+                        src={project.id === "coke-studio" 
+                          ? "https://www.youtube-nocookie.com/embed/Ta943n1xZPk?si=uqXMZ4f6za_x0Tug&modestbranding=1&rel=0&controls=1"
+                          : project.id === "honda-sp125"
+                            ? "https://www.youtube-nocookie.com/embed/99DVbQJQomE?si=3TtzTN5WIZOMDgm7&modestbranding=1&rel=0&controls=1"
+                            : project.id === "bkash-boishakh"
+                              ? "https://www.youtube-nocookie.com/embed/N1-9_e-d6kY?si=3xuxb3tkx-4vlig3&modestbranding=1&rel=0&controls=1"
+                              : project.id === "gp-future"
+                                ? "https://www.youtube-nocookie.com/embed/uiIK9jQbhRA?si=3fBsVSY-U_UXGU_b&modestbranding=1&rel=0&controls=1"
+                                : project.id === "aarong-fashion"
+                                  ? "https://www.youtube-nocookie.com/embed/nOreGhU2Ddw?si=YO5heKNTmFMgOcKm&modestbranding=1&rel=0&controls=1"
+                                  : "https://www.youtube-nocookie.com/embed/hVICqoOHOPM?si=7aN2jbtHCutIEDb9&modestbranding=1&rel=0&controls=1"}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        className="w-full h-full absolute inset-0 opacity-90 transition-opacity duration-300 hover:opacity-100"
+                      ></iframe>
+                      {/* Premium physical glass overlay (clicks pass through) */}
+                      <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-tr from-white/10 via-transparent to-white/5 border border-white/20 shadow-[inset_0_0_15px_rgba(255,255,255,0.15)] dark:shadow-[inset_0_0_15px_rgba(255,255,255,0.05)] backdrop-blur-[0.5px]"></div>
                     </div>
+                  ) : (
+                    <>
+                      <img
+                        src={project.imageUrl}
+                        alt={project.title}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                      />
+                      {/* Category Badge & Year */}
+                      <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">
+                        <span className="font-mono text-[9px] font-bold tracking-widest text-white bg-black dark:bg-[#FF2B5E] px-2.5 py-1 z-10">
+                          {project.category.toUpperCase()}
+                        </span>
+                        <span className="font-mono text-xs font-bold text-white drop-shadow-md z-10">
+                          {project.year}
+                        </span>
+                      </div>
+                    </>
                   )}
+
+
                 </div>
 
                 {/* Info Area */}
@@ -638,6 +660,19 @@ export default function Projects() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {/* Toggle Button Container */}
+        {filteredProjects.length > 6 && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="flex items-center space-x-2 bg-white dark:bg-[#121212] hover:bg-black dark:hover:bg-[#FF2B5E] text-black dark:text-white hover:text-white border border-gray-200 dark:border-white/10 px-8 py-3.5 font-sans text-xs tracking-widest uppercase font-bold transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] cursor-pointer"
+            >
+              <span>{showAll ? "Show Less" : "Show More Projects"}</span>
+              {showAll ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+            </button>
+          </div>
+        )}
 
         {/* Immersive Case Study Spotlight Portal */}
         <AnimatePresence>

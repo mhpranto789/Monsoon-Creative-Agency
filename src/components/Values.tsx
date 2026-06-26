@@ -62,7 +62,7 @@ export default function Values() {
         >
           <div className="lg:col-span-5 space-y-4">
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-none">
-              Shattering the Status Quo<span className="text-brand-primary">.</span>
+              Shattering the Status Quo<span className="text-brand-primary animate-pulse">.</span>
             </h2>
           </div>
           <div className="lg:col-span-7">

@@ -73,7 +73,7 @@ export default function Faq() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
           <div className="lg:col-span-5 space-y-4">
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-none">
-              Answers and Truths<span className="text-[#FF2B5E]">.</span>
+              Answers and Truths<span className="text-[#FF2B5E] animate-pulse">.</span>
             </h2>
           </div>
           <div className="lg:col-span-7">

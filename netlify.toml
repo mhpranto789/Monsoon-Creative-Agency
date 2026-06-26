@@ -1,0 +1,32 @@
+# Netlify Configuration File
+# This file configures the build settings, redirects, and headers for Netlify.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Redirect rules for single-page applications (SPA)
+# This ensures that any deep-linked routes or page refreshes resolve to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security and Performance Caching Headers
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
