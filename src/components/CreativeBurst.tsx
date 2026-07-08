@@ -137,7 +137,7 @@ export default function CreativeBurst() {
       <div className="relative w-[360px] h-[460px] sm:w-[440px] sm:h-[540px]">
         
         {/* Colorful Human Brain Vector Base */}
-        <div className="absolute left-2 bottom-16 w-[280px] h-[245px] sm:w-[360px] sm:h-[315px] z-10">
+        <div className="absolute left-2 bottom-6 w-[280px] h-[245px] sm:w-[360px] sm:h-[315px] z-10">
           <svg
             viewBox="0 0 320 280"
             className="w-full h-full drop-shadow-[0_12px_40px_rgba(255,43,94,0.35)] filter"
