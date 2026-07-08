@@ -61,7 +61,7 @@ export default function Faq() {
     : FAQ_DATA.filter(item => item.category === activeTab);
 
   return (
-    <section id="faq" className="py-24 bg-[#FAFAF9] dark:bg-[#050505] relative border-t border-gray-150 dark:border-white/10 transition-colors duration-400">
+    <section id="faq" className="py-24 bg-transparent relative border-t border-gray-150 dark:border-white/10 transition-colors duration-400">
       {/* Dynamic graphic backgrounds */}
       <div 
         className="absolute inset-0 z-0 bg-gradient-to-b from-[#FAFAF9] via-[#FAF7F2] to-[#FAFAF9] dark:from-[#050505] dark:via-[#08080A] dark:to-[#050505] opacity-40 pointer-events-none" 

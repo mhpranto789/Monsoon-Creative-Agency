@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MessageSquare, Briefcase } from "lucide-react";
 import { motion } from "motion/react";
+import CreativeBurst from "./CreativeBurst";
 
 interface HeroProps {
   onLearnMore: (sectionId: string) => void;
@@ -48,7 +49,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-[#FAFAF9] dark:bg-[#050505] flex flex-col justify-center overflow-hidden pt-24 transition-colors duration-400"
+      className="relative min-h-screen bg-transparent flex flex-col justify-center overflow-hidden pt-24 transition-colors duration-400"
     >
       {/* Premium custom animated background with 3 core words */}
       <div className="absolute inset-0 z-0 overflow-hidden select-none pointer-events-none">
@@ -104,7 +105,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
         />
 
         {/* Kinetic Typography Marquees (Innovation, Marketing, Communication) */}
-        <div className="absolute inset-0 flex flex-col justify-around py-16 opacity-30 dark:opacity-20 z-0">
+        <div className="absolute inset-0 flex flex-col justify-around py-16 opacity-30 dark:opacity-30 z-0">
           
           {/* Track 1: Moving Left */}
           <div className="overflow-hidden flex w-full">
@@ -195,61 +196,71 @@ export default function Hero({ onLearnMore }: HeroProps) {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full py-16 flex flex-col justify-between min-h-[calc(100vh-6rem)]">
         {/* Core Editorial Headlines */}
-        <div className="my-auto py-12">
-          <div className="max-w-4xl space-y-8">
-            <h1 id="hero-title" className="font-display text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-black dark:text-white leading-[1.05]">
-              <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className="block text-gray-400 dark:text-gray-500 font-light"
-              >
-                Welcome to
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="block text-black dark:text-white relative min-h-[1.15em]"
-              >
-                {currentText}
-                <span className="text-brand-primary inline-block animate-pulse font-extrabold ml-1">.</span>
-              </motion.span>
-            </h1>
+        <div className="my-auto py-12 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
+            
+            {/* Left Column: Headline and Narrative */}
+            <div className="lg:col-span-7 space-y-8 w-full">
+              <h1 id="hero-title" className="font-display text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-black dark:text-white leading-[1.05]">
+                <motion.span
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  className="block text-gray-400 dark:text-gray-500 font-light"
+                >
+                  Welcome to
+                </motion.span>
+                <motion.span
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="block text-black dark:text-white relative min-h-[1.15em]"
+                >
+                  {currentText}
+                  <span className="text-brand-primary inline-block animate-pulse font-extrabold ml-1">.</span>
+                </motion.span>
+              </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-sans text-lg md:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-2xl leading-relaxed"
-            >
-              We provide <strong className="font-medium text-black dark:text-white">innovative, integrated brand marketing</strong> and <strong className="font-medium text-black dark:text-white">communication solutions</strong> designed to spark human connections, shatter expectations, and rewrite brand narratives from the ground up.
-            </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="font-sans text-lg md:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-2xl leading-relaxed"
+              >
+                We provide <strong className="font-medium text-black dark:text-white">innovative, integrated brand marketing</strong> and <strong className="font-medium text-black dark:text-white">communication solutions</strong> designed to spark human connections, shatter expectations, and rewrite brand narratives from the ground up.
+              </motion.p>
 
-            {/* Responsive CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4"
-            >
-              <button
-                id="hero-cta-projects"
-                onClick={() => onLearnMore("projects")}
-                className="btn-liquid-glass-primary group flex items-center justify-center space-x-3 transition-all duration-200 rounded-full cursor-pointer px-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.97]"
+              {/* Responsive CTAs */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4"
               >
-                <Briefcase size={16} />
-                <span>Explore Case Studies</span>
-              </button>
-              <button
-                id="hero-cta-contact"
-                onClick={() => onLearnMore("contact")}
-                className="btn-liquid-glass group flex items-center justify-center space-x-3 text-black dark:text-white text-sm font-semibold px-8 py-4 transition-all duration-200 rounded-full cursor-pointer shadow-sm hover:shadow-md hover:scale-[1.03] active:scale-[0.97]"
-              >
-                <MessageSquare size={16} />
-                <span>Start a Partnership</span>
-              </button>
-            </motion.div>
+                <button
+                  id="hero-cta-projects"
+                  onClick={() => onLearnMore("projects")}
+                  className="btn-liquid-glass-primary group flex items-center justify-center space-x-3 transition-all duration-200 rounded-full cursor-pointer px-8 py-4 shadow-md hover:shadow-lg hover:scale-[1.03] active:scale-[0.97]"
+                >
+                  <Briefcase size={16} />
+                  <span>Explore Case Studies</span>
+                </button>
+                <button
+                  id="hero-cta-contact"
+                  onClick={() => onLearnMore("contact")}
+                  className="btn-liquid-glass group flex items-center justify-center space-x-3 text-black dark:text-white text-sm font-semibold px-8 py-4 transition-all duration-200 rounded-full cursor-pointer shadow-sm hover:shadow-md hover:scale-[1.03] active:scale-[0.97]"
+                >
+                  <MessageSquare size={16} />
+                  <span>Start a Partnership</span>
+                </button>
+              </motion.div>
+            </div>
+
+            {/* Right Column: Creative Particle Burst Graphic */}
+            <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
+              <CreativeBurst />
+            </div>
+
           </div>
         </div>
       </div>

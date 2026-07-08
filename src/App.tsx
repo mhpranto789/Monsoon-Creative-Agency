@@ -13,28 +13,10 @@ import Footer from "./components/Footer";
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [isWhatsAppOpen, setIsWhatsAppOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">(() => {
-    // Read from localStorage on mount
-    const saved = localStorage.getItem("theme");
-    return saved === "dark" ? "dark" : "light";
-  });
-
-  // Apply theme class to document element on changes
+  // Force dark mode to be active at all times for a premium aesthetic
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prev => {
-      const next = prev === "light" ? "dark" : "light";
-      localStorage.setItem("theme", next);
-      return next;
-    });
-  };
+    document.documentElement.classList.add("dark");
+  }, []);
 
   // Track active scroll sections to update Navbar highlighting dynamically
   useEffect(() => {
@@ -72,50 +54,129 @@ export default function App() {
   return (
     <div 
       id="app-root" 
-      className="bg-[#FAFAF9] dark:bg-[#050505] min-h-screen text-black dark:text-gray-150 antialiased selection:bg-[#FF2B5E] selection:text-white transition-colors duration-400"
+      className="relative min-h-screen text-black dark:text-gray-150 antialiased selection:bg-[#FF2B5E] selection:text-white transition-colors duration-400 overflow-x-hidden"
     >
       {/* 
-        React 19 Native Metadata Hoisting
-        These tags will automatically move to the HTML <head> for clean SEO indexing
+        Unified Animated Glass Backdrop for the Entire Website
+        Creates a deep, fluid space with floating glowing orbs and a premium frosted glass blur sheet.
       */}
-      <title>Monsoon Creative Agency | Modern Creative Agency Dhaka</title>
-      <meta 
-        name="description" 
-        content="Monsoon Creative Agency is Dhaka's premier creative brand communications and experiential activation agency. Specialized in brand strategy, high-octane launch events, design and cinematic TVCs." 
-      />
-      <meta name="keywords" content="Creative Agency Dhaka, Brand Marketing Bangladesh, Coke Studio Bangla agency, Experiential Marketing Banani, Monsoon Creative Agency, Monsoon" />
-      <meta name="author" content="Monsoon Creative Agency" />
-      
-      {/* Open Graph Meta tags */}
-      <meta property="og:title" content="Monsoon Creative Agency | Modern Creative Brand & Experiential Agency" />
-      <meta property="og:description" content="Shattering cookie-cutter templates to deliver beautiful, emotional and high-impact campaigns across Bangladesh." />
-      <meta property="og:type" content="website" />
-      
-      {/* Twitter Cards */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Monsoon Creative Agency | Creative Agency" />
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
+        {/* Deep modern background backing */}
+        <div className="absolute inset-0 bg-[#FAFAF9] dark:bg-[#060709]" />
+        
+        {/* Soft, rotating, premium glowing orbs */}
+        <motion.div
+          animate={{
+            x: [0, 90, -70, 0],
+            y: [0, -110, 90, 0],
+            scale: [1, 1.25, 0.85, 1],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-[-5%] left-[-5%] w-[55vw] h-[55vw] rounded-full bg-brand-primary/10 dark:bg-brand-primary/8 blur-[120px]"
+        />
 
-      {/* Structured Nav Header with Theme Toggler */}
-      <Navbar 
-        onNavigate={handleNavigation} 
-        activeSection={activeSection} 
-        theme={theme}
-        onToggleTheme={toggleTheme}
-      />
+        <motion.div
+          animate={{
+            x: [0, -100, 80, 0],
+            y: [0, 90, -100, 0],
+            scale: [1, 0.9, 1.15, 1],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-blue-500/8 dark:bg-blue-500/6 blur-[140px]"
+        />
 
-      {/* Main Agency Content Showcase */}
-      <main id="main-content">
-        <Hero onLearnMore={handleNavigation} />
-        <Projects />
-        <Clients />
-        <OurTeam />
-        <Values />
-        <Leaders />
-        <Faq />
-      </main>
+        <motion.div
+          animate={{
+            x: [0, 60, -60, 0],
+            y: [0, 70, -80, 0],
+            scale: [1, 1.1, 0.95, 1],
+          }}
+          transition={{
+            duration: 22,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-[35%] right-[10%] w-[45vw] h-[45vw] rounded-full bg-purple-600/6 dark:bg-purple-600/5 blur-[110px]"
+        />
 
-      {/* Footer and Inquiry capture area */}
-      <Footer />
+        <motion.div
+          animate={{
+            x: [0, -50, 50, 0],
+            y: [0, -60, 70, 0],
+            scale: [1, 0.95, 1.05, 1],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute bottom-[25%] left-[5%] w-[40vw] h-[40vw] rounded-full bg-emerald-500/6 dark:bg-[#00F2FE]/4 blur-[100px]"
+        />
+
+        {/* Global technical alignment grid */}
+        <div 
+          className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:32px_32px]"
+          style={{ 
+            maskImage: "radial-gradient(circle at 50% 50%, white 30%, transparent 95%)", 
+            WebkitMaskImage: "radial-gradient(circle at 50% 50%, white 30%, transparent 95%)" 
+          }}
+        />
+
+        {/* High-fidelity Frosted Glass Overlay Pane */}
+        <div className="absolute inset-0 bg-[#FAFAF9]/60 dark:bg-[#060709]/75 backdrop-blur-[70px] md:backdrop-blur-[100px]" />
+      </div>
+
+      {/* Actual page markup floating on top of the glass pane */}
+      <div className="relative z-10">
+        {/* 
+          React 19 Native Metadata Hoisting
+          These tags will automatically move to the HTML <head> for clean SEO indexing
+        */}
+        <title>Monsoon Creative Agency | Modern Creative Agency Dhaka</title>
+        <meta 
+          name="description" 
+          content="Monsoon Creative Agency is Dhaka's premier creative brand communications and experiential activation agency. Specialized in brand strategy, high-octane launch events, design and cinematic TVCs." 
+        />
+        <meta name="keywords" content="Creative Agency Dhaka, Brand Marketing Bangladesh, Coke Studio Bangla agency, Experiential Marketing Banani, Monsoon Creative Agency, Monsoon" />
+        <meta name="author" content="Monsoon Creative Agency" />
+        
+        {/* Open Graph Meta tags */}
+        <meta property="og:title" content="Monsoon Creative Agency | Modern Creative Brand & Experiential Agency" />
+        <meta property="og:description" content="Shattering cookie-cutter templates to deliver beautiful, emotional and high-impact campaigns across Bangladesh." />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Cards */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Monsoon Creative Agency | Creative Agency" />
+  
+        {/* Structured Nav Header */}
+        <Navbar 
+          onNavigate={handleNavigation} 
+          activeSection={activeSection} 
+        />
+  
+        {/* Main Agency Content Showcase */}
+        <main id="main-content">
+          <Hero onLearnMore={handleNavigation} />
+          <Projects />
+          <Clients />
+          <OurTeam />
+          <Values />
+          <Leaders />
+          <Faq />
+        </main>
+  
+        {/* Footer and Inquiry capture area */}
+        <Footer />
+      </div>
 
       {/* Floating WhatsApp Widget */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">

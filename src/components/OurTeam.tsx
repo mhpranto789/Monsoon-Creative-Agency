@@ -95,7 +95,7 @@ export default function OurTeam() {
   return (
     <section 
       id="our-team" 
-      className="py-24 bg-white dark:bg-[#070708] text-black dark:text-white border-t border-gray-100 dark:border-white/10 transition-colors duration-400 relative overflow-hidden"
+      className="py-24 bg-transparent text-black dark:text-white border-t border-gray-100 dark:border-white/10 transition-colors duration-400 relative overflow-hidden"
     >
       {/* Subtle background graphic */}
       <div 

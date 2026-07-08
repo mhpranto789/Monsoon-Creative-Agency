@@ -1,15 +1,13 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight, Sun, Moon } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface NavbarProps {
   onNavigate: (sectionId: string) => void;
   activeSection: string;
-  theme: "light" | "dark";
-  onToggleTheme: () => void;
 }
 
-export default function Navbar({ onNavigate, activeSection, theme, onToggleTheme }: NavbarProps) {
+export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -95,27 +93,6 @@ export default function Navbar({ onNavigate, activeSection, theme, onToggleTheme
               </button>
             ))}
 
-            {/* Theme Toggle Button */}
-            <button
-               id="theme-toggle-desktop"
-               onClick={onToggleTheme}
-               className="btn-liquid-glass p-2.5 ml-2 text-black dark:text-white transition-all rounded-full hover:scale-110 active:scale-95 shadow-sm cursor-pointer flex items-center justify-center"
-              title={theme === "light" ? "Switch to Pitch Black mode" : "Switch to Light mode"}
-              aria-label="Toggle Theme"
-            >
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={theme}
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.15 }}
-                >
-                  {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
-                </motion.div>
-              </AnimatePresence>
-            </button>
-
             <button
               id="nav-cta-contact"
               onClick={() => handleItemClick("contact")}
@@ -128,16 +105,6 @@ export default function Navbar({ onNavigate, activeSection, theme, onToggleTheme
 
           {/* Mobile Actions block */}
           <div className="flex md:hidden items-center space-x-3">
-            {/* Theme Toggle Button (Mobile) */}
-            <button
-              id="theme-toggle-mobile"
-              onClick={onToggleTheme}
-              className="btn-liquid-glass p-2.5 text-black dark:text-white transition-all rounded-full hover:scale-110 active:scale-95 cursor-pointer flex items-center justify-center shadow-sm"
-              aria-label="Toggle Theme"
-            >
-              {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
-            </button>
-
             {/* Mobile Menu Button */}
             <button
               id="mobile-menu-toggle"

@@ -542,7 +542,7 @@ const PROJECTS_DATA: Project[] = [
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
-    <section id="projects" className="py-24 bg-[#FAFAF9] dark:bg-[#050505] border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
+    <section id="projects" className="py-24 bg-transparent border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
          {/* Section Header */}

@@ -90,7 +90,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" className="bg-[#FAFAF9] dark:bg-[#050505] text-black dark:text-white pt-24 pb-12 relative overflow-hidden border-t border-gray-150 dark:border-transparent transition-colors duration-400">
+    <footer id="contact" className="bg-transparent text-black dark:text-white pt-24 pb-12 relative overflow-hidden border-t border-gray-150 dark:border-transparent transition-colors duration-400">
       
       {/* Red Ambient Radial Glow */}
       <div 

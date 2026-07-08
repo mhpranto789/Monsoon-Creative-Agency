@@ -201,7 +201,7 @@ function AnimatedCounter({ end, duration = 2000, suffix = "" }: AnimatedCounterP
 
 export default function Clients() {
   return (
-    <section id="clients" className="py-24 bg-[#FAFAF9] dark:bg-[#050505] text-black dark:text-white overflow-hidden relative border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
+    <section id="clients" className="py-24 bg-transparent text-black dark:text-white overflow-hidden relative border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
       {/* Soft color highlights instead of harsh dot-grid */}
       <div 
         className="absolute inset-0 z-0 bg-gradient-to-b from-[#FAFAF9] via-[#FAF7F2] to-[#FAFAF9] dark:from-[#050505] dark:via-[#08080A] dark:to-[#050505] opacity-50" 
