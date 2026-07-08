@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Clients from "./components/Clients";
+import OurTeam from "./components/OurTeam";
 import Values from "./components/Values";
 import Faq from "./components/Faq";
 import Leaders from "./components/Leaders";
@@ -38,7 +39,7 @@ export default function App() {
   // Track active scroll sections to update Navbar highlighting dynamically
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "projects", "clients", "leaders", "faq", "values", "contact"];
+      const sections = ["home", "projects", "clients", "our-team", "values", "leaders", "faq", "contact"];
       const scrollPos = window.scrollY + 200; // Offset trigger point
 
       for (const sectionId of sections) {
@@ -107,9 +108,10 @@ export default function App() {
         <Hero onLearnMore={handleNavigation} />
         <Projects />
         <Clients />
+        <OurTeam />
+        <Values />
         <Leaders />
         <Faq />
-        <Values />
       </main>
 
       {/* Footer and Inquiry capture area */}

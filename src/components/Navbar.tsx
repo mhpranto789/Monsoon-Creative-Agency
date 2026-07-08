@@ -29,9 +29,10 @@ export default function Navbar({ onNavigate, activeSection, theme, onToggleTheme
     { label: "Home", id: "home" },
     { label: "Projects", id: "projects" },
     { label: "Clients", id: "clients" },
+    { label: "Our Team", id: "our-team" },
+    { label: "About Us", id: "values" },
     { label: "Company Leaders", id: "leaders" },
     { label: "FAQ", id: "faq" },
-    { label: "About Us", id: "values" },
     { label: "Contact Us", id: "contact" },
   ];
 
