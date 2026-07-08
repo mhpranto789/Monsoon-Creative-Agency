@@ -137,10 +137,17 @@ export default function CreativeBurst() {
       <div className="relative w-[360px] h-[460px] sm:w-[440px] sm:h-[540px]">
         
         {/* Colorful Human Brain Vector Base */}
-        <div className="absolute left-2 bottom-6 w-[280px] h-[245px] sm:w-[360px] sm:h-[315px] z-10">
+        <motion.div 
+          className="absolute left-2 bottom-6 w-[280px] h-[245px] sm:w-[360px] sm:h-[315px] z-10 cursor-pointer origin-bottom"
+          whileHover={{ 
+            scale: 1.05,
+            y: -8,
+          }}
+          transition={{ type: "spring", stiffness: 320, damping: 18 }}
+        >
           <svg
             viewBox="0 0 320 280"
-            className="w-full h-full drop-shadow-[0_12px_40px_rgba(255,43,94,0.35)] filter"
+            className="w-full h-full transition-all duration-500 filter drop-shadow-[0_12px_40px_rgba(255,43,94,0.35)] hover:drop-shadow-[0_20px_60px_rgba(255,43,94,0.75)] hover:brightness-110"
             aria-label="Vibrant Creative Brain"
           >
             <defs>
@@ -276,7 +283,7 @@ export default function CreativeBurst() {
               <path d="M 280 65 Q 280 71 286 71 Q 280 71 280 77 Q 280 71 274 71 Q 280 71 280 65 Z" fill="#FBBF24" />
             </g>
           </svg>
-        </div>
+        </motion.div>
 
         {/* Dynamic Flying Particles Container */}
         <div className="absolute inset-0 pointer-events-none z-20">
