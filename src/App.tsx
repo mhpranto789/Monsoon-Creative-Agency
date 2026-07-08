@@ -54,7 +54,7 @@ export default function App() {
   return (
     <div 
       id="app-root" 
-      className="relative min-h-screen text-black dark:text-gray-150 antialiased selection:bg-[#FF2B5E] selection:text-white transition-colors duration-400 overflow-x-hidden"
+      className="relative min-h-screen text-gray-100 antialiased selection:bg-[#FF2B5E] selection:text-white transition-colors duration-400 overflow-x-hidden"
     >
       {/* 
         Unified Animated Glass Backdrop for the Entire Website
@@ -62,7 +62,7 @@ export default function App() {
       */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
         {/* Deep modern background backing */}
-        <div className="absolute inset-0 bg-[#FAFAF9] dark:bg-[#060709]" />
+        <div className="absolute inset-0 bg-[#050505]" />
         
         {/* Soft, rotating, premium glowing orbs */}
         <motion.div
@@ -76,7 +76,7 @@ export default function App() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-[-5%] left-[-5%] w-[55vw] h-[55vw] rounded-full bg-brand-primary/10 dark:bg-brand-primary/8 blur-[120px]"
+          className="absolute top-[-5%] left-[-5%] w-[55vw] h-[55vw] rounded-full bg-brand-primary/10 blur-[120px]"
         />
 
         <motion.div
@@ -90,7 +90,7 @@ export default function App() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-blue-500/8 dark:bg-blue-500/6 blur-[140px]"
+          className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-blue-500/8 blur-[140px]"
         />
 
         <motion.div
@@ -104,7 +104,7 @@ export default function App() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-[35%] right-[10%] w-[45vw] h-[45vw] rounded-full bg-purple-600/6 dark:bg-purple-600/5 blur-[110px]"
+          className="absolute top-[35%] right-[10%] w-[45vw] h-[45vw] rounded-full bg-purple-600/6 blur-[110px]"
         />
 
         <motion.div
@@ -118,12 +118,12 @@ export default function App() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute bottom-[25%] left-[5%] w-[40vw] h-[40vw] rounded-full bg-emerald-500/6 dark:bg-[#00F2FE]/4 blur-[100px]"
+          className="absolute bottom-[25%] left-[5%] w-[40vw] h-[40vw] rounded-full bg-emerald-500/6 blur-[100px]"
         />
 
         {/* Global technical alignment grid */}
         <div 
-          className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:32px_32px]"
+          className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:32px_32px]"
           style={{ 
             maskImage: "radial-gradient(circle at 50% 50%, white 30%, transparent 95%)", 
             WebkitMaskImage: "radial-gradient(circle at 50% 50%, white 30%, transparent 95%)" 
@@ -131,7 +131,7 @@ export default function App() {
         />
 
         {/* High-fidelity Frosted Glass Overlay Pane */}
-        <div className="absolute inset-0 bg-[#FAFAF9]/60 dark:bg-[#060709]/75 backdrop-blur-[70px] md:backdrop-blur-[100px]" />
+        <div className="absolute inset-0 bg-[#050505]/75 backdrop-blur-[70px] md:backdrop-blur-[100px]" />
       </div>
 
       {/* Actual page markup floating on top of the glass pane */}

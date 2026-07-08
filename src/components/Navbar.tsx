@@ -45,7 +45,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
         id="navbar-header"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#FAFAF9]/90 dark:bg-[#0B1220]/90 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10 py-4 shadow-sm"
+            ? "bg-[#060709]/80 backdrop-blur-md border-b border-white/10 py-4 shadow-sm"
             : "bg-transparent py-6"
         }`}
       >
@@ -56,19 +56,19 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
             onClick={() => handleItemClick("home")}
             className="group flex items-center space-x-2 text-left cursor-pointer transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
-            <div className="relative w-8 h-8 bg-black dark:bg-white flex items-center justify-center font-bold text-white dark:text-black text-lg rounded-lg transition-transform group-hover:rotate-12 duration-300 shadow-sm">
+            <div className="relative w-8 h-8 bg-white flex items-center justify-center font-bold text-black text-lg rounded-lg transition-transform group-hover:rotate-12 duration-300 shadow-sm">
               <span className="font-display">m</span>
             </div>
             <div>
-              <span className="font-display font-black text-xl tracking-tight text-black dark:text-white block">
+              <span className="font-display font-black text-xl tracking-tight text-white block">
                 Monsoon
               </span>
-              <span className="font-mono text-[9px] tracking-widest text-gray-500 dark:text-gray-400 uppercase block -mt-1">
+              <span className="font-mono text-[9px] tracking-widest text-gray-400 uppercase block -mt-1">
                 Creative Agency
               </span>
             </div>
           </button>
-
+ 
           {/* Desktop Nav Items */}
           <nav id="desktop-nav" aria-label="Desktop navigation" className="hidden md:flex items-center space-x-6">
             {menuItems.map((item) => (
@@ -78,8 +78,8 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
                 onClick={() => handleItemClick(item.id)}
                 className={`text-sm font-medium transition-colors relative py-1 cursor-pointer ${
                   activeSection === item.id
-                    ? "text-black dark:text-white"
-                    : "text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+                    ? "text-white"
+                    : "text-gray-400 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -109,7 +109,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
             <button
               id="mobile-menu-toggle"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="btn-liquid-glass p-2.5 text-black dark:text-white rounded-full hover:scale-110 active:scale-95 focus:outline-none cursor-pointer flex items-center justify-center shadow-sm transition-all duration-200"
+              className="btn-liquid-glass p-2.5 text-white rounded-full hover:scale-110 active:scale-95 focus:outline-none cursor-pointer flex items-center justify-center shadow-sm transition-all duration-200"
               aria-label="Toggle Menu"
             >
               {isMobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
@@ -117,7 +117,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
           </div>
         </div>
       </header>
-
+ 
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -127,7 +127,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[#FAFAF9] dark:bg-[#0B1220] pt-28 px-8 flex flex-col justify-between"
+            className="fixed inset-0 z-40 bg-[#060709]/95 backdrop-blur-xl pt-28 px-8 flex flex-col justify-between"
           >
             <nav id="mobile-nav" aria-label="Mobile navigation" className="flex flex-col space-y-5">
               {menuItems.map((item, index) => (
@@ -141,20 +141,20 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
                   className={`text-2xl font-display font-bold text-left cursor-pointer ${
                     activeSection === item.id 
                       ? "text-brand-primary" 
-                      : "text-black dark:text-white"
+                      : "text-white"
                   }`}
                 >
                   {item.label}
                 </motion.button>
               ))}
             </nav>
-
-            <div className="border-t border-gray-200 dark:border-white/10 py-8 mb-4 space-y-2">
-              <span className="font-mono text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider block mb-1">
+ 
+            <div className="border-t border-white/10 py-8 mb-4 space-y-2">
+              <span className="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-1">
                 Say Hello
               </span>
-              <p className="text-gray-800 dark:text-gray-200 font-medium">hello@monsoon.agency</p>
-              <p className="text-gray-500 dark:text-gray-400 text-sm">House 42, Road 11, Banani, Dhaka</p>
+              <p className="text-gray-200 font-medium">hello@monsoon.agency</p>
+              <p className="text-gray-400 text-sm">House 42, Road 11, Banani, Dhaka</p>
             </div>
           </motion.div>
         )}
