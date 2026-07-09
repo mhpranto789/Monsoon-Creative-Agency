@@ -128,161 +128,39 @@ export default function CreativeBurst() {
   }, []);
 
   return (
-    <div className="relative w-full h-[450px] sm:h-[500px] lg:h-[600px] flex items-center justify-center select-none">
+    <div className="relative w-full h-[520px] sm:h-[620px] lg:h-[720px] flex items-center justify-center select-none">
       
       {/* Decorative background glow for depth */}
       <div className="absolute inset-0 bg-radial-gradient from-brand-primary/10 via-transparent to-transparent blur-3xl opacity-60 pointer-events-none" />
 
       {/* Main composition frame */}
-      <div className="relative w-[360px] h-[460px] sm:w-[440px] sm:h-[540px]">
+      <div className="relative w-[400px] h-[500px] sm:w-[500px] sm:h-[600px] lg:w-[600px] lg:h-[700px]">
         
         {/* Colorful Human Brain Vector Base */}
         <motion.div 
-          className="absolute left-2 bottom-6 w-[280px] h-[245px] sm:w-[360px] sm:h-[315px] z-10 cursor-pointer origin-bottom"
+          className="absolute left-4 bottom-6 w-[340px] h-[310px] sm:w-[450px] sm:h-[410px] lg:w-[540px] lg:h-[490px] z-10 cursor-pointer origin-bottom"
           whileHover={{ 
             scale: 1.05,
             y: -8,
           }}
           transition={{ type: "spring", stiffness: 320, damping: 18 }}
         >
-          <svg
-            viewBox="0 0 320 280"
-            className="w-full h-full transition-all duration-500 filter drop-shadow-[0_12px_40px_rgba(255,43,94,0.35)] hover:drop-shadow-[0_20px_60px_rgba(255,43,94,0.75)] hover:brightness-110"
-            aria-label="Vibrant Creative Brain"
-          >
-            <defs>
-              {/* Gradients matching the premium, vibrant theme */}
-              <linearGradient id="frontal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#FF2B5E" />
-                <stop offset="100%" stopColor="#EC4899" />
-              </linearGradient>
-              <linearGradient id="parietal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#A855F7" />
-                <stop offset="100%" stopColor="#6366F1" />
-              </linearGradient>
-              <linearGradient id="occipital-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3B82F6" />
-                <stop offset="100%" stopColor="#06B6D4" />
-              </linearGradient>
-              <linearGradient id="temporal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#FBBF24" />
-                <stop offset="100%" stopColor="#F97316" />
-              </linearGradient>
-              <linearGradient id="cerebellum-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#10B981" />
-                <stop offset="100%" stopColor="#059669" />
-              </linearGradient>
-              <linearGradient id="stem-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#6366F1" />
-                <stop offset="100%" stopColor="#312E81" />
-              </linearGradient>
-              
-              {/* Outer soft glowing aura */}
-              <filter id="brain-glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="15" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-              </filter>
-            </defs>
-
-            {/* Glowing Ambient Backdrop Aura */}
-            <g filter="url(#brain-glow)" opacity="0.4">
-              <path
-                d="M 120 40 C 40 40, 30 160, 70 200 C 100 240, 160 260, 200 250 C 240 240, 300 240, 300 170 C 300 100, 240 40, 180 40 Z"
-                fill="#FF2B5E"
-              />
-            </g>
-
-            {/* MAIN BRAIN STRUCTURE GROUP */}
-            <g stroke="#08080a" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round">
-              
-              {/* Brain Stem */}
-              <path
-                d="M 155 210 Q 155 260 150 265 C 145 270 135 268 135 255 Q 140 220 140 205"
-                fill="url(#stem-grad)"
-              />
-
-              {/* Cerebellum (Bottom Back) */}
-              <path
-                d="M 170 190 C 190 190 225 195 240 210 C 255 225 250 245 230 250 C 210 255 175 250 165 225 C 160 210 165 195 170 190 Z"
-                fill="url(#cerebellum-grad)"
-              />
-              {/* Cerebellum Internal folds */}
-              <path d="M 185 205 Q 215 210 230 220" fill="none" />
-              <path d="M 175 220 Q 200 225 220 235" fill="none" />
-              <path d="M 180 235 Q 195 240 210 242" fill="none" />
-
-              {/* Temporal Lobe (Lower Front/Center) */}
-              <path
-                d="M 85 160 C 60 160 55 185 65 205 C 75 225 125 225 145 210 C 165 195 155 170 135 165 C 115 160 100 160 85 160 Z"
-                fill="url(#temporal-grad)"
-              />
-              {/* Temporal internal folds */}
-              <path d="M 75 180 C 90 175 115 180 130 195" fill="none" />
-              <path d="M 80 195 C 95 195 110 205 125 200" fill="none" />
-
-              {/* Frontal Lobe (Top Left / Front) */}
-              <path
-                d="M 140 70 C 100 70 55 90 45 130 C 35 170 70 185 105 180 C 140 175 150 140 145 110 C 140 80 145 70 140 70 Z"
-                fill="url(#frontal-grad)"
-              />
-              {/* Frontal internal gyri lines */}
-              <path d="M 65 105 Q 85 110 95 95" fill="none" />
-              <path d="M 55 130 C 75 125 90 140 115 125" fill="none" />
-              <path d="M 70 155 Q 95 150 110 165" fill="none" />
-              <path d="M 115 100 Q 125 125 140 135" fill="none" />
-
-              {/* Parietal Lobe (Top Center) */}
-              <path
-                d="M 140 70 C 175 55 235 60 255 95 C 270 120 260 145 230 150 C 200 155 155 140 145 110 C 138 80 140 70 140 70 Z"
-                fill="url(#parietal-grad)"
-              />
-              {/* Parietal internal gyri lines */}
-              <path d="M 160 80 Q 185 95 210 80" fill="none" />
-              <path d="M 155 105 C 180 110 195 125 220 115" fill="none" />
-              <path d="M 175 130 Q 200 135 220 145" fill="none" />
-
-              {/* Occipital Lobe (Back Right) */}
-              <path
-                d="M 255 95 C 280 110 295 135 295 160 C 295 185 270 200 240 190 C 220 180 225 155 230 150 C 255 145 265 120 255 95 Z"
-                fill="url(#occipital-grad)"
-              />
-              {/* Occipital internal folds */}
-              <path d="M 270 120 Q 255 135 275 150" fill="none" />
-              <path d="M 285 145 Q 260 160 270 175" fill="none" />
-              <path d="M 250 165 Q 240 175 255 182" fill="none" />
-
-            </g>
-
-            {/* GLOSSY HIGHLIGHTS / BUBBLE SHINES (Matching the cute/modern look) */}
-            <g fill="white" opacity="0.32" pointerEvents="none">
-              {/* Frontal shines */}
-              <ellipse cx="65" cy="100" rx="10" ry="4" transform="rotate(-35 65 100)" />
-              <circle cx="50" cy="125" r="3" />
-              
-              {/* Parietal shines */}
-              <ellipse cx="180" cy="72" rx="18" ry="5" transform="rotate(-10 180 72)" />
-              <circle cx="215" cy="76" r="4" />
-
-              {/* Occipital shines */}
-              <ellipse cx="282" cy="125" rx="10" ry="4" transform="rotate(40 282 125)" />
-              
-              {/* Temporal shines */}
-              <ellipse cx="80" cy="180" rx="10" ry="3" transform="rotate(-15 80 180)" />
-
-              {/* Cerebellum shines */}
-              <ellipse cx="210" cy="202" rx="12" ry="4" transform="rotate(-5 210 202)" />
-            </g>
-
-            {/* Sparkles / Creative stars around the brain */}
-            <g fill="#FF2B5E" opacity="0.8">
-              {/* Sparkle 1 */}
-              <path d="M 35 75 Q 35 85 45 85 Q 35 85 35 95 Q 35 85 25 85 Q 35 85 35 75 Z" />
-              {/* Sparkle 2 */}
-              <path d="M 305 215 Q 305 223 313 223 Q 305 223 305 231 Q 305 223 297 223 Q 305 223 305 215 Z" fill="#00F2FE" />
-              {/* Sparkle 3 */}
-              <path d="M 280 65 Q 280 71 286 71 Q 280 71 280 77 Q 280 71 274 71 Q 280 71 280 65 Z" fill="#FBBF24" />
-            </g>
-          </svg>
+          <motion.img
+            src="https://lh3.googleusercontent.com/d/1Mrc0IVEDVeYsh7w8THAYnKE4nBiD5QlF"
+            alt="Monsoon Creative Visual"
+            referrerPolicy="no-referrer"
+            animate={{
+              y: [0, -12, 0],
+              rotate: [0, 1.2, -1.2, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="w-full h-full object-contain transition-all duration-500 filter drop-shadow-[0_12px_40px_rgba(255,43,94,0.35)] hover:drop-shadow-[0_20px_60px_rgba(255,43,94,0.75)] hover:brightness-110"
+            aria-label="Vibrant Creative Reference visual"
+          />
         </motion.div>
 
         {/* Dynamic Flying Particles Container */}

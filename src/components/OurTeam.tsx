@@ -114,9 +114,6 @@ export default function OurTeam() {
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-tight">
               Meet the Creative Fire starters<span className="text-[#FF2B5E]">.</span>
             </h2>
-            <p className="font-sans text-gray-500 dark:text-gray-400 text-sm font-light max-w-lg">
-              A diverse ecosystem of storytellers, event builders, copy alchemists, and production engineers working in sync to shatter templates.
-            </p>
           </div>
 
           {/* Dynamic Specialty Tabs */}
