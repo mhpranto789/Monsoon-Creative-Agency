@@ -142,6 +142,7 @@ export default function CreativeBurst() {
           whileHover={{ 
             scale: 1.05,
             y: -8,
+            rotate: 2,
           }}
           transition={{ type: "spring", stiffness: 320, damping: 18 }}
         >
@@ -150,11 +151,11 @@ export default function CreativeBurst() {
             alt="Monsoon Creative Visual"
             referrerPolicy="no-referrer"
             animate={{
-              y: [0, -12, 0],
-              rotate: [0, 1.2, -1.2, 0],
+              y: [0, -18, 0],
+              rotate: [-8, 8, -8],
             }}
             transition={{
-              duration: 6,
+              duration: 8,
               repeat: Infinity,
               ease: "easeInOut"
             }}

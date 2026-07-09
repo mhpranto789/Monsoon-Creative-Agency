@@ -54,6 +54,15 @@ export default function Hero({ onLearnMore }: HeroProps) {
       {/* Premium custom animated background with 3 core words */}
       <div className="absolute inset-0 z-0 overflow-hidden select-none pointer-events-none">
         
+        {/* Rich dark overlay vignette specific to hero */}
+        <div 
+          className="absolute inset-0 z-1 bg-[#020202]/30" 
+          style={{ 
+            backgroundImage: "radial-gradient(circle at 50% 50%, rgba(3, 3, 3, 0.2) 20%, rgba(2, 2, 3, 0.9) 100%)" 
+          }} 
+          aria-hidden="true"
+        />
+
         {/* Modern minimal grid pattern */}
         <div 
           className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] dark:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)]"
@@ -114,7 +123,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
               animate={{ x: [0, "-50%"] }}
               transition={{ ease: "linear", duration: 32, repeat: Infinity }}
             >
-              <div className="flex gap-12 pr-12 font-display font-black text-[9vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
+              <div className="flex gap-12 pr-12 font-display font-black text-[12vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
                 <span>Innovation</span>
                 <span className="text-brand-primary/20">•</span>
                 <span>Marketing</span>
@@ -122,7 +131,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                 <span>Communication</span>
                 <span className="text-brand-primary/20">•</span>
               </div>
-              <div className="flex gap-12 pr-12 font-display font-black text-[9vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
+              <div className="flex gap-12 pr-12 font-display font-black text-[12vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
                 <span>Innovation</span>
                 <span className="text-brand-primary/20">•</span>
                 <span>Marketing</span>
@@ -140,7 +149,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
               animate={{ x: ["-50%", "0%"] }}
               transition={{ ease: "linear", duration: 38, repeat: Infinity }}
             >
-              <div className="flex gap-12 pr-12 font-display font-black text-[9vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
+              <div className="flex gap-12 pr-12 font-display font-black text-[12vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
                 <span>Marketing</span>
                 <span className="text-brand-primary/20">•</span>
                 <span>Communication</span>
@@ -148,7 +157,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                 <span>Innovation</span>
                 <span className="text-brand-primary/20">•</span>
               </div>
-              <div className="flex gap-12 pr-12 font-display font-black text-[9vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
+              <div className="flex gap-12 pr-12 font-display font-black text-[12vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
                 <span>Marketing</span>
                 <span className="text-brand-primary/20">•</span>
                 <span>Communication</span>
@@ -166,7 +175,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
               animate={{ x: [0, "-50%"] }}
               transition={{ ease: "linear", duration: 28, repeat: Infinity }}
             >
-              <div className="flex gap-12 pr-12 font-display font-black text-[9vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
+              <div className="flex gap-12 pr-12 font-display font-black text-[12vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
                 <span>Communication</span>
                 <span className="text-brand-primary/20">•</span>
                 <span>Innovation</span>
@@ -174,7 +183,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                 <span>Marketing</span>
                 <span className="text-brand-primary/20">•</span>
               </div>
-              <div className="flex gap-12 pr-12 font-display font-black text-[9vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
+              <div className="flex gap-12 pr-12 font-display font-black text-[12vw] tracking-widest text-black/5 dark:text-white/5 uppercase select-none">
                 <span>Communication</span>
                 <span className="text-brand-primary/20">•</span>
                 <span>Innovation</span>
@@ -206,7 +215,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
-                  className="block text-gray-400 dark:text-gray-500 font-light"
+                  className="block text-white font-light text-4xl sm:text-6xl lg:text-7xl mb-1"
                 >
                   Welcome to
                 </motion.span>
@@ -214,7 +223,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="block text-black dark:text-white relative min-h-[1.15em]"
+                  className="block text-sky-400 relative min-h-[1.15em]"
                 >
                   {currentText}
                   <span className="text-brand-primary inline-block animate-pulse font-extrabold ml-1">.</span>
