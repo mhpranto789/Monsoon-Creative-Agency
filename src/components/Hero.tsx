@@ -234,7 +234,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="font-sans text-lg md:text-2xl text-gray-600 dark:text-gray-300 font-light max-w-2xl leading-relaxed"
+                className="font-montserrat text-lg md:text-2xl text-gray-600 dark:text-gray-300 font-thin max-w-2xl leading-relaxed"
               >
                 We provide <strong className="font-medium text-black dark:text-white">innovative, integrated brand marketing</strong> and <strong className="font-medium text-black dark:text-white">communication solutions</strong> designed to spark human connections, shatter expectations, and rewrite brand narratives from the ground up.
               </motion.p>
