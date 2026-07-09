@@ -158,6 +158,7 @@ export default function CreativeBurst() {
               repeat: Infinity,
               ease: "easeInOut"
             }}
+            style={{ willChange: "transform" }}
             className="w-full h-full object-contain transition-all duration-500 filter drop-shadow-[0_12px_40px_rgba(255,43,94,0.35)] hover:drop-shadow-[0_20px_60px_rgba(255,43,94,0.75)] hover:brightness-110"
             aria-label="Vibrant Creative Reference visual"
           />
@@ -172,6 +173,7 @@ export default function CreativeBurst() {
               style={{
                 left: `${(p.startX / 440) * 100}%`,
                 top: `${(p.startY / 540) * 100}%`,
+                willChange: "transform, opacity",
               }}
               initial={{
                 x: 0,

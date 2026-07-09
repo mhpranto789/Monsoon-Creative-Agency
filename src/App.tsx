@@ -76,6 +76,7 @@ export default function App() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: "transform" }}
           className="absolute top-[-5%] left-[-5%] w-[55vw] h-[55vw] rounded-full bg-brand-primary/10 blur-[120px]"
         />
 
@@ -90,6 +91,7 @@ export default function App() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: "transform" }}
           className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-blue-500/8 blur-[140px]"
         />
 
@@ -104,6 +106,7 @@ export default function App() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: "transform" }}
           className="absolute top-[35%] right-[10%] w-[45vw] h-[45vw] rounded-full bg-purple-600/6 blur-[110px]"
         />
 
@@ -118,6 +121,7 @@ export default function App() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          style={{ willChange: "transform" }}
           className="absolute bottom-[25%] left-[5%] w-[40vw] h-[40vw] rounded-full bg-emerald-500/6 blur-[100px]"
         />
 
@@ -166,12 +170,12 @@ export default function App() {
         {/* Main Agency Content Showcase */}
         <main id="main-content">
           <Hero onLearnMore={handleNavigation} />
-          <Projects />
-          <Clients />
-          <OurTeam />
-          <Values />
-          <Leaders />
-          <Faq />
+          <div className="content-visibility-lazy optimize-gpu"><Projects /></div>
+          <div className="content-visibility-lazy optimize-gpu"><Clients /></div>
+          <div className="content-visibility-lazy optimize-gpu"><OurTeam /></div>
+          <div className="content-visibility-lazy optimize-gpu"><Values /></div>
+          <div className="content-visibility-lazy optimize-gpu"><Leaders /></div>
+          <div className="content-visibility-lazy optimize-gpu"><Faq /></div>
         </main>
   
         {/* Footer and Inquiry capture area */}

@@ -19,10 +19,10 @@
 
   @keyframes scroll {
     0% {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
   }
 }
@@ -186,4 +186,16 @@ html {
 .btn-liquid-glass-primary:active {
   transform: translateY(1px) scale(0.97);
 }
+
+/* Modern Rendering Performance Optimizations */
+.optimize-gpu {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.content-visibility-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 650px;
+}
+
 

@@ -614,6 +614,7 @@ const PROJECTS_DATA: Project[] = [
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
+                        loading="lazy"
                         className="w-full h-full absolute inset-0 opacity-90 transition-opacity duration-300 hover:opacity-100"
                       ></iframe>
                       {/* Premium physical glass overlay (clicks pass through) */}
