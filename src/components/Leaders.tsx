@@ -15,13 +15,13 @@ const LEADERS_DATA: Leader[] = [
     location: "Niketon Dhaka"
   },
   {
-    id: "rumana-afroze",
-    name: "Rumana Afroze",
-    role: "Managing Director & Partner",
-    bio: "Specialist in consumer psychology and experiential brand engagement pipelines. Bridging the gap between raw local emotion and rigorous corporate execution standards.",
-    imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=700&q=80",
+    id: "kaiser-hamid",
+    name: "Kaiser Hamid",
+    role: "HEAD OF DIGITAL STRATEGY",
+    bio: "Expert in navigating complex digital segments to elevate brands. Leveraging meticulous market research, competitive intelligence, and compelling copywriting to build end-to-end digital strategies that ensure sustainable brand expansion and market leadership.",
+    imageUrl: "https://lh3.googleusercontent.com/d/1AW6rJ9dU9Jo4C26faHut1yANOMXd0RVH",
     linkedinUrl: "https://linkedin.com",
-    tag: "Brand Alchemist"
+    tag: "GROWTH ARCHITECT"
   },
   {
     id: "zubair-rahman",
