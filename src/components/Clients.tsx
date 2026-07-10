@@ -237,6 +237,7 @@ export default function Clients() {
                   <img 
                     src={client.bgImage} 
                     alt={client.name} 
+                    loading="lazy"
                     className="h-10 w-auto object-contain max-w-full filter dark:brightness-100" 
                     referrerPolicy="no-referrer"
                   />
@@ -259,6 +260,7 @@ export default function Clients() {
                   <img 
                     src={client.bgImage} 
                     alt={client.name} 
+                    loading="lazy"
                     className="h-10 w-auto object-contain max-w-full filter dark:brightness-100" 
                     referrerPolicy="no-referrer"
                   />

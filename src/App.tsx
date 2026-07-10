@@ -22,31 +22,42 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "projects", "clients", "our-team", "values", "leaders", "faq", "contact"];
-      const scrollPos = window.scrollY + 200; // Offset trigger point
-
+      const headerHeight = 100; // Trigger threshold
+      
+      let currentSection = "home";
+      
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-
-          if (scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
-            setActiveSection(sectionId);
+          const rect = element.getBoundingClientRect();
+          // If the top of the section is near or above the header trigger point,
+          // and the bottom of the section is still below the trigger point
+          if (rect.top <= headerHeight + 20 && rect.bottom > headerHeight + 20) {
+            currentSection = sectionId;
             break;
           }
         }
       }
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll handler targeting elements directly
+  // Smooth scroll handler targeting elements directly with fixed header offset correction
   const handleNavigation = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const headerOffset = 90; // Precise height of the fixed navbar
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setActiveSection(sectionId);
     }
   };
@@ -170,12 +181,12 @@ export default function App() {
         {/* Main Agency Content Showcase */}
         <main id="main-content">
           <Hero onLearnMore={handleNavigation} />
-          <div className="content-visibility-lazy optimize-gpu"><Projects /></div>
-          <div className="content-visibility-lazy optimize-gpu"><Clients /></div>
-          <div className="content-visibility-lazy optimize-gpu"><OurTeam /></div>
-          <div className="content-visibility-lazy optimize-gpu"><Values /></div>
-          <div className="content-visibility-lazy optimize-gpu"><Leaders /></div>
-          <div className="content-visibility-lazy optimize-gpu"><Faq /></div>
+          <div className="optimize-gpu"><Projects /></div>
+          <div className="optimize-gpu"><Clients /></div>
+          <div className="optimize-gpu"><OurTeam /></div>
+          <div className="optimize-gpu"><Values /></div>
+          <div className="optimize-gpu"><Leaders /></div>
+          <div className="optimize-gpu"><Faq /></div>
         </main>
   
         {/* Footer and Inquiry capture area */}

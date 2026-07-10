@@ -209,7 +209,7 @@ export default function ProjectSpotlight({
                         : "border-gray-200 dark:border-white/10 hover:border-gray-400 opacity-70 hover:opacity-100"
                     }`}
                   >
-                    <img src={img} alt="Thumbnail view" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
+                    <img src={img} alt="Thumbnail view" loading="lazy" referrerPolicy="no-referrer" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-black/10 hover:bg-transparent" />
                   </button>
                 ))}

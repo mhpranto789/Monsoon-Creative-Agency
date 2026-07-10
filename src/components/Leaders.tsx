@@ -90,6 +90,7 @@ export default function Leaders() {
                     <img
                       src={leader.imageUrl}
                       alt={leader.name}
+                      loading="lazy"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-102 transition-all duration-700 ease-out"
                     />
