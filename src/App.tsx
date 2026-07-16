@@ -146,7 +146,7 @@ export default function App() {
         />
 
         {/* High-fidelity Frosted Glass Overlay Pane */}
-        <div className="absolute inset-0 bg-[#050505]/75 backdrop-blur-[70px] md:backdrop-blur-[100px]" />
+        <div className="absolute inset-0 bg-[#050505]/85 backdrop-blur-[8px]" />
       </div>
 
       {/* Actual page markup floating on top of the glass pane */}

@@ -65,7 +65,7 @@ export default function CreativeBurst() {
 
   useEffect(() => {
     const list: Particle[] = [];
-    const totalCount = 28; // Reduced count for pristine, non-cluttered visuals
+    const totalCount = 14; // Optimized count for high performance and clean visual flow
 
     for (let i = 0; i < totalCount; i++) {
       const kind = i % 2 === 0 ? "shape" : "word";
