@@ -49,7 +49,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-transparent flex flex-col justify-center overflow-hidden pt-24 transition-colors duration-400"
+      className="relative min-h-screen bg-[#050505] flex flex-col justify-center overflow-hidden pt-24 transition-colors duration-400"
     >
       {/* Premium custom animated background with 3 core words */}
       <div className="absolute inset-0 z-0 overflow-hidden select-none pointer-events-none">
@@ -198,7 +198,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
 
         {/* Vignette & Contrast Overlay */}
         <div 
-          className="absolute inset-0 bg-gradient-to-b from-[#FAFAF9]/40 via-transparent to-[#FAFAF9] dark:from-[#050505]/40 dark:via-transparent dark:to-[#050505] transition-colors duration-400" 
+          className="absolute inset-0 bg-gradient-to-b from-[#050505]/40 via-transparent to-[#050505]" 
           aria-hidden="true"
         />
       </div>
@@ -210,12 +210,12 @@ export default function Hero({ onLearnMore }: HeroProps) {
             
             {/* Left Column: Headline and Narrative */}
             <div className="lg:col-span-7 space-y-8 w-full">
-              <h1 id="hero-title" className="font-display text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-black dark:text-white leading-[1.05]">
+              <h1 id="hero-title" className="font-display font-extrabold tracking-tight text-black dark:text-white leading-[1.05]">
                 <motion.span
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
-                  className="block text-white font-light text-4xl sm:text-6xl lg:text-7xl mb-1"
+                  className="block text-white font-light text-2xl sm:text-5xl md:text-6xl lg:text-7xl mb-1"
                 >
                   Welcome to
                 </motion.span>
@@ -223,7 +223,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="block text-sky-400 relative min-h-[1.15em] whitespace-nowrap"
+                  className="block text-sky-400 relative min-h-[1.15em] whitespace-nowrap text-3xl sm:text-6xl md:text-7xl lg:text-8xl"
                 >
                   {currentText}
                   <span className="text-brand-primary inline-block animate-pulse font-extrabold ml-1">.</span>
