@@ -100,7 +100,7 @@ export default function ProjectSpotlight({
   ];
 
   const defaultQuote = {
-    text: "Monsoon didn't just meet our brand brief; they shattered the usual expectations, creating an emotional bridge that Dhaka actually stopped to look at.",
+    text: "Alt DOT Creative didn't just meet our brand brief; they shattered the usual expectations, creating an emotional bridge that Dhaka actually stopped to look at.",
     author: "Senior Brand Director",
     role: "National FMCG Division"
   };
@@ -468,7 +468,7 @@ export default function ProjectSpotlight({
                 }}
                 className="btn-liquid-glass-primary w-full flex items-center justify-center space-x-2 text-sm font-sans font-bold py-4 transition-all rounded-full cursor-pointer hover:scale-[1.01] active:scale-[0.99] shadow-md hover:shadow-lg duration-200"
               >
-                <span>Partner with Monsoon on similar brief</span>
+                <span>Partner with Alt DOT Creative on similar brief</span>
                 <ExternalLink size={13} />
               </button>
               

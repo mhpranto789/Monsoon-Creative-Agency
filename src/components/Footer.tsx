@@ -175,7 +175,7 @@ export default function Footer() {
                 <div className="flex space-x-3">
                   <a 
                     href="https://facebook.com" 
-                    aria-label="Follow Monsoon on Facebook"
+                    aria-label="Follow Alt DOT Creative on Facebook"
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
@@ -184,7 +184,7 @@ export default function Footer() {
                   </a>
                   <a 
                     href="https://linkedin.com" 
-                    aria-label="Connect with Monsoon on LinkedIn"
+                    aria-label="Connect with Alt DOT Creative on LinkedIn"
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
@@ -193,7 +193,7 @@ export default function Footer() {
                   </a>
                   <a 
                     href="https://instagram.com" 
-                    aria-label="Follow Monsoon on Instagram"
+                    aria-label="Follow Alt DOT Creative on Instagram"
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-15 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
@@ -202,7 +202,7 @@ export default function Footer() {
                   </a>
                   <a 
                     href="https://twitter.com" 
-                    aria-label="Follow Monsoon on Twitter"
+                    aria-label="Follow Alt DOT Creative on Twitter"
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
@@ -338,7 +338,7 @@ export default function Footer() {
                     ) : (
                       <>
                         <Send size={14} />
-                        <span>Deliver Brief to Monsoon</span>
+                        <span>Deliver Brief to Alt DOT Creative</span>
                       </>
                     )}
                   </button>
@@ -360,7 +360,7 @@ export default function Footer() {
                       Brief Received Successfully!
                     </h4>
                     <p className="font-sans text-xs text-gray-550 dark:text-gray-400 max-w-sm leading-relaxed mb-6">
-                      An Account Director at Monsoon Dhaka is already reviewing your details. We will touch base shortly.
+                      An Account Director at Alt DOT Creative is already reviewing your details. We will touch base shortly.
                     </p>
                     <button
                       id="close-success-toast"
@@ -407,7 +407,7 @@ export default function Footer() {
         {/* Footer Base Linkages and Credits */}
         <div className="border-t border-gray-200 dark:border-white/10 pt-12 mt-12 flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="flex items-center space-x-3 text-xs text-gray-400 dark:text-gray-550 font-mono">
-            <span>© {new Date().getFullYear()} MONSOON. Dhaka, Bangladesh.</span>
+            <span>© {new Date().getFullYear()} Alt DOT Creative. Dhaka, Bangladesh.</span>
             <span>|</span>
             <span className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Privacy Charter</span>
           </div>

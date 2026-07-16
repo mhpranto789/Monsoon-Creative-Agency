@@ -148,7 +148,7 @@ export default function CreativeBurst() {
         >
           <motion.img
             src="https://lh3.googleusercontent.com/d/1Mrc0IVEDVeYsh7w8THAYnKE4nBiD5QlF"
-            alt="Monsoon Creative Visual"
+            alt="Alt DOT Creative Visual"
             referrerPolicy="no-referrer"
             animate={{
               y: [0, -18, 0],

@@ -8,7 +8,7 @@ interface HeroProps {
 }
 
 export default function Hero({ onLearnMore }: HeroProps) {
-  const words = ["Monsoon", "Storytelling", "Brand Action", "Innovation"];
+  const words = ["Alt DOT Creative", "Storytelling", "Brand Action", "Innovation"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -223,7 +223,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="block text-sky-400 relative min-h-[1.15em]"
+                  className="block text-sky-400 relative min-h-[1.15em] whitespace-nowrap"
                 >
                   {currentText}
                   <span className="text-brand-primary inline-block animate-pulse font-extrabold ml-1">.</span>

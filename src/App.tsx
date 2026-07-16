@@ -155,22 +155,22 @@ export default function App() {
           React 19 Native Metadata Hoisting
           These tags will automatically move to the HTML <head> for clean SEO indexing
         */}
-        <title>Monsoon Creative Agency | Modern Creative Agency Dhaka</title>
+        <title>Alt DOT Creative | Innovative Brand Marketing & Communication Solutions</title>
         <meta 
           name="description" 
-          content="Monsoon Creative Agency is Dhaka's premier creative brand communications and experiential activation agency. Specialized in brand strategy, high-octane launch events, design and cinematic TVCs." 
+          content="We provide innovative, integrated brand marketing and communication solutions designed to spark human connections, shatter expectations, and rewrite brand narratives from the ground up." 
         />
-        <meta name="keywords" content="Creative Agency Dhaka, Brand Marketing Bangladesh, Coke Studio Bangla agency, Experiential Marketing Banani, Monsoon Creative Agency, Monsoon" />
-        <meta name="author" content="Monsoon Creative Agency" />
+        <meta name="keywords" content="Alt DOT Creative, brand marketing, integrated marketing, communication solutions, brand narratives, digital strategy, creative agency, consumer psychology, market research" />
+        <meta name="author" content="Alt DOT Creative" />
         
         {/* Open Graph Meta tags */}
-        <meta property="og:title" content="Monsoon Creative Agency | Modern Creative Brand & Experiential Agency" />
-        <meta property="og:description" content="Shattering cookie-cutter templates to deliver beautiful, emotional and high-impact campaigns across Bangladesh." />
+        <meta property="og:title" content="Alt DOT Creative | Innovative Brand Marketing & Communication Solutions" />
+        <meta property="og:description" content="We provide innovative, integrated brand marketing and communication solutions designed to spark human connections, shatter expectations, and rewrite brand narratives from the ground up." />
         <meta property="og:type" content="website" />
         
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Monsoon Creative Agency | Creative Agency" />
+        <meta name="twitter:title" content="Alt DOT Creative | Innovative Brand Marketing" />
   
         {/* Structured Nav Header */}
         <Navbar 

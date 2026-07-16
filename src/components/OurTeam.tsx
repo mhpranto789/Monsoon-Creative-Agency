@@ -109,7 +109,7 @@ export default function OurTeam() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div className="max-w-2xl space-y-4">
             <span className="font-mono text-xs font-bold text-[#FF2B5E] tracking-widest uppercase block">
-              The Minds Behind Monsoon
+              The Minds Behind Alt DOT Creative
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-tight">
               Meet the Creative Fire starters<span className="text-[#FF2B5E]">.</span>

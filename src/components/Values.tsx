@@ -67,7 +67,7 @@ export default function Values() {
           </div>
           <div className="lg:col-span-7">
             <p className="font-sans text-lg text-gray-500 dark:text-gray-400 font-light leading-relaxed">
-              We started Monsoon Creative Agency with a single, clear mission: to build a creative powerhouse that puts <strong className="font-medium text-black dark:text-white">human connections</strong> before agency margins. We believe in crafting campaigns that citizens actually want to witness — campaigns that invoke tears, laughter, and cultural pride rather than billboard noise.
+              We started Alt DOT Creative with a single, clear mission: to provide innovative, integrated brand marketing and communication solutions designed to spark human connections, shatter expectations, and rewrite brand narratives from the ground up.
             </p>
           </div>
         </motion.div>

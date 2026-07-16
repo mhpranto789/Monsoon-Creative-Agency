@@ -13,7 +13,7 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: "creative-approach",
     category: "Philosophy",
-    question: "How does Monsoon approach creative brand campaigns?",
+    question: "How does Alt DOT Creative approach creative brand campaigns?",
     answer: "We reject boilerplates and pre-packaged international models. We begin with dense ethnographic local research—tuning into the authentic cultural codes, street semantics, and emotional frequencies that define Bangladeshi communities. We then translate these insights into highly original cinematic, digital, or physical experiences that feel deeply native yet internationally polished."
   },
   {
@@ -25,7 +25,7 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: "design-philosophy",
     category: "Philosophy",
-    question: "What defines Monsoon's specific typography and styling system?",
+    question: "What defines Alt DOT Creative's specific typography and styling system?",
     answer: "We believe in high-contrast editorial minimalism. We pair elegant, high-profile modern typography (like Inter and JetBrains Mono) with crisp, monospace data labels and razor-sharp borders. We avoid low-value gradients or visual 'AI slop' so that our layout remains clean, deliberate, and premium."
   },
   {
@@ -38,12 +38,12 @@ const FAQ_DATA: FaqItem[] = [
     id: "brand-partners",
     category: "Services",
     question: "Do you only partner with corporate conglomerates?",
-    answer: "Not exclusively. While our core roster features multinational FMCG leaders, automotive makers, and telecom giants, we believe in supporting local innovators, direct-to-consumer labels, and cultural groups. If a brand has the ambition to speak to citizens with raw integrity, they are a fit for Monsoon."
+    answer: "Not exclusively. While our core roster features multinational FMCG leaders, automotive makers, and telecom giants, we believe in supporting local innovators, direct-to-consumer labels, and cultural groups. If a brand has the ambition to speak to citizens with raw integrity, they are a fit for Alt DOT Creative."
   },
   {
     id: "onboarding-process",
     category: "Process",
-    question: "How can a prospective partner initiate a project with Monsoon?",
+    question: "How can a prospective partner initiate a project with Alt DOT Creative?",
     answer: "We bypass standard agency markup fluff. You start with a direct strategic session with our art and account directors. We discuss your real spatial constraints, emotional goals, or technical queries, and return with a razor-focused roadmap detailing honest budgets and targeted activation metrics."
   }
 ];

@@ -34,7 +34,7 @@ const PROJECTS_DATA: Project[] = [
       { label: "Earned Media Multiplier", value: "6.8x", subtext: "National news coverage value" }
     ],
     clientQuote: {
-      text: "Monsoon turned our activation brief into a historic cultural milestone for music lovers in Bangladesh. Unbelievable precision on tight schedules.",
+      text: "Alt DOT Creative turned our activation brief into a historic cultural milestone for music lovers in Bangladesh. Unbelievable precision on tight schedules.",
       author: "Lead Experiential Officer",
       role: "Coke Studio Bangla Portfolio"
     },
@@ -104,7 +104,7 @@ const PROJECTS_DATA: Project[] = [
       { label: "Positive organic brand love", value: "98.1%", subtext: "Filtered comments classification index" }
     ],
     clientQuote: {
-      text: "Monsoon crafted an experience that merged corporate utility with genuine raw folk pride. Users felt the connection instantly on Boishakh morning.",
+      text: "Alt DOT Creative crafted an experience that merged corporate utility with genuine raw folk pride. Users felt the connection instantly on Boishakh morning.",
       author: "Corporate PR Director",
       role: "bKash Brand Core Committee"
     },
@@ -314,7 +314,7 @@ const PROJECTS_DATA: Project[] = [
       { label: "In-store Booklet Handouts", value: "45,000", subtext: "Coordinated distribution networks" }
     ],
     clientQuote: {
-      text: "Monsoon crafted a guide that parents kept as a true family keepsake. The design language is exceptionally comforting.",
+      text: "Alt DOT Creative crafted a guide that parents kept as a true family keepsake. The design language is exceptionally comforting.",
       author: "Lead Nutrition Specialist",
       role: "Nestlé Nutrition Division"
     },
@@ -524,7 +524,7 @@ const PROJECTS_DATA: Project[] = [
       { label: "Service Net Income uplift", value: "1.4x", subtext: "Direct tracking feedback" }
     ],
     clientQuote: {
-      text: "The dignity and cinematic focus Monsoon placed on our service heroes was profoundly inspiring.",
+      text: "The dignity and cinematic focus Alt DOT Creative placed on our service heroes was profoundly inspiring.",
       author: "VP Core Strategy",
       role: "Sheba Platform Ltd. Bangladesh"
     },

@@ -57,14 +57,14 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
             className="group flex items-center space-x-2 text-left cursor-pointer transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
             <div className="relative w-8 h-8 bg-white flex items-center justify-center font-bold text-black text-lg rounded-lg transition-transform group-hover:rotate-12 duration-300 shadow-sm">
-              <span className="font-display">m</span>
+              <span className="font-display">A</span>
             </div>
             <div>
               <span className="font-display font-black text-xl tracking-tight text-white block">
-                Monsoon
+                Alt DOT
               </span>
               <span className="font-mono text-[9px] tracking-widest text-gray-400 uppercase block -mt-1">
-                Creative Agency
+                Creative
               </span>
             </div>
           </button>
@@ -153,7 +153,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
               <span className="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-1">
                 Say Hello
               </span>
-              <p className="text-gray-200 font-medium">hello@monsoon.agency</p>
+              <p className="text-gray-200 font-medium">hello@altdot.creative</p>
               <p className="text-gray-400 text-sm">House 42, Road 11, Banani, Dhaka</p>
             </div>
           </motion.div>
