@@ -8,7 +8,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "coke-studio",
     title: "Coke Studio Bangla 2023",
-    category: "Experiential",
+    category: "Digital Marketing",
     type: "Experiential & Live Brand Campaign",
     year: "2023",
     description: "Re-imagined the live music experience across Bangladesh, executing multi-touchpoint sound stages, immersive venue setups, and cultural art fusions that gathered over 20,000 passionate music fans in-person.",
@@ -42,43 +42,43 @@ const PROJECTS_DATA: Project[] = [
   },
   {
     id: "honda-sp125",
-    title: "Honda SP125 Launch",
-    category: "Creative",
-    type: "National ATL Launch & TVC Development",
+    title: "Ventura Sky Villa Launch",
+    category: "Real Estate",
+    type: "Premium Real Estate Launch & VR Experience",
     year: "2024",
-    description: "Crafted a high-octane visual identity and television commercial highlighting speed, safety, and modern design aesthetics. Redefined the 125cc tier with bold typography and cinematic camera narratives.",
-    imageUrl: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80",
-    stats: { label: "Pre-Orders & Dealer Inquiries", value: "3.4" },
+    description: "Crafted a high-octane visual identity and digital launch strategy for Gulshan's most exclusive penthouses. Redefined the premium residential tier with interactive 3D spatial mapping, high-contrast typography, and cinematic CGI walk-throughs.",
+    imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Fully Booked Residences", value: "100%" },
     campaignGoals: [
-      "Cinematic Directing in high-definition low-light environments",
-      "Interactive 3D Projection mapping launches across regional dealer hubs",
-      "OOH Static Dominance in major arterial roads of Dhaka and Chittagong"
+      "Cinematic CGI directing of daylight spatial elements",
+      "Interactive 3D walkthrough launches in regional elite private lounges",
+      "OOH premium dominance targeting high-net-worth neighborhoods of Dhaka"
     ],
-    tagline: "Redefining street mechanics with premium high-contrast visual narratives.",
-    timeline: "6-Week TVC & ATL Pipeline",
-    channelsUsed: ["Cinematic TVC Production", "Interactive Showrooms", "Mega OOH Static Bilboards"],
+    tagline: "Redefining structural mechanics with premium high-contrast architectural narratives.",
+    timeline: "6-Week Ultra-Premium Pipeline",
+    channelsUsed: ["Cinematic CGI Production", "Interactive Sales Lounge", "High-Net-Worth targeted Digital Marketing"],
     galleryImages: [
-      "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
     ],
     metricsDetail: [
-      { label: "Total Digital Impressions", value: "14.8M", subtext: "YouTube & Meta premium bumper spots" },
-      { label: "Showroom Inquiries Uplift", value: "+340%", subtext: "Audited via dealer CRM portals" },
-      { label: "Cinema Recall Accuracy", value: "88.5%", subtext: "Post-launch focus group analysis" }
+      { label: "High-Net-Worth Reach", value: "2.4M+", subtext: "Targeted digital and exclusive private invites" },
+      { label: "Direct Penthouse Bookings", value: "100%", subtext: "All 12 custom units claimed within 21 days" },
+      { label: "Showroom Inquiries Uplift", value: "+340%", subtext: "Verified via Ventura CRM portal" }
     ],
     clientQuote: {
-      text: "The cinematic tone paired with localized street semantics completely revolutionized the marketing playbook for our commuter line.",
-      author: "Marketing Strategist",
-      role: "Bangladesh Honda Private Ltd."
+      text: "Alt DOT Creative redefined how luxury properties are launched in Bangladesh. The virtual experience was a masterpiece of storytelling.",
+      author: "Chief Operations Officer",
+      role: "Ventura Properties Ltd."
     },
     youtubeId: "99DVbQJQomE"
   },
   {
     id: "bkash-boishakh",
     title: "bKash Pure Bangla Boishakh",
-    category: "Creative",
+    category: "Creative Graphics",
     type: "Creative Strategy & Brand Illustration",
     year: "2024",
     description: "A digital-first cultural art campaign combining traditional Bangladeshi folk illustrations with ultra-sleek UI elements. Included user-generated dynamic greeting generators and customized app stickers.",
@@ -112,43 +112,43 @@ const PROJECTS_DATA: Project[] = [
   },
   {
     id: "gp-future",
-    title: "Grameenphone Future-Ready",
-    category: "Experiential",
-    type: "Corporate Tech Summit & Experiential Portal",
+    title: "Shanta Pinnacle Experience",
+    category: "Real Estate",
+    type: "Premium Real Estate Spatial & VR Experience",
     year: "2023",
-    description: "Designed a multi-sensory interactive tunnel utilizing motion-triggered LED projections and real-time AI analytics mapping. Provided key stakeholders with an unforgettable immersion into future connectivity.",
-    imageUrl: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80",
-    stats: { label: "Executive NPS Rating Score", value: "2.8" },
+    description: "Designed an elite interactive sales suite and architectural presentation tunnel for Shanta's landmark commercial tower. Combined motion-triggered smart projection mapping with real-time analytics to pitch high-value spaces.",
+    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Commercial Space Leased", value: "85%" },
     campaignGoals: [
-      "Design spatial 3D blueprint for complex LED physical interactive tunnel",
-      "Synchronize multi-channel directional soundscapes matching visual motions",
-      "Track corporate visitor engagement to showcase telecommunications impact"
+      "Design spatial 3D blueprint for complex interactive sales lounge",
+      "Synchronize multi-channel directional soundscapes with high-end luxury graphics",
+      "Track corporate visitor engagement to showcase architectural impacts"
     ],
-    tagline: "Synthesizing spatial projection and electronic sensors for telecommunication portals.",
-    timeline: "5-Week Design & Hardware Fabrication",
-    channelsUsed: ["LED Spatial Blueprints", "Electronic Motion Sensors", "Spatial Audio choreography"],
+    tagline: "Synthesizing spatial projection and electronic sensors for landmark real estate portals.",
+    timeline: "5-Week Design & Fabrication",
+    channelsUsed: ["Spatial Layout Blueprints", "Interactive Interactive Screen Guides", "Direct B2B outreach"],
     galleryImages: [
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
     ],
     metricsDetail: [
-      { label: "VIP Leader Interactions", value: "2,500+", subtext: "Validated on-board executive credentials" },
-      { label: "Event NPS Score", value: "98.8%", subtext: "Verified through digital polling" },
-      { label: "B2B Lead Pipeline value", value: "$4.1M", subtext: "Strategic contracts initiated" }
+      { label: "VIP Investors Engaged", value: "1,500+", subtext: "High-net-worth leads verified" },
+      { label: "Space Leased Within Month", value: "85%", subtext: "Strategic contracts closed" },
+      { label: "Project Investment Pipeline", value: "$14.1M", subtext: "Direct commercial acquisition leads" }
     ],
     clientQuote: {
-      text: "They designed a portal that set new benchmarks for professional stakeholder events in Bangladesh.",
-      author: "Head of Experiential Events",
-      role: "Grameenphone Corporate Marketing"
+      text: "They designed a real estate portal that set new benchmarks for commercial property marketing in South Asia.",
+      author: "Director of Asset Management",
+      role: "Shanta Holdings Limited"
     },
     youtubeId: "uiIK9jQbhRA"
   },
   {
     id: "aarong-fashion",
     title: "Aarong Luxury Autumn",
-    category: "Creative",
+    category: "Creative Graphics",
     type: "Premium Editorial Catalog & Social Strategy",
     year: "2023",
     description: "Directed an elegant, high-contrast lifestyle photoshoot for Aarong's flagship Autumn collection, utilizing deep terracotta clays and natural light profiles to capture heritage in a contemporary silhouette.",
@@ -183,7 +183,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "pepsi-soundwave",
     title: "Pepsi Soundwave Activations",
-    category: "Experiential",
+    category: "Digital Marketing",
     type: "Multi-City Experiential Music Tour",
     year: "2024",
     description: "Built fully sensory, branded sound-booths equipped with voice-activated light walls where festival visitors could craft custom musical beats and receive hyper-personalized digital dynamic souvenirs.",
@@ -218,7 +218,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "sunsilk-divas",
     title: "Sunsilk Fashion Divas",
-    category: "Creative",
+    category: "Digital Marketing",
     type: "Digital Campaign & Custom Influencer Filters",
     year: "2024",
     description: "An interactive, digital-native beauty pageant campaign enabling Sunsilk hair-styling enthusiasts in Bangladesh to style and share virtual avatars using dynamic AR face-recognition tools.",
@@ -253,7 +253,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "robi-independence",
     title: "Robi Victory Projection",
-    category: "Experiential",
+    category: "Digital Marketing",
     type: "National Day 3D Projection Mapping",
     year: "2023",
     description: "Executed a massive night-time 3D spatial video projection mapping on heritage structures in Dhaka, highlighting independent connectivity achievements of Robi subscribers through high-lumen lasers.",
@@ -288,7 +288,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "nido-parent",
     title: "Nestlé Nido Parent Pride",
-    category: "Creative",
+    category: "Creative Graphics",
     type: "Premium Editorial Guide & Healthcare Portal",
     year: "2024",
     description: "Styled a warm, heritage-friendly digital handbook and high-contrast print companion celebrating early childhood milestones. Emphasized clean interior styling and interactive health parameters.",
@@ -323,7 +323,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "pathao-ride",
     title: "Pathao Commuter Pride",
-    category: "Creative",
+    category: "Creative Graphics",
     type: "Commuter Safety Styling & Transit Campaign",
     year: "2023",
     description: "Designed stylized protective rider clothing and commuters' gear. Blended iconic rickshaw folk geometry with high-contrast warning elements to make road safety look cool and recognizable.",
@@ -357,43 +357,43 @@ const PROJECTS_DATA: Project[] = [
   },
   {
     id: "cineplex-redcarpet",
-    title: "Star Cineplex Dune Gala",
-    category: "Experiential",
-    type: "Premium Spatial Rigging & VIP Experience",
+    title: "Navana Green Cascade",
+    category: "Real Estate",
+    type: "Eco-Luxury Real Estate Launch",
     year: "2024",
-    description: "Designed and built an architectural block entry tunnel featuring physical red deserts, dramatic focus lights, and camera tracks for Dhaka's elite film premier evening.",
-    imageUrl: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1200&q=80",
-    stats: { label: "VIP Reach & Digital Broadcast", value: "4.5" },
+    description: "Designed a premium, sustainable digital campaign and physical experiential space for Navana's flagship eco-luxury residential tower. Created a modern visual branding system and high-fidelity VR walkthrough.",
+    imageUrl: "https://images.unsplash.com/photo-1448630360428-654a95b31fc5?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Digital ROI Conversion", value: "4.5x" },
     campaignGoals: [
-      "Deploy deep scenic sand layouts portraying futuristic cinematic environments",
-      "Assemble high-speed camera tracks to capture automated celebrity entry clips",
-      "Encode slow-motion templates with dynamic musical tracks for immediate sharing"
+      "Develop custom brand guidelines and eco-luxury digital visual assets",
+      "Assemble premium virtual reality showcase for direct sales integration",
+      "Deploy targeted social campaigns highlighting architectural sustainability"
     ],
-    tagline: "Staging immersive premiere formats with elite hardware and volumetric light designs.",
-    timeline: "3-Week Intensive Assembly Setup",
-    channelsUsed: ["Spatial Tunnel Rigging", "Motion Camera Tracks", "Celebrity Video Portals"],
+    tagline: "Staging eco-luxury residence formats with elite digital branding and immersive VR.",
+    timeline: "3-Week Intensive Digital Rollout",
+    channelsUsed: ["Eco-Luxury Brand Design", "Targeted Social Funnels", "High-Fidelity Virtual Reality Tours"],
     galleryImages: [
-      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1448630360428-654a95b31fc5?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
     ],
     metricsDetail: [
-      { label: "Executive & Star Guests", value: "480+", subtext: "Audited invite check-ins" },
-      { label: "Co-Branded Social Buzz", value: "4.5M+", subtext: "Organic shares by VIP attendees" },
-      { label: "Brand Recall Score", value: "98.2%", subtext: "Post-event questionnaires feedback" }
+      { label: "Qualified Investor Leads", value: "1,200+", subtext: "Verified high-intent inquiries" },
+      { label: "Target Audience reach", value: "4.5M+", subtext: "Premium demographic distribution" },
+      { label: "Brand Recall Accuracy", value: "98.2%", subtext: "Audited post-campaign feedback" }
     ],
     clientQuote: {
-      text: "Literally the premier red carpet layout Dhaka has ever witnessed. The spatial framing was majestic.",
-      author: "Group PR Director",
-      role: "Star Cineplex Group Bangladesh"
+      text: "Literally the premier property campaign Dhaka has witnessed. The eco-luxury branding matched our architectural vision perfectly.",
+      author: "Director of Brand Marketing",
+      role: "Navana Real Estate Group"
     },
     youtubeId: "_vQ6qV5ZJ8E"
   },
   {
     id: "radhuni-feasts",
     title: "Radhuni Boishakhi Feasts",
-    category: "Creative",
+    category: "Digital Marketing",
     type: "Voice Interactive Cooking & Digital Portal",
     year: "2024",
     description: "Built a responsive, hands-free cooking assistant for traditional Bangladeshi home kitchens, featuring chef guides, cultural illustration backdrops, and interactive recipe checklists.",
@@ -428,7 +428,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "airtel-tour",
     title: "Airtel Student Campus Gigs",
-    category: "Experiential",
+    category: "Digital Marketing",
     type: "Underground Campus Concert Series",
     year: "2023",
     description: "Coordinated a high-octane 12-campus tour showcasing localized indie music bands, high-contrast neon photography domes, and modern cloud gaming portals for university students.",
@@ -463,7 +463,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "apex-crafts",
     title: "Apex Heritage Handmade",
-    category: "Creative",
+    category: "Creative Graphics",
     type: "Editorial Modeling & Craft Documentary",
     year: "2024",
     description: "Framed an elegant lifestyle photography session for Apex's premium leather shoes, showcasing handcrafted leather weaving and traditional sustainable methods inside histortical quarters.",
@@ -498,7 +498,7 @@ const PROJECTS_DATA: Project[] = [
   {
     id: "sheba-portraits",
     title: "Sheba Comfort Heroes",
-    category: "Creative",
+    category: "Creative Graphics",
     type: "Transit PR & Short Cinematic Stories",
     year: "2023",
     description: "Designed a city-wide public transport transit campaign highlighting domestic electricians and technicians. Enhanced the dignity of skilled service heroes with cinema-quality close-ups.",
@@ -531,7 +531,7 @@ const PROJECTS_DATA: Project[] = [
     youtubeId: "b-FstjK8q3U"
   }
 ];export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState<'All' | 'Creative' | 'Experiential'>('All');
+  const [selectedCategory, setSelectedCategory] = useState<'All' | 'Digital Marketing' | 'Creative Graphics' | 'Real Estate'>('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showAll, setShowAll] = useState(false);
 
@@ -554,11 +554,11 @@ const PROJECTS_DATA: Project[] = [
           </div>
 
           {/* Tab Filters */}
-          <div className="flex items-center space-x-1 border border-gray-200 dark:border-white/10 p-1 bg-white dark:bg-[#121212] inline-flex self-start md:self-auto rounded-full shadow-sm transition-all duration-200">
-            {(['All', 'Creative', 'Experiential'] as const).map((cat) => (
+          <div className="flex flex-wrap items-center gap-1 border border-gray-200 dark:border-white/10 p-1 bg-white dark:bg-[#121212] rounded-full shadow-sm transition-all duration-200">
+            {(['All', 'Digital Marketing', 'Creative Graphics', 'Real Estate'] as const).map((cat) => (
               <button
                 key={cat}
-                id={`filter-${cat}`}
+                id={`filter-${cat.replace(/\s+/g, '-').toLowerCase()}`}
                 onClick={() => {
                   setSelectedCategory(cat);
                   setShowAll(false);

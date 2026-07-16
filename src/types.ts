@@ -7,7 +7,7 @@ export interface ProjectMetric {
 export interface Project {
   id: string;
   title: string;
-  category: 'Creative' | 'Experiential';
+  category: 'Digital Marketing' | 'Creative Graphics' | 'Real Estate';
   type: string;
   year: string;
   description: string;

@@ -107,7 +107,7 @@ export default function ProjectSpotlight({
 
   const quote = project.clientQuote || defaultQuote;
   const timeline = project.timeline || "6-Week Full Production Lifecycle";
-  const tagline = project.tagline || `Transforming ordinary touchpoints into extraordinary digital & physical ${project.category === "Experiential" ? "summits" : "storytelling"}.`;
+  const tagline = project.tagline || `Transforming ordinary touchpoints into extraordinary digital & physical ${project.category === "Real Estate" ? "spaces" : "storytelling"}.`;
   const channels = project.channelsUsed || [
     "Experiential BTL Venues", 
     "Cinematic TVC", 
