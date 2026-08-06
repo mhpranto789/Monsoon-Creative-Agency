@@ -58,9 +58,13 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
           >
             <div className="relative w-9 h-9 md:w-10 md:h-10 bg-white/10 dark:bg-black/40 border border-white/20 rounded-lg p-1 flex items-center justify-center transition-transform group-hover:scale-105 duration-300 shadow-sm overflow-hidden">
               <img 
-                src="/logo.png" 
+                src="https://lh3.googleusercontent.com/d/1bhLdxR_M7FNQRzx93QDXM2nnKB2-kNuL" 
                 alt="Alt DOT Creative Logo" 
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-contain rounded"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "/logo.png";
+                }}
               />
             </div>
             <div>
