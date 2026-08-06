@@ -157,12 +157,30 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
               ))}
             </nav>
  
-            <div className="border-t border-white/10 py-8 mb-4 space-y-2">
+            <div className="border-t border-white/10 py-6 mb-4 space-y-3">
               <span className="font-mono text-xs text-gray-400 uppercase tracking-wider block mb-1">
-                Say Hello
+                Say Hello & Inquiries
               </span>
-              <p className="text-gray-200 font-medium">hello@altdot.creative</p>
-              <p className="text-gray-400 text-sm">House 42, Road 11, Banani, Dhaka</p>
+              <div>
+                <a 
+                  href="mailto:mhpranto789@gmail.com" 
+                  className="text-white hover:text-brand-primary font-medium transition-colors block text-base"
+                >
+                  mhpranto789@gmail.com
+                </a>
+              </div>
+              <div className="pt-1">
+                <p className="text-gray-300 text-sm font-medium">House 18, Road 01, Block B, Niketon</p>
+                <p className="text-gray-400 text-xs font-light">Gulshan 1, Dhaka, Bangladesh</p>
+              </div>
+              <div className="pt-1">
+                <a 
+                  href="tel:+8801634415619" 
+                  className="text-gray-300 hover:text-white text-xs font-mono transition-colors block"
+                >
+                  +8801634415619
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
