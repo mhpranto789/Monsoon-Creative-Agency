@@ -108,11 +108,11 @@ export default function OurTeam() {
         {/* Editorial Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div className="max-w-2xl space-y-4">
-            <span className="font-mono text-xs font-bold text-[#FF2B5E] tracking-widest uppercase block">
+            <span className="font-mono text-xs font-bold text-[#e83e27] tracking-widest uppercase block">
               The Minds Behind Alt DOT Creative
             </span>
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-tight">
-              Meet the Creative Fire starters<span className="text-[#FF2B5E]">.</span>
+              Meet the Creative Fire starters<span className="text-[#e83e27]">.</span>
             </h2>
           </div>
 
@@ -132,7 +132,7 @@ export default function OurTeam() {
                 {filter === spec && (
                   <motion.div
                     layoutId="activeTeamSpecialtyPill"
-                    className="absolute inset-0 bg-black dark:bg-[#FF2B5E] rounded-lg z-0"
+                    className="absolute inset-0 bg-black dark:bg-[#e83e27] rounded-lg z-0"
                     transition={{ type: "spring", stiffness: 380, damping: 28 }}
                   />
                 )}
@@ -157,7 +157,7 @@ export default function OurTeam() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                className="group flex flex-col justify-between bg-[#FAFAF9] dark:bg-[#0E0F12] border border-gray-150 dark:border-white/10 p-6 hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
+                className="group flex flex-col justify-between bg-[#FAFAF9] dark:bg-[#0E0F12] border border-gray-150 dark:border-white/10 p-6 hover:border-[#e83e27] dark:hover:border-[#e83e27] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
               >
                 <div>
                   {/* Portrait Container */}
@@ -171,13 +171,13 @@ export default function OurTeam() {
                     />
                     
                     {/* Specialty overlay tag */}
-                    <div className="absolute top-4 left-4 bg-black dark:bg-[#FF2B5E] text-white text-[9px] font-mono tracking-widest font-bold uppercase px-3 py-1 z-10">
+                    <div className="absolute top-4 left-4 bg-black dark:bg-[#e83e27] text-white text-[9px] font-mono tracking-widest font-bold uppercase px-3 py-1 z-10">
                       {member.specialty}
                     </div>
 
                     {/* Gradient shading overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 pointer-events-none">
-                      <span className="font-mono text-[10px] text-[#FF2B5E] font-bold tracking-wider uppercase mb-1">
+                      <span className="font-mono text-[10px] text-[#e83e27] font-bold tracking-wider uppercase mb-1">
                         Perspective
                       </span>
                       <p className="font-sans italic text-xs text-white leading-relaxed">
@@ -189,7 +189,7 @@ export default function OurTeam() {
                   {/* Metadata and narrative */}
                   <div className="space-y-3">
                     <div>
-                      <h3 className="font-display font-black text-2xl text-black dark:text-white group-hover:text-[#FF2B5E] transition-colors leading-none">
+                      <h3 className="font-display font-black text-2xl text-black dark:text-white group-hover:text-[#e83e27] transition-colors leading-none">
                         {member.name}
                       </h3>
                       <span className="font-mono text-[11px] text-gray-450 dark:text-gray-400 font-bold block mt-1.5 uppercase tracking-wider">

@@ -82,7 +82,7 @@ export default function Leaders() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="group flex flex-col justify-between bg-white dark:bg-[#0e0f12] border border-gray-150 dark:border-white/10 p-6 hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col justify-between bg-white dark:bg-[#0e0f12] border border-gray-150 dark:border-white/10 p-6 hover:border-[#e83e27] dark:hover:border-[#e83e27] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div>
                   {/* Image Placeholder Frame */}
@@ -95,7 +95,7 @@ export default function Leaders() {
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-102 transition-all duration-700 ease-out"
                     />
                     {/* Absolute Badge corner */}
-                    <div className="absolute top-4 right-4 bg-black dark:bg-[#FF2B5E] text-white text-[9px] font-mono tracking-widest font-bold uppercase px-3 py-1">
+                    <div className="absolute top-4 right-4 bg-black dark:bg-[#e83e27] text-white text-[9px] font-mono tracking-widest font-bold uppercase px-3 py-1">
                       {leader.tag}
                     </div>
                   </div>
@@ -103,10 +103,10 @@ export default function Leaders() {
                   {/* Info and Taglines */}
                   <div className="space-y-3">
                     <div>
-                      <h3 className="font-display font-black text-2xl text-black dark:text-white group-hover:text-[#FF2B5E] transition-colors leading-none">
+                      <h3 className="font-display font-black text-2xl text-black dark:text-white group-hover:text-[#e83e27] transition-colors leading-none">
                         {leader.name}
                       </h3>
-                      <span className="font-mono text-[11px] text-[#FF2B5E] font-bold block mt-1 uppercase tracking-wider">
+                      <span className="font-mono text-[11px] text-[#e83e27] font-bold block mt-1 uppercase tracking-wider">
                         {leader.role}
                       </span>
                     </div>
@@ -152,7 +152,7 @@ export default function Leaders() {
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="flex items-center space-x-2 bg-white dark:bg-[#121212] hover:bg-black dark:hover:bg-[#FF2B5E] text-black dark:text-white hover:text-white border border-gray-200 dark:border-white/10 px-8 py-3.5 font-sans text-xs tracking-widest uppercase font-bold transition-all duration-300 shadow-sm hover:shadow-md active:scale-98"
+              className="flex items-center space-x-2 bg-white dark:bg-[#121212] hover:bg-black dark:hover:bg-[#e83e27] text-black dark:text-white hover:text-white border border-gray-200 dark:border-white/10 px-8 py-3.5 font-sans text-xs tracking-widest uppercase font-bold transition-all duration-300 shadow-sm hover:shadow-md active:scale-98"
             >
               <span>{showAll ? "Show Less" : "Show More Leaders"}</span>
               {showAll ? <ChevronUp size={14} /> : <ChevronDown size={14} />}

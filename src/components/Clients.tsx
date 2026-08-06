@@ -211,7 +211,7 @@ export default function Clients() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <div className="max-w-xl space-y-4">
           <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-none">
-            Our Client Roster<span className="text-[#FF2B5E] animate-pulse">.</span>
+            Our Client Roster<span className="text-[#e83e27] animate-pulse">.</span>
           </h2>
           <p className="font-sans text-gray-500 dark:text-gray-400 text-sm font-light">
             We are trusted by global conglomerates and high-impact local giants to disrupt markets, trigger emotions, and execute massive ground activations.
@@ -231,7 +231,7 @@ export default function Clients() {
             {CLIENTS_DATA.map((client) => (
               <div
                 key={`${client.id}-marquee1`}
-                className="flex items-center justify-center bg-white dark:bg-white border border-gray-200 dark:border-gray-100/20 px-6 py-3 hover:bg-[#FF2B5E]/5 hover:border-[#FF2B5E]/40 hover:shadow-md transition-all duration-300 h-16 w-36 rounded-md shadow-xs"
+                className="flex items-center justify-center bg-white dark:bg-white border border-gray-200 dark:border-gray-100/20 px-6 py-3 hover:bg-[#e83e27]/5 hover:border-[#e83e27]/40 hover:shadow-md transition-all duration-300 h-16 w-36 rounded-md shadow-xs"
               >
                 {client.bgImage ? (
                   <img 
@@ -254,7 +254,7 @@ export default function Clients() {
             {CLIENTS_DATA.map((client) => (
               <div
                 key={`${client.id}-marquee2`}
-                className="flex items-center justify-center bg-white dark:bg-white border border-gray-200 dark:border-gray-100/20 px-6 py-3 hover:bg-[#FF2B5E]/5 hover:border-[#FF2B5E]/40 hover:shadow-md transition-all duration-300 h-16 w-36 rounded-md shadow-xs"
+                className="flex items-center justify-center bg-white dark:bg-white border border-gray-200 dark:border-gray-100/20 px-6 py-3 hover:bg-[#e83e27]/5 hover:border-[#e83e27]/40 hover:shadow-md transition-all duration-300 h-16 w-36 rounded-md shadow-xs"
               >
                 {client.bgImage ? (
                   <img 
@@ -282,7 +282,7 @@ export default function Clients() {
             <div
               key={client.id}
               id={`client-card-${client.id}`}
-              className="relative overflow-hidden bg-white dark:bg-[#0E0F12] border border-gray-150 dark:border-white/10 p-5 sm:p-6 flex flex-col justify-end aspect-[4/3] group hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="relative overflow-hidden bg-white dark:bg-[#0E0F12] border border-gray-150 dark:border-white/10 p-5 sm:p-6 flex flex-col justify-end aspect-[4/3] group hover:border-[#e83e27] dark:hover:border-[#e83e27] shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
               {/* Brand-specific Background Image */}
               {client.bgImage && (
@@ -306,7 +306,7 @@ export default function Clients() {
         {/* Dynamic Metric Counter Segment */}
         <div className="mt-20 border-t border-gray-200 dark:border-white/10 pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left transition-colors font-sans">
           <div className="space-y-2">
-            <span className="font-display font-black text-5xl text-[#FF2B5E] block">
+            <span className="font-display font-black text-5xl text-[#e83e27] block">
               42+
             </span>
             <span className="font-mono text-xs tracking-wider text-gray-500 dark:text-gray-400 uppercase block font-medium font-sans">Massive activations executed</span>

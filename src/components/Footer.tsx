@@ -106,7 +106,7 @@ export default function Footer() {
           <div className="lg:col-span-5 space-y-10">
             <div className="space-y-4">
               <h2 className="font-display text-4xl sm:text-6xl font-black text-black dark:text-white leading-tight">
-                Let's build something awesome <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF2B5E] to-[#FF5E85]/80">together</span>
+                Let's build something awesome <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e83e27] to-[#f05a46]/80">together</span>
               </h2>
               <p className="font-sans text-gray-500 dark:text-gray-400 text-sm font-light max-w-md leading-relaxed">
                 Have an inquiry or want to launch Dhaka's next massive brand activation? Drop us a prompt. We answer within 12 hours with structured execution routes.
@@ -178,7 +178,7 @@ export default function Footer() {
                     aria-label="Follow Alt DOT Creative on Facebook"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#e83e27] dark:hover:bg-[#e83e27] hover:border-[#e83e27] dark:hover:border-[#e83e27] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Facebook size={18} />
                   </a>
@@ -187,7 +187,7 @@ export default function Footer() {
                     aria-label="Connect with Alt DOT Creative on LinkedIn"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#e83e27] dark:hover:bg-[#e83e27] hover:border-[#e83e27] dark:hover:border-[#e83e27] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Linkedin size={18} />
                   </a>
@@ -196,7 +196,7 @@ export default function Footer() {
                     aria-label="Follow Alt DOT Creative on Instagram"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-15 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-15 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#e83e27] dark:hover:bg-[#e83e27] hover:border-[#e83e27] dark:hover:border-[#e83e27] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Instagram size={18} />
                   </a>
@@ -205,7 +205,7 @@ export default function Footer() {
                     aria-label="Follow Alt DOT Creative on Twitter"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#FF2B5E] dark:hover:bg-[#FF2B5E] hover:border-[#FF2B5E] dark:hover:border-[#FF2B5E] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#e83e27] dark:hover:bg-[#e83e27] hover:border-[#e83e27] dark:hover:border-[#e83e27] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Twitter size={18} />
                   </a>

@@ -630,7 +630,7 @@ const PROJECTS_DATA: Project[] = [
                       />
                       {/* Category Badge & Year */}
                       <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">
-                        <span className="font-mono text-[9px] font-bold tracking-widest text-white bg-black dark:bg-[#FF2B5E] px-2.5 py-1 z-10">
+                        <span className="font-mono text-[9px] font-bold tracking-widest text-white bg-black dark:bg-[#e83e27] px-2.5 py-1 z-10">
                           {project.category.toUpperCase()}
                         </span>
                         <span className="font-mono text-xs font-bold text-white drop-shadow-md z-10">
@@ -649,11 +649,11 @@ const PROJECTS_DATA: Project[] = [
                     <span className="font-mono text-[10px] text-gray-400 dark:text-gray-500 block tracking-wider uppercase mb-1">
                       {project.type}
                     </span>
-                    <h3 className="font-display font-black text-lg text-black dark:text-white group-hover:text-[#FF2B5E] dark:group-hover:text-[#FF2B5E] transition-colors leading-snug">
+                    <h3 className="font-display font-black text-lg text-black dark:text-white group-hover:text-[#e83e27] dark:group-hover:text-[#e83e27] transition-colors leading-snug">
                       {project.title}
                     </h3>
                   </div>
-                  <div className="ml-4 p-2 bg-gray-100 dark:bg-white/5 text-black dark:text-white group-hover:bg-black dark:group-hover:bg-[#FF2B5E] group-hover:text-white transition-all">
+                  <div className="ml-4 p-2 bg-gray-100 dark:bg-white/5 text-black dark:text-white group-hover:bg-black dark:group-hover:bg-[#e83e27] group-hover:text-white transition-all">
                     <ArrowUpRight size={18} />
                   </div>
                 </div>
@@ -667,7 +667,7 @@ const PROJECTS_DATA: Project[] = [
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="flex items-center space-x-2 bg-white dark:bg-[#121212] hover:bg-black dark:hover:bg-[#FF2B5E] text-black dark:text-white hover:text-white border border-gray-200 dark:border-white/10 px-8 py-3.5 font-sans text-xs tracking-widest uppercase font-bold transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] cursor-pointer"
+              className="flex items-center space-x-2 bg-white dark:bg-[#121212] hover:bg-black dark:hover:bg-[#e83e27] text-black dark:text-white hover:text-white border border-gray-200 dark:border-white/10 px-8 py-3.5 font-sans text-xs tracking-widest uppercase font-bold transition-all duration-300 shadow-sm hover:shadow-md active:scale-[0.98] cursor-pointer"
             >
               <span>{showAll ? "Show Less" : "Show More Projects"}</span>
               {showAll ? <ChevronUp size={14} /> : <ChevronDown size={14} />}

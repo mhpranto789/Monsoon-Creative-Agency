@@ -122,7 +122,7 @@ export default function ProjectSpotlight({
         {/* TOP STATUS BAR CONTAINER */}
         <div className="p-4 sm:px-8 border-b border-gray-100 dark:border-white/5 flex justify-between items-center bg-gray-50 dark:bg-black/40">
           <div className="flex items-center space-x-3">
-            <span className="w-2.5 h-2.5 bg-[#FF2B5E] animate-pulse" />
+            <span className="w-2.5 h-2.5 bg-[#e83e27] animate-pulse" />
             <span className="font-mono text-[9px] font-bold tracking-widest text-gray-400 dark:text-gray-550 uppercase">
               CASE SPOTLIGHT . STUDY {currentIndex + 1} OF {allProjectsCount}
             </span>
@@ -189,7 +189,7 @@ export default function ProjectSpotlight({
                   </button>
                 </div>
 
-                <div className="absolute bottom-4 left-4 bg-[#FF2B5E] text-white text-[9px] font-mono tracking-widest uppercase px-2 py-0.5 pointer-events-none z-10">
+                <div className="absolute bottom-4 left-4 bg-[#e83e27] text-white text-[9px] font-mono tracking-widest uppercase px-2 py-0.5 pointer-events-none z-10">
                   {project.category} / {project.year}
                 </div>
               </div>
@@ -205,7 +205,7 @@ export default function ProjectSpotlight({
                     }}
                     className={`relative aspect-video overflow-hidden border transition-all duration-200 hover:scale-105 rounded-lg cursor-pointer ${
                       !showVideo && activeImage === img 
-                        ? "border-[#FF2B5E] ring-1 ring-[#FF2B5E]" 
+                        ? "border-[#e83e27] ring-1 ring-[#e83e27]" 
                         : "border-gray-200 dark:border-white/10 hover:border-gray-400 opacity-70 hover:opacity-100"
                     }`}
                   >
@@ -220,7 +220,7 @@ export default function ProjectSpotlight({
             <div className="border border-gray-150 dark:border-white/10 bg-[#FAF9F6] dark:bg-[#0E0F12] p-6 space-y-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-250/50 dark:border-white/5 pb-4">
                 <div className="space-y-1">
-                  <span className="font-mono text-[9px] tracking-widest text-[#FF2B5E] uppercase block font-bold">
+                  <span className="font-mono text-[9px] tracking-widest text-[#e83e27] uppercase block font-bold">
                     AUDITED CAMPAIGN FOOTPRINT
                   </span>
                   <h4 className="font-display font-black text-lg text-black dark:text-white leading-none">
@@ -255,7 +255,7 @@ export default function ProjectSpotlight({
                 <div className="flex justify-between items-start">
                   <div className="space-y-0.5">
                     <div className="flex items-center space-x-2">
-                      <Sliders size={13} className="text-[#FF2B5E]" />
+                      <Sliders size={13} className="text-[#e83e27]" />
                       <span className="font-mono text-[10px] text-black dark:text-white uppercase font-bold tracking-wider">
                         Interactive Reach Simulator
                       </span>
@@ -270,7 +270,7 @@ export default function ProjectSpotlight({
                 <div className="space-y-3">
                   <div className="flex justify-between font-mono text-[10px] text-gray-400">
                     <span>Local (Dhaka City)</span>
-                    <span className="text-[#FF2B5E] font-bold">Value: {multiplier === 0.5 ? "Sub-Metro" : multiplier === 1 ? "Selected Campaign" : multiplier === 1.5 ? "Regional Reach" : "Bangladesh Wide"} ({multiplier}x)</span>
+                    <span className="text-[#e83e27] font-bold">Value: {multiplier === 0.5 ? "Sub-Metro" : multiplier === 1 ? "Selected Campaign" : multiplier === 1.5 ? "Regional Reach" : "Bangladesh Wide"} ({multiplier}x)</span>
                     <span>National Scope</span>
                   </div>
                   <input
@@ -280,14 +280,14 @@ export default function ProjectSpotlight({
                     step="0.5"
                     value={multiplier}
                     onChange={(e) => setMultiplier(parseFloat(e.target.value))}
-                    className="w-full accent-[#FF2B5E] h-1.5 bg-gray-200 dark:bg-white/10 rounded-lg cursor-pointer appearance-none transition-all"
+                    className="w-full accent-[#e83e27] h-1.5 bg-gray-200 dark:bg-white/10 rounded-lg cursor-pointer appearance-none transition-all"
                   />
                 </div>
 
                 {/* THE RESULTING SIMULATOR KPI */}
-                <div className="p-4 bg-[#FF2B5E]/5 border border-[#FF2B5E]/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+                <div className="p-4 bg-[#e83e27]/5 border border-[#e83e27]/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
                   <div>
-                    <span className="font-mono text-[9px] text-[#FF2B5E] tracking-widest block font-bold uppercase">
+                    <span className="font-mono text-[9px] text-[#e83e27] tracking-widest block font-bold uppercase">
                       ESTIMATED BRAND INTERACTION SCALE
                     </span>
                     <span className="font-sans text-xs text-black dark:text-gray-300 font-light mt-0.5 block">
@@ -316,7 +316,7 @@ export default function ProjectSpotlight({
             {/* TEXT HEADERS */}
             <div className="space-y-6">
               <div className="space-y-2">
-                <span className="font-mono text-xs font-bold text-[#FF2B5E] tracking-widest uppercase bg-[#FF2B5E]/10 py-1 px-3 rounded-none inline-block">
+                <span className="font-mono text-xs font-bold text-[#e83e27] tracking-widest uppercase bg-[#e83e27]/10 py-1 px-3 rounded-none inline-block">
                   {project.type.toUpperCase()}
                 </span>
                 <h3 className="font-display font-extrabold text-3xl sm:text-4xl text-black dark:text-white leading-tight">
@@ -332,14 +332,14 @@ export default function ProjectSpotlight({
                 <div className="space-y-1">
                   <span className="text-gray-400 uppercase block text-[9px]">LIFECYCLE DURATION</span>
                   <span className="text-black dark:text-white font-bold flex items-center space-x-1.5">
-                    <Calendar size={13} className="text-[#FF2B5E]" />
+                    <Calendar size={13} className="text-[#e83e27]" />
                     <span>{timeline}</span>
                   </span>
                 </div>
                 <div className="space-y-1">
                   <span className="text-gray-400 uppercase block text-[9px]">LAUNCH BASE</span>
                   <span className="text-black dark:text-white font-bold flex items-center space-x-1.5">
-                    <Award size={13} className="text-[#FF2B5E]" />
+                    <Award size={13} className="text-[#e83e27]" />
                     <span>Banani Hub, Dhaka</span>
                   </span>
                 </div>
@@ -355,7 +355,7 @@ export default function ProjectSpotlight({
                       onClick={() => setActiveTab(tab)}
                       className={`pb-3 pr-6 tracking-wide relative pt-1 uppercase cursor-pointer ${
                         activeTab === tab 
-                          ? "text-[#FF2B5E]" 
+                          ? "text-[#e83e27]" 
                           : "text-gray-400 dark:text-gray-550 hover:text-black dark:hover:text-white"
                       }`}
                     >
@@ -363,7 +363,7 @@ export default function ProjectSpotlight({
                       {activeTab === tab && (
                         <motion.div 
                            layoutId="activeTabUnderline" 
-                          className="absolute bottom-0 left-0 right-6 h-0.5 bg-[#FF2B5E]" 
+                          className="absolute bottom-0 left-0 right-6 h-0.5 bg-[#e83e27]" 
                         />
                       )}
                     </button>
@@ -429,9 +429,9 @@ export default function ProjectSpotlight({
                         <p>
                           The resulting data represents a paradigm shift. On-site engagement scored unprecedented retention, making it one of Bangladesh's most viral brand stories of the year.
                         </p>
-                        <div className="bg-[#FF2B5E]/5 p-3 border-l-2 border-[#FF2B5E] space-y-1 mt-2">
+                        <div className="bg-[#e83e27]/5 p-3 border-l-2 border-[#e83e27] space-y-1 mt-2">
                           <span className="font-mono text-[10px] text-gray-400 uppercase block font-medium">ORGANIC SCALE INDEX</span>
-                          <span className="font-display font-extrabold text-sm text-[#FF2B5E] block">
+                          <span className="font-display font-extrabold text-sm text-[#e83e27] block">
                             Outperformed typical brand benchmarks by {multiplier === 1.5 ? "+64%" : "+42%"}
                           </span>
                         </div>
@@ -443,12 +443,12 @@ export default function ProjectSpotlight({
 
               {/* RADICAL QUOTE TESTIMONIAL DISPLAY */}
               <div className="bg-[#FAF9F6] dark:bg-[#0B0C0E] p-5 border border-gray-150 dark:border-white/5">
-                <Quote size={20} className="text-[#FF2B5E] opacity-50 mb-2" />
+                <Quote size={20} className="text-[#e83e27] opacity-50 mb-2" />
                 <p className="font-sans text-xs text-slate-700 dark:text-gray-300 font-light leading-relaxed italic">
                   "{quote.text}"
                 </p>
                 <div className="mt-3 flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-[#FF2B5E]" />
+                  <div className="w-1.5 h-1.5 bg-[#e83e27]" />
                   <span className="font-mono text-[10px] text-gray-400 font-bold uppercase">
                     {quote.author} . <strong className="font-semibold">{quote.role}</strong>
                   </span>
@@ -495,7 +495,7 @@ export default function ProjectSpotlight({
           >
             {/* Top Close indicator */}
             <div className="flex justify-between items-center text-white px-4">
-              <span className="font-mono text-[10px] tracking-widest text-[#FF2B5E] font-bold">
+              <span className="font-mono text-[10px] tracking-widest text-[#e83e27] font-bold">
                 {project.title.toUpperCase()} // DETAILED PERSPECTIVE
               </span>
               <button 

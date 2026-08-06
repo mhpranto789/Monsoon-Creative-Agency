@@ -54,10 +54,14 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
           <button
             id="navbar-logo"
             onClick={() => handleItemClick("home")}
-            className="group flex items-center space-x-2 text-left cursor-pointer transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            className="group flex items-center space-x-3 text-left cursor-pointer transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
           >
-            <div className="relative w-8 h-8 bg-white flex items-center justify-center font-bold text-black text-lg rounded-lg transition-transform group-hover:rotate-12 duration-300 shadow-sm">
-              <span className="font-display">A</span>
+            <div className="relative w-9 h-9 md:w-10 md:h-10 bg-white/10 dark:bg-black/40 border border-white/20 rounded-lg p-1 flex items-center justify-center transition-transform group-hover:scale-105 duration-300 shadow-sm overflow-hidden">
+              <img 
+                src="/logo.png" 
+                alt="Alt DOT Creative Logo" 
+                className="w-full h-full object-contain rounded"
+              />
             </div>
             <div>
               <span className="font-display font-black text-xl tracking-tight text-white block">

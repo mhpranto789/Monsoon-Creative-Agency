@@ -50,7 +50,7 @@ const WORDS = [
 ];
 
 const PREMIUM_COLORS = [
-  "#FF2B5E", // Brand Pink/Rose
+  "#e83e27", // Brand Red
   "#00F2FE", // Electric Cyan
   "#FBBF24", // Gold
   "#A78BFA", // Pastel Violet

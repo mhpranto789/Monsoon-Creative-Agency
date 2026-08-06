@@ -65,7 +65,7 @@ export default function App() {
   return (
     <div 
       id="app-root" 
-      className="relative min-h-screen text-gray-100 antialiased selection:bg-[#FF2B5E] selection:text-white transition-colors duration-400 overflow-x-hidden"
+      className="relative min-h-screen text-gray-100 antialiased selection:bg-[#e83e27] selection:text-white transition-colors duration-400 overflow-x-hidden"
     >
       {/* 
         Unified Animated Glass Backdrop for the Entire Website
@@ -219,7 +219,7 @@ export default function App() {
               {/* Header */}
               <div className="flex items-center space-x-3">
                 {/* Support Team Avatar Container */}
-                <div className="relative w-11 h-11 rounded-full bg-gradient-to-tr from-[#FF2B5E] to-[#FF5C8A] flex items-center justify-center shadow-inner">
+                <div className="relative w-11 h-11 rounded-full bg-gradient-to-tr from-[#e83e27] to-[#f05a46] flex items-center justify-center shadow-inner">
                   {/* Chat speech bubble icon */}
                   <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -254,7 +254,7 @@ export default function App() {
                 href="https://wa.me/8801634415619"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full py-2.5 px-4 text-center rounded-2xl bg-gradient-to-r from-[#FF2B5E] to-[#FF5C8A] hover:from-[#E01042] hover:to-[#FF2B5E] text-white font-sans font-extrabold text-xs tracking-wider transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
+                className="block w-full py-2.5 px-4 text-center rounded-2xl bg-gradient-to-r from-[#e83e27] to-[#f05a46] hover:from-[#c92f1b] hover:to-[#e83e27] text-white font-sans font-extrabold text-xs tracking-wider transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-md hover:shadow-lg"
               >
                 Chat on WhatsApp
               </a>
