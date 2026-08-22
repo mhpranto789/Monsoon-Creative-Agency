@@ -137,7 +137,7 @@ export default function Footer() {
                     </a>
                   </div>
                   <p className="font-sans text-sm text-gray-800 dark:text-gray-350 font-medium">
-                    House-12, Road-1, Niketan
+                    House-12, Road-1, Niketon
                   </p>
                   <p className="font-sans text-xs text-gray-500 dark:text-gray-455 font-light">
                     Gulshan-1, Dhaka, Bangladesh
@@ -148,8 +148,8 @@ export default function Footer() {
               {/* Embedded Google Map Preview */}
               <div className="overflow-hidden border border-gray-200 dark:border-white/10 bg-black/5 dark:bg-white/5 relative group">
                 <iframe
-                  title="Alt DOT Creative Google Map Location - Niketan, Gulshan-1, Dhaka"
-                  src="https://maps.google.com/maps?q=House+12,+Road+1,+Niketan,+Gulshan-1,+Dhaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  title="Alt DOT Creative Google Map Location - Niketon, Gulshan-1, Dhaka"
+                  src="https://maps.google.com/maps?q=House+12,+Road+1,+Niketon,+Gulshan-1,+Dhaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="160"
                   style={{ border: 0 }}

@@ -175,7 +175,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
                 </a>
               </div>
               <div className="pt-1">
-                <p className="text-gray-300 text-sm font-medium">House-12, Road-1, Niketan</p>
+                <p className="text-gray-300 text-sm font-medium">House-12, Road-1, Niketon</p>
                 <p className="text-gray-400 text-xs font-light">Gulshan-1, Dhaka, Bangladesh</p>
               </div>
               <div className="pt-1">

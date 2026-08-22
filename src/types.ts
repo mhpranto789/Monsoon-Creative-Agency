@@ -22,6 +22,9 @@ export interface Project {
   timeline?: string;
   channelsUsed?: string[];
   youtubeId?: string;
+  videoType?: 'youtube' | 'facebook';
+  facebookUrl?: string;
+  videoUrl?: string;
 }
 
 export interface Client {

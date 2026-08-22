@@ -14,7 +14,8 @@ import {
   ExternalLink,
   Users,
   Eye,
-  Share2
+  Share2,
+  Play
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Project, ProjectMetric } from "../types";
@@ -166,27 +167,73 @@ export default function ProjectSpotlight({
             {/* LARGE HERO VIEW PORT */}
             <div className="space-y-3">
               <div 
-                className="relative aspect-[16/10] w-full bg-slate-900/10 dark:bg-slate-900/50 border border-gray-150 dark:border-white/10 overflow-hidden cursor-zoom-in group"
-                onClick={() => setIsZoomed(true)}
+                className="relative aspect-[16/10] w-full bg-slate-900/10 dark:bg-slate-900/50 border border-gray-150 dark:border-white/10 overflow-hidden group"
               >
-                <img
-                  src={activeImage}
-                  alt={project.title}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                />
-                
-                <div className="absolute top-4 right-4 flex items-center space-x-2 z-10">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setIsZoomed(true);
-                    }}
-                    className="btn-liquid-glass text-white text-[9px] font-sans tracking-wide uppercase px-3.5 py-1.5 flex items-center space-x-1.5 cursor-pointer transition-all duration-200 hover:scale-105 font-bold rounded-full shadow-md"
+                {showVideo ? (
+                  <div className="w-full h-full absolute inset-0 z-0 overflow-hidden bg-black flex items-center justify-center">
+                    {project.videoType === 'facebook' && project.facebookUrl ? (
+                      <iframe
+                        src={`https://www.facebook.com/plugins/video.php?height=476&href=${encodeURIComponent(project.facebookUrl)}&show_text=false&t=0`}
+                        title={project.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="w-full h-full absolute inset-0 opacity-95"
+                      ></iframe>
+                    ) : project.youtubeId ? (
+                      <iframe
+                        src={`https://www.youtube-nocookie.com/embed/${project.youtubeId}?autoplay=1&modestbranding=1&rel=0&controls=1`}
+                        title={project.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="w-full h-full absolute inset-0"
+                      ></iframe>
+                    ) : null}
+                  </div>
+                ) : (
+                  <div 
+                    className="w-full h-full relative cursor-zoom-in"
+                    onClick={() => setIsZoomed(true)}
                   >
-                    <Search size={10} />
-                    <span>ZOOM</span>
-                  </button>
+                    <img
+                      src={activeImage}
+                      alt={project.title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                    />
+                  </div>
+                )}
+                
+                <div className="absolute top-4 right-4 flex items-center space-x-2 z-20">
+                  {(project.youtubeId || project.facebookUrl) && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setShowVideo(!showVideo);
+                      }}
+                      className={`text-[9px] font-sans tracking-wide uppercase px-3.5 py-1.5 flex items-center space-x-1.5 cursor-pointer transition-all duration-200 hover:scale-105 font-bold rounded-full shadow-md ${
+                        showVideo 
+                          ? "bg-[#e83e27] text-white" 
+                          : "btn-liquid-glass text-white bg-black/60 hover:bg-black/80"
+                      }`}
+                    >
+                      <Play size={10} className={showVideo ? "fill-white" : ""} />
+                      <span>{showVideo ? "SHOW STILL" : "WATCH VIDEO"}</span>
+                    </button>
+                  )}
+                  {!showVideo && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsZoomed(true);
+                      }}
+                      className="btn-liquid-glass text-white text-[9px] font-sans tracking-wide uppercase px-3.5 py-1.5 flex items-center space-x-1.5 cursor-pointer transition-all duration-200 hover:scale-105 font-bold rounded-full shadow-md"
+                    >
+                      <Search size={10} />
+                      <span>ZOOM</span>
+                    </button>
+                  )}
                 </div>
 
                 <div className="absolute bottom-4 left-4 bg-[#e83e27] text-white text-[9px] font-mono tracking-widest uppercase px-2 py-0.5 pointer-events-none z-10">
@@ -196,7 +243,21 @@ export default function ProjectSpotlight({
 
               {/* THUMBNAIL TRACK */}
               <div className="grid grid-cols-4 gap-2">
-                {defaultGallery.map((img, idx) => (
+                {/* Optional video card button in thumbnails if video exists */}
+                {(project.youtubeId || project.facebookUrl) && (
+                  <button
+                    onClick={() => setShowVideo(true)}
+                    className={`relative aspect-video overflow-hidden border transition-all duration-200 hover:scale-105 rounded-lg cursor-pointer bg-black flex flex-col items-center justify-center text-white ${
+                      showVideo
+                        ? "border-[#e83e27] ring-1 ring-[#e83e27]"
+                        : "border-gray-200 dark:border-white/10 hover:border-gray-400 opacity-70 hover:opacity-100"
+                    }`}
+                  >
+                    <Play size={16} className="text-[#e83e27] fill-[#e83e27] mb-0.5" />
+                    <span className="font-mono text-[8px] uppercase tracking-wider font-bold">Video Play</span>
+                  </button>
+                )}
+                {defaultGallery.slice(0, (project.youtubeId || project.facebookUrl) ? 3 : 4).map((img, idx) => (
                   <button
                     key={idx}
                     onClick={() => {
@@ -340,7 +401,7 @@ export default function ProjectSpotlight({
                   <span className="text-gray-400 uppercase block text-[9px]">LAUNCH BASE</span>
                   <span className="text-black dark:text-white font-bold flex items-center space-x-1.5">
                     <Award size={13} className="text-[#e83e27]" />
-                    <span>Banani Hub, Dhaka</span>
+                    <span>Niketon Hub, Dhaka</span>
                   </span>
                 </div>
               </div>
@@ -473,7 +534,7 @@ export default function ProjectSpotlight({
               </button>
               
               <p className="font-mono text-[9px] text-gray-400 dark:text-gray-550 text-center uppercase tracking-widest">
-                Banani Office Open: Sun-Thu 10:00 - 18:00
+                Niketon Office Open: Sun-Thu 10:00 - 18:00
               </p>
             </div>
 

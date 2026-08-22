@@ -214,6 +214,148 @@ const PROJECTS_DATA: Project[] = [
       role: "PepsiCo International Group"
     },
     youtubeId: "hVICqoOHOPM"
+  },
+  {
+    id: "adc-commercial-film",
+    title: "ADC Commercial Cinema Spot",
+    category: "Digital Marketing",
+    type: "Commercial Film & TVC Cinematography",
+    year: "2024",
+    description: "High-octane commercial cinematography and brand storytelling designed for television, digital broadcast, and synchronized multi-channel social campaigns.",
+    imageUrl: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Digital Broadcast Reach", value: "4.2M" },
+    campaignGoals: [
+      "Cinematic multi-camera production with color-calibrated cinema lenses",
+      "Dynamic sound design and custom brand score orchestration",
+      "Multi-format digital distribution across national broadcast and digital OTT"
+    ],
+    tagline: "Framing brand narratives with cinematic lighting and meticulous visual pacing.",
+    timeline: "4-Week Full Production Sprint",
+    channelsUsed: ["Cinema TVC Broadcast", "Digital Streaming OTT", "High-Impact YouTube Cutdowns"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80"
+    ],
+    metricsDetail: [
+      { label: "Audited Digital Reach", value: "4.2M+", subtext: "Cross-platform video views" },
+      { label: "Completion Rate Index", value: "88.6%", subtext: "Above-benchmark video watch duration" },
+      { label: "Brand Affinity Uplift", value: "+38%", subtext: "Independent post-campaign survey" }
+    ],
+    clientQuote: {
+      text: "Alt DOT Creative delivered cinema-level production that gave our brand an undeniable competitive edge.",
+      author: "Chief Brand Strategist",
+      role: "Enterprise Brand Division"
+    },
+    youtubeId: "VIbneuGlnSU"
+  },
+  {
+    id: "adc-brand-motion",
+    title: "Cinematic Motion & Visual Direction",
+    category: "Creative Graphics",
+    type: "Motion Film Direction & Creative Production",
+    year: "2024",
+    description: "Dynamic visual storytelling capturing fine product craftsmanship, fluid motion dynamics, and high-contrast color styling for leading lifestyle and commercial brands.",
+    imageUrl: "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Social Video Impressions", value: "3.8M" },
+    campaignGoals: [
+      "Precision motion staging with macro optics and high-speed motion rigs",
+      "Tailored color grading enhancing brand textures and product materials",
+      "Bespoke motion graphic transitions for seamless viewer retention"
+    ],
+    tagline: "Elevating everyday product details into mesmerizing visual poetry.",
+    timeline: "3-Week Creative & Motion Design",
+    channelsUsed: ["Cinematic Motion Showcase", "Digital Visual Ads", "Social Video Mastercuts"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&w=800&q=80"
+    ],
+    metricsDetail: [
+      { label: "Organic Social Shares", value: "62,000+", subtext: "Audited shares across networks" },
+      { label: "Brand Recall Rate", value: "96.4%", subtext: "High visual memorability score" },
+      { label: "Engagement Lift", value: "2.8x", subtext: "Versus static visual benchmarks" }
+    ],
+    clientQuote: {
+      text: "The motion dynamics and visual texture brought our creative concepts to life beyond expectations.",
+      author: "Head of Marketing",
+      role: "Creative Media Group"
+    },
+    youtubeId: "vXW0M4euANU"
+  },
+  {
+    id: "fb-reel-1362330277666733",
+    title: "ADC Vertical Reel: Lifestyle & Story",
+    category: "Digital Marketing",
+    type: "Social Reel & Micro-Storytelling",
+    year: "2024",
+    description: "High-engagement vertical micro-content and dynamic reels production tailored for Facebook & Instagram social amplification with rapid hooks and viral pacing.",
+    imageUrl: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Reel Views & Engagement", value: "2.1M" },
+    campaignGoals: [
+      "Fast 3-second hook optimization for vertical smartphone feeds",
+      "High-definition 9:16 cinematography with vibrant lifestyle color grading",
+      "Integrated soundtrack timing and punchy typography overlays"
+    ],
+    tagline: "Crafting vertical micro-stories that stop thumb-scrolling instantly.",
+    timeline: "2-Week Rapid Content Sprint",
+    channelsUsed: ["Facebook Reels", "Instagram Reels", "Short-Form Social Ads"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+    ],
+    metricsDetail: [
+      { label: "Total Reel Views", value: "2.1M+", subtext: "Audited social impressions" },
+      { label: "Average Retention", value: "74.2%", subtext: "Full video watch rate" },
+      { label: "Direct Save / Share Rate", value: "+120%", subtext: "Organic social sharing multiplier" }
+    ],
+    clientQuote: {
+      text: "The reel gained instant traction and delivered phenomenal viral engagement across our demographic.",
+      author: "Social Media Lead",
+      role: "Digital Campaign Studio"
+    },
+    videoType: "facebook",
+    facebookUrl: "https://www.facebook.com/reel/1362330277666733"
+  },
+  {
+    id: "fb-reel-6945254908821296",
+    title: "ADC Vertical Reel: Creative Motion",
+    category: "Creative Graphics",
+    type: "Social Reel & Motion Graphics",
+    year: "2024",
+    description: "Cinematic vertical production engineered for high retention, rhythm-matched visual cuts, and seamless brand integration across modern social feeds.",
+    imageUrl: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Organic Reel Impressions", value: "1.9M" },
+    campaignGoals: [
+      "Dynamic speed-ramped camera moves and seamless whip transitions",
+      "Color-calibrated visual identity optimized for mobile OLED screens",
+      "Engagement-driving calls to action and rhythmic audio syncing"
+    ],
+    tagline: "Transforming high-tempo motion design into thumb-stopping social moments.",
+    timeline: "2-Week Agile Production",
+    channelsUsed: ["Facebook Reels", "Instagram Reels", "Meta Boosted Media"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80"
+    ],
+    metricsDetail: [
+      { label: "Aggregate Plays", value: "1.9M+", subtext: "Multi-platform video plays" },
+      { label: "Engagement Ratio", value: "8.4%", subtext: "High interaction and comment volume" },
+      { label: "Click-Through CTR", value: "4.6%", subtext: "Direct profile traffic referrals" }
+    ],
+    clientQuote: {
+      text: "The pacing and motion rhythm of this vertical piece were spot on. Exactly what modern audiences love.",
+      author: "Creative Producer",
+      role: "Visual Content Network"
+    },
+    videoType: "facebook",
+    facebookUrl: "https://www.facebook.com/reel/6945254908821296"
   }
 ];
 
@@ -319,23 +461,37 @@ export default function Projects({ onNavigateToContact, onOpenFoodWork }: Projec
                 className="group relative bg-white dark:bg-[#121212] border border-gray-200/80 dark:border-white/10 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
-                {/* Image Wrapper */}
+                {/* Image / Video Wrapper */}
                 <div className="relative aspect-video sm:aspect-[4/3] w-full bg-gray-100 dark:bg-zinc-805 overflow-hidden">
-                  {project.id === "coke-studio" || project.id === "honda-sp125" || project.id === "bkash-boishakh" || project.id === "gp-future" || project.id === "aarong-fashion" || project.id === "pepsi-soundwave" ? (
-                    <div className="w-full h-full absolute inset-0 z-0 overflow-hidden" onClick={(e) => e.stopPropagation()}>
+                  {project.videoType === 'facebook' && project.facebookUrl ? (
+                    <div className="w-full h-full absolute inset-0 z-0 overflow-hidden bg-black flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
                       <iframe
-                        src={project.id === "coke-studio" 
-                          ? "https://www.youtube-nocookie.com/embed/Ta943n1xZPk?si=uqXMZ4f6za_x0Tug&modestbranding=1&rel=0&controls=1"
-                          : project.id === "honda-sp125"
-                            ? "https://www.youtube-nocookie.com/embed/99DVbQJQomE?si=3TtzTN5WIZOMDgm7&modestbranding=1&rel=0&controls=1"
-                            : project.id === "bkash-boishakh"
-                              ? "https://www.youtube-nocookie.com/embed/N1-9_e-d6kY?si=3xuxb3tkx-4vlig3&modestbranding=1&rel=0&controls=1"
-                              : project.id === "gp-future"
-                                ? "https://www.youtube-nocookie.com/embed/uiIK9jQbhRA?si=3fBsVSY-U_UXGU_b&modestbranding=1&rel=0&controls=1"
-                                : project.id === "aarong-fashion"
-                                  ? "https://www.youtube-nocookie.com/embed/nOreGhU2Ddw?si=YO5heKNTmFMgOcKm&modestbranding=1&rel=0&controls=1"
-                                  : "https://www.youtube-nocookie.com/embed/hVICqoOHOPM?si=7aN2jbtHCutIEDb9&modestbranding=1&rel=0&controls=1"}
-                        title="YouTube video player"
+                        src={`https://www.facebook.com/plugins/video.php?height=476&href=${encodeURIComponent(project.facebookUrl)}&show_text=false&t=0`}
+                        title={project.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        loading="lazy"
+                        className="w-full h-full absolute inset-0 opacity-95 transition-opacity duration-300 hover:opacity-100"
+                      ></iframe>
+                      {/* Premium physical glass overlay (clicks pass through) */}
+                      <div className="absolute inset-0 pointer-events-none z-10 bg-gradient-to-tr from-white/10 via-transparent to-white/5 border border-white/20 shadow-[inset_0_0_15px_rgba(255,255,255,0.15)] dark:shadow-[inset_0_0_15px_rgba(255,255,255,0.05)] backdrop-blur-[0.5px]"></div>
+                      <a
+                        href={project.facebookUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="absolute top-3 right-3 z-20 px-2.5 py-1 rounded-full bg-black/70 hover:bg-[#1877F2] text-white text-[10px] font-mono flex items-center space-x-1.5 backdrop-blur-md border border-white/20 transition-all hover:scale-105"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <span>FB Reel</span>
+                        <ExternalLink size={10} />
+                      </a>
+                    </div>
+                  ) : project.youtubeId ? (
+                    <div className="w-full h-full absolute inset-0 z-0 overflow-hidden bg-black" onClick={(e) => e.stopPropagation()}>
+                      <iframe
+                        src={`https://www.youtube-nocookie.com/embed/${project.youtubeId}?modestbranding=1&rel=0&controls=1`}
+                        title={project.title}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
@@ -365,21 +521,6 @@ export default function Projects({ onNavigateToContact, onOpenFoodWork }: Projec
                       </div>
                     </>
                   )}
-                </div>
-
-                {/* Info Area */}
-                <div className="p-6 border-t border-gray-200 dark:border-white/10 flex justify-between items-center bg-white dark:bg-[#141414] group-hover:bg-[#FAF9F6] dark:group-hover:bg-[#1C1C1C] transition-colors">
-                  <div>
-                    <span className="font-mono text-[10px] text-gray-400 dark:text-gray-500 block tracking-wider uppercase mb-1">
-                      {project.type}
-                    </span>
-                    <h3 className="font-display font-black text-lg text-black dark:text-white group-hover:text-[#e83e27] dark:group-hover:text-[#e83e27] transition-colors leading-snug">
-                      {project.title}
-                    </h3>
-                  </div>
-                  <div className="ml-4 p-2 bg-gray-100 dark:bg-white/5 text-black dark:text-white group-hover:bg-black dark:group-hover:bg-[#e83e27] group-hover:text-white transition-all">
-                    <ArrowUpRight size={18} />
-                  </div>
                 </div>
               </motion.div>
             ))}

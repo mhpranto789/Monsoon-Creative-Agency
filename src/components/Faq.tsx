@@ -197,7 +197,7 @@ export default function Faq() {
               <div className="pt-4 border-t border-white/5 space-y-4">
                 <div className="flex items-center space-x-3 text-xs text-gray-400">
                   <div className="w-1.5 h-1.5 bg-[#e83e27] rounded-full animate-ping" />
-                  <span className="font-mono">Banani HQ Workspace Active</span>
+                  <span className="font-mono">Niketon HQ Workspace Active</span>
                 </div>
                 
                 <button

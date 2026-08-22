@@ -12,7 +12,7 @@ const LEADERS_DATA: Leader[] = [
     imageUrl: "https://lh3.googleusercontent.com/d/1iv38ghi4nO9n-dDjOiQEsykkuHKLQyjU",
     linkedinUrl: "https://linkedin.com",
     tag: "Strategy Architect",
-    location: "Niketan, Dhaka"
+    location: "Niketon, Dhaka"
   },
   {
     id: "kaiser-hamid",
@@ -120,7 +120,7 @@ export default function Leaders() {
                 {/* Leader Linkages Base */}
                 <div className="flex justify-between items-center pt-6 mt-6 border-t border-gray-100 dark:border-white/5 text-xs font-sans">
                   <span className="font-mono text-[9px] text-gray-400 dark:text-gray-550 group-hover:text-black dark:group-hover:text-white transition-colors uppercase">
-                    {leader.location || "Banani Hub Board"}
+                    {leader.location || "Niketon Hub Board"}
                   </span>
                   
                   <div className="flex items-center space-x-2">
