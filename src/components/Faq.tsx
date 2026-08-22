@@ -26,7 +26,7 @@ const FAQ_DATA: FaqItem[] = [
     id: "design-philosophy",
     category: "Philosophy",
     question: "What defines Alt DOT Creative's specific typography and styling system?",
-    answer: "We believe in high-contrast editorial minimalism. We pair elegant, high-profile modern typography (like Inter and JetBrains Mono) with crisp, monospace data labels and razor-sharp borders. We avoid low-value gradients or visual 'AI slop' so that our layout remains clean, deliberate, and premium."
+    answer: "We believe in high-contrast editorial minimalism. We pair elegant, architectural Montserrat typography with crisp data labels and razor-sharp borders. We avoid low-value gradients or visual 'AI slop' so that our layout remains clean, deliberate, and premium."
   },
   {
     id: "campaign-timeline",
