@@ -23,7 +23,7 @@ const TEAM_MEMBERS_DATA: TeamMember[] = [
     bio: "The operational wizard behind our massive physical brand setups. Coordinates multiple vendors, complex logistics, and live broadcast integrations to flawless execution.",
     imageUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&h=700&q=80",
     linkedinUrl: "https://linkedin.com",
-    mailUrl: "mailto:mhpranto789@gmail.com",
+    mailUrl: "mailto:connect.altdotcreative@gmail.com",
     signatureQuote: "Precision in execution is where strategy meets reality."
   },
   {
@@ -34,7 +34,7 @@ const TEAM_MEMBERS_DATA: TeamMember[] = [
     bio: "Shapes the deep cultural storytelling and verbal architecture of all campaigns. Infusing authentic local insights into premium corporate messaging pipelines.",
     imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=700&q=80",
     linkedinUrl: "https://linkedin.com",
-    mailUrl: "mailto:mhpranto789@gmail.com",
+    mailUrl: "mailto:connect.altdotcreative@gmail.com",
     signatureQuote: "Words should make you feel before they make you think."
   },
   {
@@ -45,7 +45,7 @@ const TEAM_MEMBERS_DATA: TeamMember[] = [
     bio: "Decodes complex market metrics and consumer behaviors. Crafts core conceptual directions for high-octane experiential events, creating genuine empathy.",
     imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=700&q=80",
     linkedinUrl: "https://linkedin.com",
-    mailUrl: "mailto:mhpranto789@gmail.com",
+    mailUrl: "mailto:connect.altdotcreative@gmail.com",
     signatureQuote: "Data gives you the blueprint, but empathy is the engine."
   },
   {
@@ -56,7 +56,7 @@ const TEAM_MEMBERS_DATA: TeamMember[] = [
     bio: "Brings spatial conceptual designs to life with LED projection mapping, mechanical triggers, and real-time custom electronic integrations.",
     imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&h=700&q=80",
     linkedinUrl: "https://linkedin.com",
-    mailUrl: "mailto:mhpranto789@gmail.com",
+    mailUrl: "mailto:connect.altdotcreative@gmail.com",
     signatureQuote: "Any sufficiently advanced technology is indistinguishable from magic."
   },
   {
@@ -67,7 +67,7 @@ const TEAM_MEMBERS_DATA: TeamMember[] = [
     bio: "Translates abstract brand concepts into awe-inspiring physical installations, structural layouts, and customized stage structures.",
     imageUrl: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&h=700&q=80",
     linkedinUrl: "https://linkedin.com",
-    mailUrl: "mailto:mhpranto789@gmail.com",
+    mailUrl: "mailto:connect.altdotcreative@gmail.com",
     signatureQuote: "Space is not passive; it should command attention."
   },
   {
@@ -78,7 +78,7 @@ const TEAM_MEMBERS_DATA: TeamMember[] = [
     bio: "Navigates newsrooms, digital portals, and influencer networks. Secures national and local coverage, building credible resonance for our partner brands.",
     imageUrl: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&h=700&q=80",
     linkedinUrl: "https://linkedin.com",
-    mailUrl: "mailto:mhpranto789@gmail.com",
+    mailUrl: "mailto:connect.altdotcreative@gmail.com",
     signatureQuote: "An honest story travels faster than any marketing campaign."
   }
 ];

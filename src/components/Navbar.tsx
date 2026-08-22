@@ -163,22 +163,22 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
               </span>
               <div>
                 <a 
-                  href="mailto:mhpranto789@gmail.com" 
+                  href="mailto:connect.altdotcreative@gmail.com" 
                   className="text-white hover:text-brand-primary font-medium transition-colors block text-base"
                 >
-                  mhpranto789@gmail.com
+                  connect.altdotcreative@gmail.com
                 </a>
               </div>
               <div className="pt-1">
-                <p className="text-gray-300 text-sm font-medium">House 18, Road 01, Block B, Niketon</p>
-                <p className="text-gray-400 text-xs font-light">Gulshan 1, Dhaka, Bangladesh</p>
+                <p className="text-gray-300 text-sm font-medium">House-12, Road-1, Niketan</p>
+                <p className="text-gray-400 text-xs font-light">Gulshan-1, Dhaka, Bangladesh</p>
               </div>
               <div className="pt-1">
                 <a 
-                  href="tel:+8801634415619" 
+                  href="tel:+8801310577702" 
                   className="text-gray-300 hover:text-white text-xs font-mono transition-colors block"
                 >
-                  +8801634415619
+                  +880 1310-577702
                 </a>
               </div>
             </div>

@@ -10,7 +10,8 @@ import {
   XCircle,
   ArrowUp,
   Instagram,
-  Twitter
+  Twitter,
+  ExternalLink
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { ContactInquiry } from "../types";
@@ -116,32 +117,68 @@ export default function Footer() {
             {/* Structured Contact Details */}
             <div className="space-y-6 pt-4 border-t border-gray-200 dark:border-white/10 max-w-sm">
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center rounded-none text-brand-primary">
+                <div className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center rounded-none text-brand-primary shrink-0 mt-0.5">
                   <MapPin size={18} />
                 </div>
-                <div>
-                  <span className="font-mono text-[10px] text-gray-400 dark:text-gray-550 uppercase block tracking-wider font-semibold">
-                    OUR OFFICE ADDRESS
-                  </span>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[10px] text-gray-400 dark:text-gray-550 uppercase block tracking-wider font-semibold">
+                      OUR OFFICE ADDRESS
+                    </span>
+                    <a
+                      href="https://maps.app.goo.gl/infttGQU475hGZns5"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-1 font-mono text-[11px] text-brand-primary hover:underline font-semibold"
+                      aria-label="View Alt DOT Creative on Google Maps"
+                    >
+                      <span>Open Map</span>
+                      <ExternalLink size={10} />
+                    </a>
+                  </div>
                   <p className="font-sans text-sm text-gray-800 dark:text-gray-350 font-medium">
-                    House 18, Road 01, Block B, Niketon
+                    House-12, Road-1, Niketan
                   </p>
                   <p className="font-sans text-xs text-gray-500 dark:text-gray-455 font-light">
-                    Gulshan 1, Dhaka, Bangladesh
+                    Gulshan-1, Dhaka, Bangladesh
                   </p>
                 </div>
               </div>
 
+              {/* Embedded Google Map Preview */}
+              <div className="overflow-hidden border border-gray-200 dark:border-white/10 bg-black/5 dark:bg-white/5 relative group">
+                <iframe
+                  title="Alt DOT Creative Google Map Location - Niketan, Gulshan-1, Dhaka"
+                  src="https://maps.google.com/maps?q=House+12,+Road+1,+Niketan,+Gulshan-1,+Dhaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="160"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-40 opacity-90 group-hover:opacity-100 transition-opacity grayscale contrast-[1.1] hover:grayscale-0"
+                />
+                <a
+                  href="https://maps.app.goo.gl/infttGQU475hGZns5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-2 right-2 px-2.5 py-1 bg-black/85 dark:bg-white/90 text-white dark:text-black text-[11px] font-mono font-medium flex items-center space-x-1.5 shadow-md backdrop-blur hover:bg-brand-primary hover:text-white dark:hover:bg-brand-primary dark:hover:text-white transition-colors"
+                >
+                  <MapPin size={11} />
+                  <span>Get Directions</span>
+                  <ExternalLink size={9} />
+                </a>
+              </div>
+
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center rounded-none text-brand-primary">
+                <div className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center rounded-none text-brand-primary shrink-0">
                   <Mail size={18} />
                 </div>
                 <div>
                   <span className="font-mono text-[10px] text-gray-400 dark:text-gray-550 uppercase block tracking-wider font-semibold">
                     EMAIL INQUIRIES
                   </span>
-                  <a href="mailto:mhpranto789@gmail.com" className="font-sans text-sm text-gray-800 dark:text-gray-350 font-medium hover:text-brand-primary transition-colors block">
-                    mhpranto789@gmail.com
+                  <a href="mailto:connect.altdotcreative@gmail.com" className="font-sans text-sm text-gray-800 dark:text-gray-350 font-medium hover:text-brand-primary transition-colors block">
+                    connect.altdotcreative@gmail.com
                   </a>
                   <p className="font-sans text-xs text-gray-500 dark:text-gray-455 font-light">
                     For projects, RFPs, and job applications
@@ -150,18 +187,18 @@ export default function Footer() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center rounded-none text-brand-primary">
+                <div className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center rounded-none text-brand-primary shrink-0">
                   <Phone size={18} />
                 </div>
                 <div>
                   <span className="font-mono text-[10px] text-gray-400 dark:text-gray-550 uppercase block tracking-wider font-semibold">
-                    CALL OUR HOTLINE
+                    CALL / WHATSAPP PRIMARY
                   </span>
-                  <a href="tel:+8801634415619" className="font-sans text-sm text-gray-800 dark:text-gray-350 font-medium hover:text-brand-primary transition-colors block">
-                    +8801634415619
+                  <a href="tel:+8801310577702" className="font-sans text-sm text-gray-800 dark:text-gray-350 font-medium hover:text-brand-primary transition-colors block">
+                    +880 1310-577702
                   </a>
                   <p className="font-sans text-xs text-gray-500 dark:text-gray-455 font-light">
-                    Sun - Thu, 10:00 AM - 6:00 PM
+                    Sun - Thu, 10:00 AM - 6:00 PM (WhatsApp available)
                   </p>
                 </div>
               </div>
@@ -174,7 +211,7 @@ export default function Footer() {
               </span>
                 <div className="flex space-x-3">
                   <a 
-                    href="https://facebook.com" 
+                    href="https://www.facebook.com/share/1CGUNQ7wS1/" 
                     aria-label="Follow Alt DOT Creative on Facebook"
                     target="_blank" 
                     rel="noopener noreferrer"
@@ -183,7 +220,7 @@ export default function Footer() {
                     <Facebook size={18} />
                   </a>
                   <a 
-                    href="https://linkedin.com" 
+                    href="https://www.linkedin.com/company/alt-dot-creative/" 
                     aria-label="Connect with Alt DOT Creative on LinkedIn"
                     target="_blank" 
                     rel="noopener noreferrer"

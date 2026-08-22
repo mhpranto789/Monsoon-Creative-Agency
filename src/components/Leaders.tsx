@@ -12,7 +12,7 @@ const LEADERS_DATA: Leader[] = [
     imageUrl: "https://lh3.googleusercontent.com/d/1iv38ghi4nO9n-dDjOiQEsykkuHKLQyjU",
     linkedinUrl: "https://linkedin.com",
     tag: "Strategy Architect",
-    location: "Niketon Dhaka"
+    location: "Niketan, Dhaka"
   },
   {
     id: "kaiser-hamid",
@@ -134,7 +134,7 @@ export default function Leaders() {
                       <Linkedin size={14} />
                     </a>
                     <a
-                      href="mailto:mhpranto789@gmail.com"
+                      href="mailto:connect.altdotcreative@gmail.com"
                       className="p-2 bg-gray-50 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all rounded-none"
                       aria-label={`Send an email to ${leader.name}`}
                     >
