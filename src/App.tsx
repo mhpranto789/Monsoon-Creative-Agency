@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Clients from "./components/Clients";
-import OurTeam from "./components/OurTeam";
 import Values from "./components/Values";
 import Faq from "./components/Faq";
 import Leaders from "./components/Leaders";
@@ -42,7 +41,7 @@ export default function App() {
     if (currentPage !== "home") return;
 
     const handleScroll = () => {
-      const sections = ["home", "projects", "clients", "our-team", "values", "leaders", "faq", "contact"];
+      const sections = ["home", "projects", "clients", "values", "leaders", "faq", "contact"];
       const headerHeight = 100; // Trigger threshold
       
       let currentSection = "home";
@@ -250,7 +249,6 @@ export default function App() {
                 />
               </div>
               <div className="optimize-gpu"><Clients /></div>
-              <div className="optimize-gpu"><OurTeam /></div>
               <div className="optimize-gpu"><Values /></div>
               <div className="optimize-gpu"><Leaders /></div>
               <div className="optimize-gpu"><Faq /></div>
