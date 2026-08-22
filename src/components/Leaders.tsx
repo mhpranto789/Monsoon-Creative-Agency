@@ -24,31 +24,13 @@ const LEADERS_DATA: Leader[] = [
     tag: "GROWTH ARCHITECT"
   },
   {
-    id: "zubair-rahman",
-    name: "Zubair Rahman",
-    role: "Head of Experiential Design",
-    bio: "A technologist merging modern physical mechanics, LED projection mapping, and sonic interactive triggers. Shaping unforgettable physical portals for enterprise innovation summits.",
-    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&h=700&q=80",
+    id: "ataur-rahaman",
+    name: "Ataur Rahaman",
+    role: "HEAD OF EDITING DEPARTMENT",
+    bio: "Mastering the rhythm of visual storytelling, high-precision cinematic pacing, sound synchronization, and advanced color grading across commercial films, brand narratives, and digital broadcast campaigns.",
+    imageUrl: "https://lh3.googleusercontent.com/d/1SxY-t5uDQ4zY0L23XiI-oe9m4rWYe7eu",
     linkedinUrl: "https://linkedin.com",
-    tag: "Spatial Maven"
-  },
-  {
-    id: "nabila-rahman",
-    name: "Nabila Rahman",
-    role: "Director of Brand Services",
-    bio: "Aligning deep brand objectives with beautiful, culturally rich storytelling. Over 10 years managing corporate accounts for Nestlé, Robi Axiata, and Square Food groups.",
-    imageUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&h=700&q=80",
-    linkedinUrl: "https://linkedin.com",
-    tag: "Client Advocate"
-  },
-  {
-    id: "ayman-shadman",
-    name: "Ayman Shadman",
-    role: "Head of Art Direction",
-    bio: "Crafting beautiful visual systems and high-contrast scenic designs. Merges traditional Bangladeshi folk illustration with premium, international layout layout standards.",
-    imageUrl: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&h=700&q=80",
-    linkedinUrl: "https://linkedin.com",
-    tag: "Visual Artisan"
+    tag: "EDITING DIRECTOR"
   }
 ];
 
