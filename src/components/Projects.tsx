@@ -6,6 +6,76 @@ import ProjectSpotlight from "./ProjectSpotlight";
 
 const PROJECTS_DATA: Project[] = [
   {
+    id: "adc-brand-anthem-film",
+    title: "ADC Brand Anthem & Cinematic Visuals",
+    category: "Digital Marketing",
+    type: "Brand Anthem & Cinematic Commercial",
+    year: "2024",
+    description: "An evocative cinematic brand anthem combining high-fidelity motion camera choreography, stylized color grades, and evocative sound scenography designed for digital broadcast.",
+    imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Audited Digital Reach", value: "3.9M" },
+    campaignGoals: [
+      "Craft high-contrast cinema visuals with color-calibrated anamorphic lenses",
+      "Dynamic sound design and custom brand score orchestration",
+      "Multi-channel broadcast campaign across streaming OTT and digital networks"
+    ],
+    tagline: "Framing visionary brand stories through immersive motion and cinematic lighting.",
+    timeline: "3-Week Agile Production Sprint",
+    channelsUsed: ["Digital Streaming", "Brand Film Mastercuts", "Broadcast OTT Ads"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80"
+    ],
+    metricsDetail: [
+      { label: "Aggregate Video Plays", value: "3.9M+", subtext: "Audited YouTube & stream impressions" },
+      { label: "Completion Rate", value: "84.2%", subtext: "Full watch time duration metric" },
+      { label: "Brand Resonance Uplift", value: "+42%", subtext: "Independent post-campaign survey" }
+    ],
+    clientQuote: {
+      text: "The storytelling depth and production values established an instant emotional connect with our audience.",
+      author: "Chief Marketing Officer",
+      role: "Strategic Enterprise Group"
+    },
+    youtubeId: "bFuI8AbBFM8"
+  },
+  {
+    id: "adc-creative-spotlight-film",
+    title: "ADC Creative Spotlight & Visual Production",
+    category: "Creative Graphics",
+    type: "Creative Commercial & Motion Production",
+    year: "2024",
+    description: "A high-octane commercial visual production showcasing fluid motion dynamics, vivid lifestyle art direction, and precision sound-synced video editing.",
+    imageUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Campaign Impressions", value: "3.2M" },
+    campaignGoals: [
+      "Staged high-speed camera tracking with modern lighting rigs",
+      "Tailored visual color grading enhancing brand textures and human emotions",
+      "Dynamic multi-format distribution optimized for mobile & desktop feeds"
+    ],
+    tagline: "Translating brand energy into captivating, cinema-grade commercial visuals.",
+    timeline: "2-Week Rapid Production",
+    channelsUsed: ["Cinema Commercial Ads", "Social Video Mastercuts", "Digital Display Campaigns"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80"
+    ],
+    metricsDetail: [
+      { label: "Total Video Views", value: "3.2M+", subtext: "Cross-platform video views" },
+      { label: "Average Watch Time", value: "81.5%", subtext: "Audited video engagement index" },
+      { label: "Audience Engagement Lift", value: "3.1x", subtext: "Versus standard campaign benchmarks" }
+    ],
+    clientQuote: {
+      text: "Exceptional pacing, stunning color palette, and crisp sound design. Truly remarkable craftsmanship.",
+      author: "Creative Producer",
+      role: "Media & Brand Network"
+    },
+    youtubeId: "AVn93mewNrI"
+  },
+  {
     id: "honda-sp125",
     title: "Ventura Sky Villa Launch",
     category: "Real Estate",
@@ -268,7 +338,7 @@ export default function Projects({ onNavigateToContact, onOpenFoodWork }: Projec
     ? PROJECTS_DATA 
     : PROJECTS_DATA.filter(p => p.category === selectedCategory);
 
-  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 9);
 
   return (
     <section id="projects" className="py-24 bg-transparent border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
@@ -423,7 +493,7 @@ export default function Projects({ onNavigateToContact, onOpenFoodWork }: Projec
         </motion.div>
 
         {/* Toggle Button Container */}
-        {filteredProjects.length > 6 && (
+        {filteredProjects.length > 9 && (
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
