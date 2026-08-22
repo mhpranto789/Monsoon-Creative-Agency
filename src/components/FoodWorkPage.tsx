@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, FormEvent } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { 
   Search, 
   X, 
@@ -13,11 +13,11 @@ import {
   FolderDown,
   ArrowLeft,
   Flame,
-  CheckCircle2,
-  Phone,
-  Mail,
+  MessageCircle,
+  PhoneCall,
   Clock,
-  Compass
+  CheckCircle2,
+  ArrowUpRight
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { FOOD_WORK_ITEMS, FOOD_CATEGORIES, FoodCategory, FoodWorkItem } from "../data/foodWorkData";
@@ -32,11 +32,6 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
   const [searchQuery, setSearchQuery] = useState("");
   const [activeItem, setActiveItem] = useState<FoodWorkItem | null>(null);
   const [visibleCount, setVisibleCount] = useState(16);
-  const [inquiryName, setInquiryName] = useState("");
-  const [inquiryBrand, setInquiryBrand] = useState("");
-  const [inquiryContact, setInquiryContact] = useState("");
-  const [inquiryMessage, setInquiryMessage] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Scroll to top on page mount
   useEffect(() => {
@@ -103,18 +98,6 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
     }
   };
 
-  const handleSubmitInquiry = (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setInquiryName("");
-      setInquiryBrand("");
-      setInquiryContact("");
-      setInquiryMessage("");
-    }, 4000);
-  };
-
   return (
     <div id="food-work-page" className="min-h-screen bg-[#050505] text-white selection:bg-[#e83e27] selection:text-white">
       {/* Top Floating Navbar for Dedicated Page */}
@@ -162,7 +145,7 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
               }}
               className="px-5 py-2 rounded-full bg-gradient-to-r from-[#e83e27] to-[#f05a46] hover:from-[#c92f1b] hover:to-[#e83e27] text-white text-xs font-bold tracking-wider uppercase transition-all duration-200 hover:scale-105 active:scale-95 shadow-md cursor-pointer"
             >
-              <span>Book Shoot</span>
+              <span>Let's Talk</span>
             </button>
           </div>
         </div>
@@ -174,7 +157,7 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-brand-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+          <div className="mb-12">
             <div className="max-w-3xl space-y-4">
               <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/25 text-brand-primary text-xs font-mono font-bold tracking-wider uppercase">
                 <Utensils size={13} className="animate-pulse" />
@@ -188,22 +171,6 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
               <p className="text-gray-300 text-base sm:text-lg font-light leading-relaxed max-w-2xl">
                 A dedicated archive of commercial culinary stills, studio menu cinematography, and hospitality brand staging. Captured with cinema macro optics, calibrated color reproduction, and bespoke culinary art direction.
               </p>
-            </div>
-
-            {/* Quick Metrics Badge Grid */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 p-4 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md shrink-0">
-              <div className="p-3 text-center">
-                <span className="block font-display text-2xl sm:text-3xl font-black text-white">50</span>
-                <span className="font-mono text-[10px] text-gray-400 uppercase tracking-wider">Curated Stills</span>
-              </div>
-              <div className="p-3 text-center border-x border-white/10">
-                <span className="block font-display text-2xl sm:text-3xl font-black text-brand-primary">7</span>
-                <span className="font-mono text-[10px] text-gray-400 uppercase tracking-wider">Cuisine Genres</span>
-              </div>
-              <div className="p-3 text-center">
-                <span className="block font-display text-2xl sm:text-3xl font-black text-white">4K</span>
-                <span className="font-mono text-[10px] text-gray-400 uppercase tracking-wider">High-Res RAW</span>
-              </div>
             </div>
           </div>
 
@@ -487,107 +454,131 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
         </div>
       </section>
 
-      {/* Dedicated Shoot Booking Form */}
+      {/* Dedicated Shoot Booking - Direct WhatsApp Connect Section */}
       <section id="book-shoot" className="py-20 px-6 md:px-12 border-t border-white/10">
         <div className="max-w-4xl mx-auto rounded-3xl bg-gradient-to-br from-[#141418] via-[#111114] to-[#180e0c] border border-white/15 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-          <div className="relative z-10 space-y-6">
-            <div className="space-y-2">
-              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-xs font-mono font-bold tracking-wider uppercase">
-                <Sparkles size={13} />
-                <span>Commercial F&B Inquiries</span>
+          {/* Subtle background glow */}
+          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-[#e83e27]/15 blur-[100px] rounded-full pointer-events-none" />
+
+          <div className="relative z-10 space-y-8">
+            <div className="space-y-3">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-mono font-bold tracking-wider uppercase">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Instant WhatsApp Production Connect</span>
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
-                Book a Food Photography Production
+
+              <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
+                Let's Talk About Your <span className="text-brand-primary">Food Shoot.</span>
               </h2>
-              <p className="text-gray-300 text-sm font-light leading-relaxed">
-                Whether you're launching a new restaurant menu, cloud kitchen brand, or beverage line, our Dhaka studio and mobile culinary crew are ready to elevate your visual identity.
+
+              <p className="text-gray-300 text-sm sm:text-base font-light leading-relaxed max-w-2xl">
+                No complex forms or waiting times. Connect directly with our culinary photography team via WhatsApp for instant date availability, package rates, and creative direction.
               </p>
             </div>
 
-            {isSubmitted ? (
-              <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-2">
-                <CheckCircle2 size={32} className="text-emerald-400 mx-auto" />
-                <h4 className="font-bold text-white text-base">Inquiry Received</h4>
-                <p className="text-xs text-gray-300">Our culinary producer will contact you within 24 hours with package estimates.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmitInquiry} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[11px] font-mono uppercase tracking-wider text-gray-400 mb-1.5">
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Chef / Manager Name"
-                      value={inquiryName}
-                      onChange={(e) => setInquiryName(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-xs font-sans focus:outline-none focus:border-brand-primary transition-all"
-                    />
+            {/* Direct Connect Action Area */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              {/* Primary WhatsApp Card */}
+              <a
+                href="https://wa.me/8801310577702?text=Hello%20Alt%20DOT%20Creative%2C%20I%20want%20to%20discuss%20a%20commercial%20Food%20Photography%20%2F%20Video%20shoot%20for%20my%20brand."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-6 rounded-2xl bg-gradient-to-br from-[#25D366]/20 via-white/5 to-white/5 border border-[#25D366]/30 hover:border-[#25D366] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex flex-col justify-between shadow-lg"
+              >
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-xl bg-[#25D366] text-black flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                    <MessageCircle size={24} className="fill-current" />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-mono uppercase tracking-wider text-gray-400 mb-1.5">
-                      Brand / Restaurant Name *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Madchef / Artisan Bakery"
-                      value={inquiryBrand}
-                      onChange={(e) => setInquiryBrand(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-xs font-sans focus:outline-none focus:border-brand-primary transition-all"
-                    />
+                    <span className="font-mono text-[10px] text-emerald-400 font-bold uppercase tracking-wider block">
+                      Direct Messaging
+                    </span>
+                    <h3 className="font-display font-bold text-xl text-white">
+                      Chat on WhatsApp
+                    </h3>
+                    <p className="text-gray-300 text-xs font-light mt-1 leading-relaxed">
+                      Instant response for shoot dates, restaurant locations, and rate cards.
+                    </p>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-[11px] font-mono uppercase tracking-wider text-gray-400 mb-1.5">
-                      Contact Phone / WhatsApp *
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="+880 1XXX-XXXXXX"
-                      value={inquiryContact}
-                      onChange={(e) => setInquiryContact(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-xs font-sans focus:outline-none focus:border-brand-primary transition-all"
-                    />
+                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-[#25D366]">
+                  <span className="font-mono tracking-wider uppercase">Open WhatsApp (+880 1310 577702)</span>
+                  <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </div>
+              </a>
+
+              {/* Direct Call / Studio Card */}
+              <a
+                href="tel:+8801310577702"
+                className="group p-6 rounded-2xl bg-white/5 hover:bg-white/[0.08] border border-white/10 hover:border-brand-primary/50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex flex-col justify-between shadow-lg"
+              >
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-xl bg-brand-primary/20 border border-brand-primary/30 text-brand-primary flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                    <PhoneCall size={22} />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-mono uppercase tracking-wider text-gray-400 mb-1.5">
-                      Shoot Scope / Estimated Dishes
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="e.g. 15 Menu Stills + 2 Video Reels"
-                      value={inquiryMessage}
-                      onChange={(e) => setInquiryMessage(e.target.value)}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 text-xs font-sans focus:outline-none focus:border-brand-primary transition-all"
-                    />
+                    <span className="font-mono text-[10px] text-brand-primary font-bold uppercase tracking-wider block">
+                      Direct Voice Line
+                    </span>
+                    <h3 className="font-display font-bold text-xl text-white">
+                      Call ADC
+                    </h3>
+                    <p className="text-gray-300 text-xs font-light mt-1 leading-relaxed">
+                      Speak directly with our producer for urgent project turnarounds and briefing.
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                  <button
-                    type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#e83e27] to-[#f05a46] hover:from-[#c92f1b] hover:to-[#e83e27] text-white text-xs font-bold tracking-wider uppercase transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg cursor-pointer"
-                  >
-                    Request Production Quote
-                  </button>
+                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-white group-hover:text-brand-primary transition-colors">
+                  <span className="font-mono tracking-wider uppercase">+880 1310-577702</span>
+                  <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </div>
+              </a>
+            </div>
 
+            {/* Quick Topic Prompts for WhatsApp */}
+            <div className="pt-2">
+              <span className="text-xs font-mono text-gray-400 uppercase tracking-wider block mb-3 font-semibold">
+                Or choose a quick topic to start chatting:
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: "🍔 Restaurant Menu Stills", text: "Hello! I need a quote for a full Restaurant Menu Still Photography shoot." },
+                  { label: "🥩 Fine Dining & Steaks", text: "Hi Alt DOT! We are launching a premium grill / steakhouse and need culinary cinematography." },
+                  { label: "🍸 Beverage & Bar Mixology", text: "Hello! Looking for specialized beverage / cocktail bar photography and video reels." },
+                  { label: "🍰 Bakery & Dessert Menu", text: "Hi! We need high-res product and lifestyle photos for our bakery and dessert items." },
+                  { label: "🎥 4K Food Reels & Motion", text: "Hello! Interested in dynamic 4K food reels and behind-the-kitchen video content." }
+                ].map((item, idx) => (
                   <a
-                    href="https://wa.me/8801310577702?text=Hello%2C%20I%20am%20interested%20in%20booking%20a%20Food%20Photography%20Shoot%20with%20Alt%20DOT%20Creative."
+                    key={idx}
+                    href={`https://wa.me/8801310577702?text=${encodeURIComponent(item.text)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-mono text-emerald-400 hover:underline flex items-center space-x-1.5"
+                    className="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-emerald-500/20 hover:border-emerald-500/40 border border-white/10 text-gray-300 hover:text-white text-xs font-sans transition-all flex items-center space-x-1.5"
                   >
-                    <span>Or chat instantly on WhatsApp →</span>
+                    <span>{item.label}</span>
+                    <ArrowUpRight size={12} className="opacity-60" />
                   </a>
-                </div>
-              </form>
-            )}
+                ))}
+              </div>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="pt-4 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-gray-400 font-mono">
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 size={14} className="text-brand-primary shrink-0" />
+                <span>On Location</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle2 size={14} className="text-brand-primary shrink-0" />
+                <span>Fast 48h Turnaround</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Clock size={14} className="text-brand-primary shrink-0" />
+                <span>Available 7 Days a Week</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -747,16 +738,15 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
                     <ExternalLink size={13} />
                   </a>
 
-                  <button
-                    onClick={() => {
-                      setActiveItem(null);
-                      const el = document.getElementById("book-shoot");
-                      el?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className="w-full py-3 px-4 rounded-xl bg-brand-primary hover:bg-[#c92f1b] text-white font-sans font-bold text-xs tracking-wider uppercase transition-colors cursor-pointer"
+                  <a
+                    href={`https://wa.me/8801310577702?text=${encodeURIComponent(`Hello Alt DOT Creative! I am interested in booking a Food Photography shoot with the visual style of "${activeItem.title}" (${activeItem.category}).`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20b858] text-black font-sans font-bold text-xs tracking-wider uppercase transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer shadow-lg hover:scale-[1.02] active:scale-[0.98]"
                   >
-                    Book Shoot For This Style
-                  </button>
+                    <MessageCircle size={15} className="fill-current" />
+                    <span>Chat on WhatsApp For This Style</span>
+                  </a>
                 </div>
               </div>
             </motion.div>
