@@ -8,7 +8,7 @@ const LEADERS_DATA: Leader[] = [
     id: "tariqul-anam",
     name: "Mahamudul Hasan",
     role: "Founder & Chief Creative Strategist",
-    bio: "Over 15 years designing ground-breaking campaigns for premier international brands. Head of creative direction for massive live setups like Coke Studio Bangla's grand activations.",
+    bio: "Over 15 years designing ground-breaking campaigns for premier international brands. Head of creative direction for massive live setups and experiential grand activations.",
     imageUrl: "https://lh3.googleusercontent.com/d/1iv38ghi4nO9n-dDjOiQEsykkuHKLQyjU",
     linkedinUrl: "https://linkedin.com",
     tag: "Strategy Architect",
@@ -27,7 +27,7 @@ const LEADERS_DATA: Leader[] = [
     id: "zubair-rahman",
     name: "Zubair Rahman",
     role: "Head of Experiential Design",
-    bio: "A technologist merging modern physical mechanics, LED projection mapping, and sonic interactive triggers. Shaping unforgettable physical portals for Grameenphone & Pepsi summits.",
+    bio: "A technologist merging modern physical mechanics, LED projection mapping, and sonic interactive triggers. Shaping unforgettable physical portals for enterprise innovation summits.",
     imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&h=700&q=80",
     linkedinUrl: "https://linkedin.com",
     tag: "Spatial Maven"

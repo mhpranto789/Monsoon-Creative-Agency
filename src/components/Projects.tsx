@@ -6,41 +6,6 @@ import ProjectSpotlight from "./ProjectSpotlight";
 
 const PROJECTS_DATA: Project[] = [
   {
-    id: "coke-studio",
-    title: "Coke Studio Bangla 2023",
-    category: "Digital Marketing",
-    type: "Experiential & Live Brand Campaign",
-    year: "2023",
-    description: "Re-imagined the live music experience across Bangladesh, executing multi-touchpoint sound stages, immersive venue setups, and cultural art fusions that gathered over 20,000 passionate music fans in-person.",
-    imageUrl: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=1200&q=80",
-    stats: { label: "Footfall & Digital Organic Reach", value: "11M" },
-    campaignGoals: [
-      "Full Ground Stage Production for 20K live audience",
-      "Localized Interactive Zones utilizing augmented mirrors",
-      "Real-time Digital UGC Broadcasting Hub & Stream alignment"
-    ],
-    tagline: "Uniting 20,000 live beats under a unified, premium cultural anthem.",
-    timeline: "8-Week Live Build-up",
-    channelsUsed: ["Soundstage Scenography", "RFID Crowd Control", "Traditional Alpona Art Activations", "OOH Broadcasts"],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80"
-    ],
-    metricsDetail: [
-      { label: "Direct Venue Footfall", value: "24,500+", subtext: "Audited RFID access tokens" },
-      { label: "Co-Branded Social Buzz", value: "11.2M+", subtext: "Direct mentions & audio usage" },
-      { label: "Earned Media Multiplier", value: "6.8x", subtext: "National news coverage value" }
-    ],
-    clientQuote: {
-      text: "Alt DOT Creative turned our activation brief into a historic cultural milestone for music lovers in Bangladesh. Unbelievable precision on tight schedules.",
-      author: "Lead Experiential Officer",
-      role: "Coke Studio Bangla Portfolio"
-    },
-    youtubeId: "Ta943n1xZPk"
-  },
-  {
     id: "honda-sp125",
     title: "Ventura Sky Villa Launch",
     category: "Real Estate",
@@ -109,111 +74,6 @@ const PROJECTS_DATA: Project[] = [
       role: "bKash Brand Core Committee"
     },
     youtubeId: "N1-9_e-d6kY"
-  },
-  {
-    id: "gp-future",
-    title: "Shanta Pinnacle Experience",
-    category: "Real Estate",
-    type: "Premium Real Estate Spatial & VR Experience",
-    year: "2023",
-    description: "Designed an elite interactive sales suite and architectural presentation tunnel for Shanta's landmark commercial tower. Combined motion-triggered smart projection mapping with real-time analytics to pitch high-value spaces.",
-    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-    stats: { label: "Commercial Space Leased", value: "85%" },
-    campaignGoals: [
-      "Design spatial 3D blueprint for complex interactive sales lounge",
-      "Synchronize multi-channel directional soundscapes with high-end luxury graphics",
-      "Track corporate visitor engagement to showcase architectural impacts"
-    ],
-    tagline: "Synthesizing spatial projection and electronic sensors for landmark real estate portals.",
-    timeline: "5-Week Design & Fabrication",
-    channelsUsed: ["Spatial Layout Blueprints", "Interactive Interactive Screen Guides", "Direct B2B outreach"],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
-    ],
-    metricsDetail: [
-      { label: "VIP Investors Engaged", value: "1,500+", subtext: "High-net-worth leads verified" },
-      { label: "Space Leased Within Month", value: "85%", subtext: "Strategic contracts closed" },
-      { label: "Project Investment Pipeline", value: "$14.1M", subtext: "Direct commercial acquisition leads" }
-    ],
-    clientQuote: {
-      text: "They designed a real estate portal that set new benchmarks for commercial property marketing in South Asia.",
-      author: "Director of Asset Management",
-      role: "Shanta Holdings Limited"
-    },
-    youtubeId: "uiIK9jQbhRA"
-  },
-  {
-    id: "aarong-fashion",
-    title: "Aarong Luxury Autumn",
-    category: "Creative Graphics",
-    type: "Premium Editorial Catalog & Social Strategy",
-    year: "2023",
-    description: "Directed an elegant, high-contrast lifestyle photoshoot for Aarong's flagship Autumn collection, utilizing deep terracotta clays and natural light profiles to capture heritage in a contemporary silhouette.",
-    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1200&q=80",
-    stats: { label: "Campaign eCommerce Conversions", value: "1.5" },
-    campaignGoals: [
-      "Direct heritage model photo-sessions utilizing natural Dhaka landscapes",
-      "Coordinate interactive premium visual catalogs with high-end print standards",
-      "Align micro-influencer channels to highlight sustainable handmade fabrics"
-    ],
-    tagline: "Framing contemporary visual silhouettes against Bangladesh's traditional clay landscapes.",
-    timeline: "4-Week Creative Direction",
-    channelsUsed: ["Editorial Art Direction", "Influencer Placement Modeling", "Eco-friendly catalogs"],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
-    ],
-    metricsDetail: [
-      { label: "Direct Sales Conversion", value: "+45%", subtext: "eCommerce tracking post-exposure" },
-      { label: "Print circulation reach", value: "85,000", subtext: "Audited delivery lists" },
-      { label: "Social Interactions engagement", value: "1.5M+", subtext: "Sustained engagement rate over 5%" }
-    ],
-    clientQuote: {
-      text: "An absolute visual masterclass that combined deep root clay motifs with premium metropolitan elegance.",
-      author: "Creative Director",
-      role: "Aarong Luxury Division"
-    },
-    youtubeId: "nOreGhU2Ddw"
-  },
-  {
-    id: "pepsi-soundwave",
-    title: "Pepsi Soundwave Activations",
-    category: "Digital Marketing",
-    type: "Multi-City Experiential Music Tour",
-    year: "2024",
-    description: "Built fully sensory, branded sound-booths equipped with voice-activated light walls where festival visitors could craft custom musical beats and receive hyper-personalized digital dynamic souvenirs.",
-    imageUrl: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80",
-    stats: { label: "Digital UGC Shares On TikTok/FB", value: "8.5" },
-    campaignGoals: [
-      "Develop custom voice sensing microcontrollers translating decibel frequencies",
-      "Construct robust transportable sound-booth booths for multi-city outdoor deployments",
-      "Deploy localized QR-code generation pipelines for instantly downloadable digital video files"
-    ],
-    tagline: "Giving youth audiences the microphone to create their own branded visual soundtrack.",
-    timeline: "7-Week Fabrication & Regional Deployment",
-    channelsUsed: ["Electronic Sensors Fabrication", "On-the-ground Brand Ambassadors", "Automatic video encoding pipeline"],
-    galleryImages: [
-      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1481162854517-d9e353af153d?auto=format&fit=crop&w=800&q=80"
-    ],
-    metricsDetail: [
-      { label: "Custom Beat Tracks Designed", value: "48,200", subtext: "Unique recordings created live" },
-      { label: "Social Video Shares", value: "85K+", subtext: "Audited organic reach TikTok indicators" },
-      { label: "Product Sampling distribution", value: "210,000+", subtext: "Target youth campus drops" }
-    ],
-    clientQuote: {
-      text: "The integration of physical audio microchips and prompt QR video templates generated our biggest seasonal youth engagement metric ever.",
-      author: "Brand Lead BD Division",
-      role: "PepsiCo International Group"
-    },
-    youtubeId: "hVICqoOHOPM"
   },
   {
     id: "adc-commercial-film",
@@ -356,6 +216,41 @@ const PROJECTS_DATA: Project[] = [
     },
     videoType: "facebook",
     facebookUrl: "https://www.facebook.com/reel/6945254908821296"
+  },
+  {
+    id: "adc-cinematic-showcase",
+    title: "ADC Visual Craft & Creative Showcase",
+    category: "Digital Marketing",
+    type: "Cinematic Film & Brand Campaign",
+    year: "2024",
+    description: "An evocative cinematic showcase blending high-precision camera choreography, stylized atmospheric lighting, and high-impact visual storytelling crafted for digital broadcast and brand identity elevation.",
+    imageUrl: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=1200&q=80",
+    stats: { label: "Campaign Video Reach", value: "3.5M" },
+    campaignGoals: [
+      "Dynamic cinematography with tailored anamorphic lens aesthetics",
+      "Atmospheric mood lighting and seamless digital post-production grading",
+      "Omni-channel distribution across digital platforms and broadcast media"
+    ],
+    tagline: "Unfolding brand narratives through cinematic atmosphere and visual mastery.",
+    timeline: "3-Week Agile Production Sprint",
+    channelsUsed: ["Digital Streaming", "Brand Film Mastercuts", "Social Campaign Broadcasts"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80"
+    ],
+    metricsDetail: [
+      { label: "Total Video Views", value: "3.5M+", subtext: "Cross-platform video impressions" },
+      { label: "Viewer Retention Rate", value: "82.4%", subtext: "Audited watch time benchmark" },
+      { label: "Positive Brand Sentiment", value: "97.8%", subtext: "Audience sentiment analysis index" }
+    ],
+    clientQuote: {
+      text: "The cinematic vision and visual storytelling elevated our brand identity to a whole new level.",
+      author: "Executive Creative Director",
+      role: "Strategic Brand Group"
+    },
+    youtubeId: "btLZGjscwk4"
   }
 ];
 

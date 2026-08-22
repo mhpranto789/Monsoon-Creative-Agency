@@ -3,13 +3,6 @@ import { Client } from "../types";
 
 const CLIENTS_DATA: Client[] = [
   { 
-    id: "coca-cola", 
-    name: "Coca-Cola Bangladesh", 
-    logoText: "Coca-Cola", 
-    industry: "Beverage",
-    bgImage: "https://lh3.googleusercontent.com/d/1dn5AVzuRBIwujDOMX1i50ufM4iiLzLxW" 
-  },
-  { 
     id: "honda", 
     name: "Honda Bangladesh", 
     logoText: "Honda", 
@@ -24,32 +17,11 @@ const CLIENTS_DATA: Client[] = [
     bgImage: "https://lh3.googleusercontent.com/d/18hYVE2ZOQ9ZM3Vd5tOEOQVKjGVTeus6P" 
   },
   { 
-    id: "gp", 
-    name: "Grameenphone", 
-    logoText: "Grameenphone", 
-    industry: "Telecom",
-    bgImage: "https://lh3.googleusercontent.com/d/17X867uw8FZdDpS5zFFVksIKVR-pz0075" 
-  },
-  { 
     id: "unilever", 
     name: "Unilever Bangladesh", 
     logoText: "Unilever", 
     industry: "FMCG",
     bgImage: "https://lh3.googleusercontent.com/d/1u4CQoevJs4Qu_BC8V9FZ1jSecQT5i4Hq" 
-  },
-  { 
-    id: "aarong", 
-    name: "Aarong BRAC", 
-    logoText: "Aarong", 
-    industry: "Premium Fashion",
-    bgImage: "https://lh3.googleusercontent.com/d/18duZWdkhgK8iRTYzdTbc4a37PJNImahr" 
-  },
-  { 
-    id: "pepsi", 
-    name: "PepsiCo Bangladesh", 
-    logoText: "Pepsi", 
-    industry: "Beverage",
-    bgImage: "https://lh3.googleusercontent.com/d/11f_YmAEcetF2zQgWVxOupjqGWqeOl2F6" 
   },
   { 
     id: "robi", 

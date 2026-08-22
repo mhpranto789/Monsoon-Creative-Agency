@@ -32,7 +32,7 @@ const FAQ_DATA: FaqItem[] = [
     id: "campaign-timeline",
     category: "Process",
     question: "How long does a campaign take from initial brief to live execution?",
-    answer: "Most full-scale brand strategies and high-end cinematic productions occupy 4 to 8 weeks. However, our modular engineering teams are notoriously agile: we have concepted, built, and launched historically successful ground activations for brands like Coke Studio Bangla and HondaBD in as few as 10 to 14 days without sacrificing production safety."
+    answer: "Most full-scale brand strategies and high-end cinematic productions occupy 4 to 8 weeks. However, our modular engineering teams are notoriously agile: we have concepted, built, and launched historically successful ground activations for brands like HondaBD and national leaders in as few as 10 to 14 days without sacrificing production safety."
   },
   {
     id: "brand-partners",

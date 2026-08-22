@@ -286,7 +286,7 @@ export default function Footer() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      placeholder="e.g. Coca-Cola BD"
+                      placeholder="e.g. Enterprise / Brand"
                       className="w-full bg-white dark:bg-black/45 border border-gray-350 dark:border-white/10 px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors"
                     />
                   </div>
