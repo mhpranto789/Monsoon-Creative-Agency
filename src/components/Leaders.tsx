@@ -9,7 +9,7 @@ const LEADERS_DATA: Leader[] = [
     name: "Mahamudul Hasan",
     role: "Founder & Chief Creative Strategist",
     bio: "Over 15 years designing ground-breaking campaigns for premier international brands. Head of creative direction for massive live setups and experiential grand activations.",
-    imageUrl: "https://lh3.googleusercontent.com/d/1iv38ghi4nO9n-dDjOiQEsykkuHKLQyjU",
+    imageUrl: "https://lh3.googleusercontent.com/d/1bS5yEcU5BjhWz9BU0KihTCTxO0wB8pKl",
     linkedinUrl: "https://linkedin.com",
     tag: "Strategy Architect",
     location: "Niketon, Dhaka"
@@ -24,6 +24,15 @@ const LEADERS_DATA: Leader[] = [
     tag: "GROWTH ARCHITECT"
   },
   {
+    id: "fazle-rabbi",
+    name: "Fazle Rabbi",
+    role: "HEAD OF MARKETING & STRATEGY",
+    bio: "Pioneering high-impact marketing initiatives, consumer psychology frameworks, and scalable go-to-market strategies. Translating visionary creative ideas into measurable brand growth and market dominance across regional and global channels.",
+    imageUrl: "https://lh3.googleusercontent.com/d/1Ia2OO2feecEU7Jm9Ucx-zC6GwzqN34Yw",
+    linkedinUrl: "https://linkedin.com",
+    tag: "MARKETING STRATEGIST"
+  },
+  {
     id: "ataur-rahaman",
     name: "Ataur Rahaman",
     role: "HEAD OF EDITING DEPARTMENT",
@@ -36,7 +45,7 @@ const LEADERS_DATA: Leader[] = [
 
 export default function Leaders() {
   const [showAll, setShowAll] = useState(false);
-  const displayedLeaders = showAll ? LEADERS_DATA : LEADERS_DATA.slice(0, 3);
+  const displayedLeaders = showAll ? LEADERS_DATA : LEADERS_DATA.slice(0, 4);
 
   return (
     <section id="leaders" className="py-24 bg-transparent border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
@@ -53,7 +62,7 @@ export default function Leaders() {
         </div>
 
         {/* Profiles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <AnimatePresence mode="popLayout">
             {displayedLeaders.map((leader, index) => (
               <motion.div
@@ -76,14 +85,10 @@ export default function Leaders() {
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-102 transition-all duration-700 ease-out"
                     />
-                    {/* Absolute Badge corner */}
-                    <div className="absolute top-4 right-4 bg-black dark:bg-[#e83e27] text-white text-[9px] font-mono tracking-widest font-bold uppercase px-3 py-1">
-                      {leader.tag}
-                    </div>
                   </div>
 
-                  {/* Info and Taglines */}
-                  <div className="space-y-3">
+                  {/* Info and Role */}
+                  <div className="space-y-2">
                     <div>
                       <h3 className="font-display font-black text-2xl text-black dark:text-white group-hover:text-[#e83e27] transition-colors leading-none">
                         {leader.name}
@@ -92,10 +97,6 @@ export default function Leaders() {
                         {leader.role}
                       </span>
                     </div>
-                    
-                    <p className="font-sans text-xs text-gray-500 dark:text-gray-400 font-light leading-relaxed pt-2 border-t border-gray-100 dark:border-white/5">
-                      {leader.bio}
-                    </p>
                   </div>
                 </div>
 
@@ -130,7 +131,7 @@ export default function Leaders() {
         </div>
 
         {/* Toggle Button Container */}
-        {LEADERS_DATA.length > 3 && (
+        {LEADERS_DATA.length > 4 && (
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}

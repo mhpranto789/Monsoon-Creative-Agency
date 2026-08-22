@@ -103,10 +103,10 @@ interface AnimatedCounterProps {
   suffix?: string;
 }
 
-function AnimatedCounter({ end, duration = 2000, suffix = "" }: AnimatedCounterProps) {
+function AnimatedCounter({ end, duration = 1800, suffix = "" }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const elementRef = useRef<HTMLSpanElement>(null);
-  const startRef = useRef<number | null>(null);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
     let animationFrameId: number;
@@ -116,21 +116,21 @@ function AnimatedCounter({ end, duration = 2000, suffix = "" }: AnimatedCounterP
       observer = new IntersectionObserver(
         (entries) => {
           const [entry] = entries;
-          if (entry.isIntersecting) {
-            startRef.current = null;
+          if (entry.isIntersecting && !hasAnimated.current) {
+            hasAnimated.current = true;
+            const startTime = performance.now();
             
             const animate = (timestamp: number) => {
-              if (!startRef.current) startRef.current = timestamp;
-              const progress = timestamp - startRef.current;
-              const percentage = Math.min(progress / duration, 1);
+              const elapsed = timestamp - startTime;
+              const progress = Math.min(elapsed / duration, 1);
               
-              // Ease out quad
-              const easeOutPercentage = percentage * (2 - percentage);
-              const currentCount = Math.floor(easeOutPercentage * end);
+              // Smooth cubic easing for high polish
+              const easeProgress = 1 - Math.pow(1 - progress, 3);
+              const currentCount = Math.round(easeProgress * end);
               
               setCount(currentCount);
               
-              if (percentage < 1) {
+              if (progress < 1) {
                 animationFrameId = requestAnimationFrame(animate);
               } else {
                 setCount(end);
@@ -138,18 +138,15 @@ function AnimatedCounter({ end, duration = 2000, suffix = "" }: AnimatedCounterP
             };
             
             animationFrameId = requestAnimationFrame(animate);
-          } else {
-            setCount(0);
           }
         },
-        { threshold: 0.1 }
+        { threshold: 0.15 }
       );
 
       if (elementRef.current) {
         observer.observe(elementRef.current);
       }
     } else {
-      // Fallback if IntersectionObserver is not supported
       setCount(end);
     }
 
@@ -164,7 +161,7 @@ function AnimatedCounter({ end, duration = 2000, suffix = "" }: AnimatedCounterP
   }, [end, duration]);
 
   return (
-    <span ref={elementRef} className="tabular-nums">
+    <span ref={elementRef} className="inline-block tabular-nums font-display font-black text-5xl">
       {count}
       {suffix}
     </span>
@@ -276,24 +273,41 @@ export default function Clients() {
         </div>
 
         {/* Dynamic Metric Counter Segment */}
-        <div className="mt-20 border-t border-gray-200 dark:border-white/10 pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left transition-colors font-sans">
+        <div className="mt-20 border-t border-gray-200 dark:border-white/10 pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left transition-colors font-sans">
           <div className="space-y-2">
-            <span className="font-display font-black text-5xl text-[#e83e27] block">
-              42+
+            <span className="text-[#e83e27] block">
+              <AnimatedCounter end={35} suffix="+" duration={1600} />
             </span>
-            <span className="font-mono text-xs tracking-wider text-gray-500 dark:text-gray-400 uppercase block font-medium font-sans">Massive activations executed</span>
+            <span className="font-mono text-xs tracking-wider text-black dark:text-white uppercase block font-bold">
+              Campaigns & Creative Launches
+            </span>
+            <p className="font-sans text-xs text-gray-500 dark:text-gray-400 font-light">
+              From viral digital narratives to full-scale brand activations.
+            </p>
           </div>
+
           <div className="space-y-2">
-            <span className="font-display font-black text-5xl text-black dark:text-white block">
-              100%
+            <span className="text-black dark:text-white block">
+              <AnimatedCounter end={100} suffix="%" duration={1800} />
             </span>
-            <span className="font-mono text-xs tracking-wider text-gray-500 dark:text-gray-400 uppercase block font-medium font-sans">Bangladesh audience empathy</span>
+            <span className="font-mono text-xs tracking-wider text-black dark:text-white uppercase block font-bold">
+              Tailored Strategy & In-House Craft
+            </span>
+            <p className="font-sans text-xs text-gray-500 dark:text-gray-400 font-light">
+              Direct collaboration with senior directors—zero agency markup fluff.
+            </p>
           </div>
+
           <div className="space-y-2">
-            <span className="font-display font-black text-5xl text-black dark:text-white block">
-              10B+
+            <span className="text-black dark:text-white block">
+              <AnimatedCounter end={99} suffix="+" duration={1700} />
             </span>
-            <span className="font-mono text-xs tracking-wider text-gray-500 dark:text-gray-400 uppercase block font-medium font-sans">Combined client monetization</span>
+            <span className="font-mono text-xs tracking-wider text-black dark:text-white uppercase block font-bold">
+              Brand Assets & Visuals Produced
+            </span>
+            <p className="font-sans text-xs text-gray-500 dark:text-gray-400 font-light">
+              Commercial gastronomy photography, cinematic films, and digital collateral.
+            </p>
           </div>
         </div>
       </div>

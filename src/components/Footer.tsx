@@ -155,7 +155,7 @@ export default function Footer() {
                   style={{ border: 0 }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-40 opacity-90 group-hover:opacity-100 transition-opacity grayscale contrast-[1.1] hover:grayscale-0"
+                  className="w-full h-40 opacity-95 group-hover:opacity-100 transition-opacity contrast-[1.05]"
                 />
                 <a
                   href="https://maps.app.goo.gl/infttGQU475hGZns5"
@@ -198,7 +198,7 @@ export default function Footer() {
                     +880 1310-577702
                   </a>
                   <p className="font-sans text-xs text-gray-500 dark:text-gray-455 font-light">
-                    Sun - Thu, 10:00 AM - 6:00 PM (WhatsApp available)
+                    Sat - Thu, 10:00 AM - 7:00 PM (WhatsApp 24/7 Available)
                   </p>
                 </div>
               </div>
@@ -343,6 +343,7 @@ export default function Footer() {
                     <option value="Experiential Activation">Experiential BTL & Venue Activation</option>
                     <option value="Digital PR & Sound Hub">Digital PR & Sounds Event Direction</option>
                     <option value="Integrated Consultancy">Integrated Agency Consultancy</option>
+                    <option value="Custom Campaign">Custom Campaign</option>
                   </select>
                 </div>
 
