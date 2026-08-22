@@ -473,7 +473,8 @@ export default function Projects({ onNavigateToContact, onOpenFoodWork }: Projec
                         src={project.imageUrl}
                         alt={project.title}
                         referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        style={{ filter: "none", WebkitFilter: "none" }}
+                        className="w-full h-full object-cover filter-none grayscale-0 group-hover:scale-105 transition-transform duration-700 ease-out"
                       />
                       {/* Category Badge & Year */}
                       <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">

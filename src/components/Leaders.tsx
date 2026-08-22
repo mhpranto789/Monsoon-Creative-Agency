@@ -83,7 +83,8 @@ export default function Leaders() {
                       alt={leader.name}
                       loading="lazy"
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-102 transition-all duration-700 ease-out"
+                      style={{ filter: "none", WebkitFilter: "none" }}
+                      className="w-full h-full object-cover filter-none grayscale-0 group-hover:scale-102 transition-transform duration-500 ease-out"
                     />
                   </div>
 
