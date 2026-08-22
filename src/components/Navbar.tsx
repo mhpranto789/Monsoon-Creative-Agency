@@ -73,7 +73,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
             </div>
             <div>
               <span className="font-display font-black text-xl tracking-tight text-white block">
-                Alt DOT
+                Alt <span className="text-brand-primary">DOT</span>
               </span>
               <span className="font-mono text-[9px] tracking-widest text-gray-400 uppercase block -mt-1">
                 Creative

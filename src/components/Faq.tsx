@@ -52,6 +52,21 @@ export default function Faq() {
   const [openId, setOpenId] = useState<string | null>("creative-approach");
   const [activeTab, setActiveTab] = useState<"all" | "Philosophy" | "Services" | "Process">("all");
 
+  const highlightDot = (text: string) => {
+    if (!text || !text.includes("DOT")) return text;
+    const parts = text.split("DOT");
+    return (
+      <>
+        {parts.map((part, i) => (
+          <span key={i}>
+            {part}
+            {i < parts.length - 1 && <span className="text-brand-primary font-bold">DOT</span>}
+          </span>
+        ))}
+      </>
+    );
+  };
+
   const toggleItem = (id: string) => {
     setOpenId(prev => (prev === id ? null : id));
   };
@@ -143,7 +158,7 @@ export default function Faq() {
                         <h3 className={`font-display font-bold text-sm md:text-base leading-snug transition-colors duration-250 ${
                           isOpen ? "text-[#e83e27]" : "text-black dark:text-white group-hover:text-black dark:group-hover:text-white"
                         }`}>
-                          {faq.question}
+                          {highlightDot(faq.question)}
                         </h3>
                       </div>
                       
@@ -169,7 +184,7 @@ export default function Faq() {
                     >
                       <div className="px-6 pb-6 pt-1 border-t border-gray-100 dark:border-white/5">
                         <p className="font-sans text-xs md:text-sm text-gray-500 dark:text-gray-400 font-light leading-relaxed">
-                          {faq.answer}
+                          {highlightDot(faq.answer)}
                         </p>
                       </div>
                     </motion.div>

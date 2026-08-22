@@ -375,7 +375,7 @@ export default function Footer() {
                     ) : (
                       <>
                         <Send size={14} />
-                        <span>Deliver Brief to Alt DOT Creative</span>
+                        <span>Deliver Brief to Alt <span className="text-brand-primary font-bold">DOT</span> Creative</span>
                       </>
                     )}
                   </button>
@@ -397,7 +397,7 @@ export default function Footer() {
                       Brief Received Successfully!
                     </h4>
                     <p className="font-sans text-xs text-gray-550 dark:text-gray-400 max-w-sm leading-relaxed mb-6">
-                      An Account Director at Alt DOT Creative is already reviewing your details. We will touch base shortly.
+                      An Account Director at Alt <span className="text-brand-primary font-bold">DOT</span> Creative is already reviewing your details. We will touch base shortly.
                     </p>
                     <button
                       id="close-success-toast"
@@ -444,7 +444,7 @@ export default function Footer() {
         {/* Footer Base Linkages and Credits */}
         <div className="border-t border-gray-200 dark:border-white/10 pt-12 mt-12 flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="flex items-center space-x-3 text-xs text-gray-400 dark:text-gray-550 font-mono">
-            <span>© {new Date().getFullYear()} Alt DOT Creative. Dhaka, Bangladesh.</span>
+            <span>© {new Date().getFullYear()} Alt <span className="text-brand-primary font-bold">DOT</span> Creative. Dhaka, Bangladesh.</span>
             <span>|</span>
             <span className="hover:text-black dark:hover:text-white transition-colors cursor-pointer">Privacy Charter</span>
           </div>

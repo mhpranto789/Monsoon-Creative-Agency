@@ -58,6 +58,21 @@ export default function ProjectSpotlight({
   const [multiplier, setMultiplier] = useState(1); // multiplier slider for local vs regional scale
   const [estimatedReach, setEstimatedReach] = useState(0);
 
+  const highlightDot = (text: string) => {
+    if (!text || !text.includes("DOT")) return text;
+    const parts = text.split("DOT");
+    return (
+      <>
+        {parts.map((part, i) => (
+          <span key={i}>
+            {part}
+            {i < parts.length - 1 && <span className="text-brand-primary font-bold">DOT</span>}
+          </span>
+        ))}
+      </>
+    );
+  };
+
   // Reset selected image and video when project changes
   useEffect(() => {
     setActiveImage(defaultGallery[0]);
@@ -506,7 +521,7 @@ export default function ProjectSpotlight({
               <div className="bg-[#FAF9F6] dark:bg-[#0B0C0E] p-5 border border-gray-150 dark:border-white/5">
                 <Quote size={20} className="text-[#e83e27] opacity-50 mb-2" />
                 <p className="font-sans text-xs text-slate-700 dark:text-gray-300 font-light leading-relaxed italic">
-                  "{quote.text}"
+                  "{highlightDot(quote.text)}"
                 </p>
                 <div className="mt-3 flex items-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-[#e83e27]" />
@@ -529,7 +544,7 @@ export default function ProjectSpotlight({
                 }}
                 className="btn-liquid-glass-primary w-full flex items-center justify-center space-x-2 text-sm font-sans font-bold py-4 transition-all rounded-full cursor-pointer hover:scale-[1.01] active:scale-[0.99] shadow-md hover:shadow-lg duration-200"
               >
-                <span>Partner with Alt DOT Creative on similar brief</span>
+                <span>Partner with Alt <span className="text-brand-primary font-bold">DOT</span> Creative on similar brief</span>
                 <ExternalLink size={13} />
               </button>
               

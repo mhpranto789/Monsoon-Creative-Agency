@@ -116,7 +116,7 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
 
             <div className="hidden sm:flex items-center space-x-2.5 pl-2 border-l border-white/10">
               <span className="font-display font-black text-sm tracking-tight text-white">
-                Alt DOT <span className="text-brand-primary">Creative</span>
+                Alt <span className="text-brand-primary">DOT</span> Creative
               </span>
               <span className="text-gray-500 text-xs font-mono">/</span>
               <span className="font-mono text-xs text-gray-300 font-semibold tracking-wide">
@@ -591,7 +591,7 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
               onClick={onBackToHome}
               className="text-white hover:text-brand-primary transition-colors font-bold uppercase"
             >
-              ← Back to Alt DOT Creative
+              ← Back to Alt <span className="text-brand-primary">DOT</span> Creative
             </button>
             <span>•</span>
             <a
@@ -605,7 +605,7 @@ export default function FoodWorkPage({ onBackToHome, onNavigateToContact }: Food
           </div>
 
           <div>
-            © {new Date().getFullYear()} Alt DOT Creative. Commercial Gastronomy & F&B Visuals.
+            © {new Date().getFullYear()} Alt <span className="text-brand-primary font-bold">DOT</span> Creative. Commercial Gastronomy & F&B Visuals.
           </div>
         </div>
       </footer>

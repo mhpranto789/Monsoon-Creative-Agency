@@ -46,6 +46,28 @@ export default function Hero({ onLearnMore }: HeroProps) {
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, currentWordIndex, typingSpeed]);
 
+  const renderHeroText = (text: string) => {
+    if (!text) return text;
+    if (text.includes("DOT")) {
+      const parts = text.split("DOT");
+      return (
+        <>
+          {parts[0]}
+          <span className="text-brand-primary font-bold">DOT</span>
+          {parts.slice(1).join("DOT")}
+        </>
+      );
+    }
+    if (text.startsWith("Alt D")) {
+      return (
+        <>
+          Alt <span className="text-brand-primary font-bold">{text.slice(4)}</span>
+        </>
+      );
+    }
+    return text;
+  };
+
   return (
     <section
       id="home"
@@ -225,7 +247,7 @@ export default function Hero({ onLearnMore }: HeroProps) {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="block text-sky-400 relative min-h-[1.15em] whitespace-nowrap text-3xl sm:text-6xl md:text-7xl lg:text-8xl"
                 >
-                  {currentText}
+                  {renderHeroText(currentText)}
                   <span className="text-brand-primary inline-block animate-pulse font-extrabold ml-1">.</span>
                 </motion.span>
               </h1>
