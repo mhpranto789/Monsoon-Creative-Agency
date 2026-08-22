@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronUp, Utensils, Sparkles, ExternalLink } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Project } from "../types";
 import ProjectSpotlight from "./ProjectSpotlight";
@@ -530,7 +530,12 @@ const PROJECTS_DATA: Project[] = [
     },
     youtubeId: "b-FstjK8q3U"
   }
-];export default function Projects() {
+];interface ProjectsProps {
+  onNavigateToContact?: () => void;
+  onOpenFoodWork?: () => void;
+}
+
+export default function Projects({ onNavigateToContact, onOpenFoodWork }: ProjectsProps) {
   const [selectedCategory, setSelectedCategory] = useState<'All' | 'Digital Marketing' | 'Creative Graphics' | 'Real Estate'>('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showAll, setShowAll] = useState(false);
@@ -545,9 +550,12 @@ const PROJECTS_DATA: Project[] = [
     <section id="projects" className="py-24 bg-transparent border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
-         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        {/* Section Header & Dedicated Food Work Promotion Banner */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-8">
           <div className="space-y-4">
+            <span className="font-mono text-xs text-brand-primary uppercase font-bold tracking-widest block">
+              Portfolio & Campaigns
+            </span>
             <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-none">
               Featured Projects<span className="text-brand-primary animate-pulse">.</span>
             </h2>
@@ -573,6 +581,37 @@ const PROJECTS_DATA: Project[] = [
               </button>
             ))}
           </div>
+        </div>
+
+        {/* Dedicated Food Work Portal Card */}
+        <div className="mb-12 p-6 md:p-8 rounded-3xl bg-gradient-to-r from-[#16161c] via-[#121216] to-[#1f110f] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden group">
+          <div className="flex items-center space-x-4 relative z-10">
+            <div className="w-14 h-14 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary shrink-0 group-hover:scale-110 transition-transform">
+              <Utensils size={24} />
+            </div>
+            <div>
+              <div className="flex items-center space-x-2 mb-1">
+                <span className="font-mono text-[10px] text-brand-primary uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-brand-primary/10 border border-brand-primary/20">
+                  Specialized Division
+                </span>
+                <span className="font-mono text-xs text-gray-400">50 High-Res Stills</span>
+              </div>
+              <h3 className="font-display font-black text-xl sm:text-2xl text-white">
+                Food Work Static Showcase
+              </h3>
+              <p className="text-gray-300 text-xs sm:text-sm font-light mt-1 max-w-xl leading-relaxed">
+                Explore our dedicated gastronomic studio gallery featuring artisan burgers, dry-aged steaks, Asian fusion, craft cocktails, and menu cinematography.
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={onOpenFoodWork}
+            className="w-full md:w-auto shrink-0 inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#e83e27] to-[#f05a46] hover:from-[#c92f1b] hover:to-[#e83e27] text-white text-xs font-bold tracking-wider uppercase transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg cursor-pointer"
+          >
+            <span>Open Food Work Page</span>
+            <ArrowUpRight size={15} />
+          </button>
         </div>
 
         {/* Projects Grid */}
@@ -639,8 +678,6 @@ const PROJECTS_DATA: Project[] = [
                       </div>
                     </>
                   )}
-
-
                 </div>
 
                 {/* Info Area */}

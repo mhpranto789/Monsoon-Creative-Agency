@@ -9,17 +9,38 @@ import Values from "./components/Values";
 import Faq from "./components/Faq";
 import Leaders from "./components/Leaders";
 import Footer from "./components/Footer";
+import FoodWorkPage from "./components/FoodWorkPage";
 
 export default function App() {
+  const [currentPage, setCurrentPage] = useState<'home' | 'food-work'>('home');
   const [activeSection, setActiveSection] = useState("home");
   const [isWhatsAppOpen, setIsWhatsAppOpen] = useState(false);
+
   // Force dark mode to be active at all times for a premium aesthetic
   useEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
 
+  // Listen to hash changes for direct URLs like /#food-work or /#projects
+  useEffect(() => {
+    const handleHashCheck = () => {
+      const hash = window.location.hash;
+      if (hash === "#food-work" || hash === "#food-work-page") {
+        setCurrentPage("food-work");
+      } else {
+        setCurrentPage("home");
+      }
+    };
+
+    handleHashCheck();
+    window.addEventListener("hashchange", handleHashCheck);
+    return () => window.removeEventListener("hashchange", handleHashCheck);
+  }, []);
+
   // Track active scroll sections to update Navbar highlighting dynamically
   useEffect(() => {
+    if (currentPage !== "home") return;
+
     const handleScroll = () => {
       const sections = ["home", "projects", "clients", "our-team", "values", "leaders", "faq", "contact"];
       const headerHeight = 100; // Trigger threshold
@@ -30,8 +51,6 @@ export default function App() {
         const element = document.getElementById(sectionId);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // If the top of the section is near or above the header trigger point,
-          // and the bottom of the section is still below the trigger point
           if (rect.top <= headerHeight + 20 && rect.bottom > headerHeight + 20) {
             currentSection = sectionId;
             break;
@@ -44,10 +63,45 @@ export default function App() {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [currentPage]);
+
+  const navigateToPage = (page: 'home' | 'food-work') => {
+    setCurrentPage(page);
+    if (page === 'food-work') {
+      window.location.hash = "#food-work";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      window.location.hash = "";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   // Smooth scroll handler targeting elements directly with fixed header offset correction
   const handleNavigation = (sectionId: string) => {
+    if (sectionId === "food-work") {
+      navigateToPage("food-work");
+      return;
+    }
+
+    if (currentPage !== "home") {
+      setCurrentPage("home");
+      window.location.hash = "";
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerOffset = 90;
+          const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+          setActiveSection(sectionId);
+        }
+      }, 100);
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       const headerOffset = 90; // Precise height of the fixed navbar
@@ -172,25 +226,40 @@ export default function App() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Alt DOT Creative | Innovative Brand Marketing" />
   
-        {/* Structured Nav Header */}
-        <Navbar 
-          onNavigate={handleNavigation} 
-          activeSection={activeSection} 
-        />
-  
-        {/* Main Agency Content Showcase */}
-        <main id="main-content">
-          <Hero onLearnMore={handleNavigation} />
-          <div className="optimize-gpu"><Projects /></div>
-          <div className="optimize-gpu"><Clients /></div>
-          <div className="optimize-gpu"><OurTeam /></div>
-          <div className="optimize-gpu"><Values /></div>
-          <div className="optimize-gpu"><Leaders /></div>
-          <div className="optimize-gpu"><Faq /></div>
-        </main>
-  
-        {/* Footer and Inquiry capture area */}
-        <Footer />
+        {currentPage === 'food-work' ? (
+          <FoodWorkPage 
+            onBackToHome={() => navigateToPage('home')}
+            onNavigateToContact={() => handleNavigation('contact')}
+          />
+        ) : (
+          <>
+            {/* Structured Nav Header */}
+            <Navbar 
+              onNavigate={handleNavigation} 
+              activeSection={activeSection} 
+              onOpenFoodWork={() => navigateToPage('food-work')}
+            />
+      
+            {/* Main Agency Content Showcase */}
+            <main id="main-content">
+              <Hero onLearnMore={handleNavigation} />
+              <div className="optimize-gpu">
+                <Projects 
+                  onNavigateToContact={() => handleNavigation("contact")} 
+                  onOpenFoodWork={() => navigateToPage('food-work')}
+                />
+              </div>
+              <div className="optimize-gpu"><Clients /></div>
+              <div className="optimize-gpu"><OurTeam /></div>
+              <div className="optimize-gpu"><Values /></div>
+              <div className="optimize-gpu"><Leaders /></div>
+              <div className="optimize-gpu"><Faq /></div>
+            </main>
+      
+            {/* Footer and Inquiry capture area */}
+            <Footer />
+          </>
+        )}
       </div>
 
       {/* Floating WhatsApp Widget */}

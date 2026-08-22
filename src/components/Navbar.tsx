@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from "motion/react";
 interface NavbarProps {
   onNavigate: (sectionId: string) => void;
   activeSection: string;
+  onOpenFoodWork?: () => void;
 }
 
-export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
+export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -36,6 +37,10 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
 
   const handleItemClick = (id: string) => {
     setIsMobileMenuOpen(false);
+    if (id === "food-work" && onOpenFoodWork) {
+      onOpenFoodWork();
+      return;
+    }
     onNavigate(id);
   };
 
