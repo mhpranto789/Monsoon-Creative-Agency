@@ -229,11 +229,11 @@ export default function Footer() {
                     <Linkedin size={18} />
                   </a>
                   <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/connect.altdotcreative?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==" 
                     aria-label="Follow Alt DOT Creative on Instagram"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-15 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#e83e27] dark:hover:bg-[#e83e27] hover:border-[#e83e27] dark:hover:border-[#e83e27] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
+                    className="w-10 h-10 bg-black/5 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-[#e83e27] dark:hover:bg-[#e83e27] hover:border-[#e83e27] dark:hover:border-[#e83e27] hover:text-white dark:hover:text-white flex items-center justify-center text-black dark:text-white transition-all"
                   >
                     <Instagram size={18} />
                   </a>

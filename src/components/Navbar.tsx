@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Instagram, Facebook, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface NavbarProps {
@@ -183,6 +183,37 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
                   className="text-gray-300 hover:text-white text-xs font-mono transition-colors block"
                 >
                   +880 1310-577702
+                </a>
+              </div>
+
+              {/* Social Channels */}
+              <div className="pt-2 flex items-center space-x-2.5">
+                <a
+                  href="https://www.instagram.com/connect.altdotcreative?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow on Instagram"
+                  className="w-9 h-9 bg-white/10 hover:bg-[#e83e27] border border-white/15 hover:border-[#e83e27] text-white flex items-center justify-center transition-all duration-200"
+                >
+                  <Instagram size={16} />
+                </a>
+                <a
+                  href="https://www.facebook.com/share/1CGUNQ7wS1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow on Facebook"
+                  className="w-9 h-9 bg-white/10 hover:bg-[#e83e27] border border-white/15 hover:border-[#e83e27] text-white flex items-center justify-center transition-all duration-200"
+                >
+                  <Facebook size={16} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/alt-dot-creative/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Connect on LinkedIn"
+                  className="w-9 h-9 bg-white/10 hover:bg-[#e83e27] border border-white/15 hover:border-[#e83e27] text-white flex items-center justify-center transition-all duration-200"
+                >
+                  <Linkedin size={16} />
                 </a>
               </div>
             </div>
