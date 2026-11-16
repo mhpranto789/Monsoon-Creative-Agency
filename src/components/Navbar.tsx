@@ -30,7 +30,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
     { label: "Projects", id: "projects" },
     { label: "Clients", id: "clients" },
     { label: "About Us", id: "values" },
-    { label: "Company Leaders", id: "leaders" },
+    { label: "Meet The Minds", id: "leaders" },
     { label: "FAQ", id: "faq" },
     { label: "Contact Us", id: "contact" },
   ];

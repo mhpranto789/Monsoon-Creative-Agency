@@ -7,7 +7,7 @@ const LEADERS_DATA: Leader[] = [
   {
     id: "tariqul-anam",
     name: "Mahamudul Hasan",
-    role: "Founder & Chief Creative Strategist",
+    role: "CEO & Founder",
     bio: "Over 15 years designing ground-breaking campaigns for premier international brands. Head of creative direction for massive live setups and experiential grand activations.",
     imageUrl: "https://lh3.googleusercontent.com/d/1bS5yEcU5BjhWz9BU0KihTCTxO0wB8pKl",
     linkedinUrl: "https://linkedin.com",
@@ -17,7 +17,7 @@ const LEADERS_DATA: Leader[] = [
   {
     id: "kaiser-hamid",
     name: "Kaiser Hamid",
-    role: "HEAD OF DIGITAL STRATEGY",
+    role: "Digital Marketing and Planning",
     bio: "Expert in navigating complex digital segments to elevate brands. Leveraging meticulous market research, competitive intelligence, and compelling copywriting to build end-to-end digital strategies that ensure sustainable brand expansion and market leadership.",
     imageUrl: "https://lh3.googleusercontent.com/d/1AW6rJ9dU9Jo4C26faHut1yANOMXd0RVH",
     linkedinUrl: "https://linkedin.com",
@@ -26,7 +26,7 @@ const LEADERS_DATA: Leader[] = [
   {
     id: "fazle-rabbi",
     name: "Fazle Rabbi",
-    role: "HEAD OF MARKETING & STRATEGY",
+    role: "Media Professional",
     bio: "Pioneering high-impact marketing initiatives, consumer psychology frameworks, and scalable go-to-market strategies. Translating visionary creative ideas into measurable brand growth and market dominance across regional and global channels.",
     imageUrl: "https://lh3.googleusercontent.com/d/1Ia2OO2feecEU7Jm9Ucx-zC6GwzqN34Yw",
     linkedinUrl: "https://linkedin.com",
@@ -35,7 +35,7 @@ const LEADERS_DATA: Leader[] = [
   {
     id: "ataur-rahaman",
     name: "Ataur Rahaman",
-    role: "HEAD OF EDITING DEPARTMENT",
+    role: "Senior Video Editor",
     bio: "Mastering the rhythm of visual storytelling, high-precision cinematic pacing, sound synchronization, and advanced color grading across commercial films, brand narratives, and digital broadcast campaigns.",
     imageUrl: "https://lh3.googleusercontent.com/d/1SxY-t5uDQ4zY0L23XiI-oe9m4rWYe7eu",
     linkedinUrl: "https://linkedin.com",
@@ -54,7 +54,7 @@ export default function Leaders() {
         {/* Editorial Header Section */}
         <div className="max-w-3xl space-y-4 mb-16">
           <h2 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black dark:text-white leading-tight">
-            Led by industry veterans, built for modern impact<span className="text-brand-primary animate-pulse">.</span>
+            Meet The Minds<span className="text-brand-primary animate-pulse">.</span>
           </h2>
           <p className="font-sans text-gray-500 dark:text-gray-400 text-sm font-light max-w-xl">
             Our directors hold years of experience steering high-impact campaigns across global brands, aligning creative integrity with ground activation muscle.
