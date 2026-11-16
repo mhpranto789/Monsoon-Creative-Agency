@@ -24,6 +24,15 @@ const LEADERS_DATA: Leader[] = [
     tag: "GROWTH ARCHITECT"
   },
   {
+    id: "sadman-shabab-kabir",
+    name: "Sadman Shabab Kabir",
+    role: "Business Analyst",
+    bio: "Bridging market intelligence, operational analytics, and strategic business modeling to translate client objectives into measurable commercial outcomes and scalable agency growth.",
+    imageUrl: "/assets/aistudio/Shabab_820c9ee8.png",
+    linkedinUrl: "https://linkedin.com",
+    tag: "BUSINESS ANALYST"
+  },
+  {
     id: "fazle-rabbi",
     name: "Fazle Rabbi",
     role: "Media Professional",
@@ -45,7 +54,7 @@ const LEADERS_DATA: Leader[] = [
 
 export default function Leaders() {
   const [showAll, setShowAll] = useState(false);
-  const displayedLeaders = showAll ? LEADERS_DATA : LEADERS_DATA.slice(0, 4);
+  const displayedLeaders = showAll ? LEADERS_DATA : LEADERS_DATA.slice(0, 8);
 
   return (
     <section id="leaders" className="py-24 bg-transparent border-t border-gray-100 dark:border-white/10 transition-colors duration-400">
@@ -62,7 +71,7 @@ export default function Leaders() {
         </div>
 
         {/* Profiles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <AnimatePresence mode="popLayout">
             {displayedLeaders.map((leader, index) => (
               <motion.div
@@ -132,7 +141,7 @@ export default function Leaders() {
         </div>
 
         {/* Toggle Button Container */}
-        {LEADERS_DATA.length > 4 && (
+        {LEADERS_DATA.length > 8 && (
           <div className="flex justify-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
