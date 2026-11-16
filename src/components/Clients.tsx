@@ -10,67 +10,11 @@ const CLIENTS_DATA: Client[] = [
     bgImage: "https://lh3.googleusercontent.com/d/158HYjtU3n0hdgBARyGppp4ZYS02PzpyW" 
   },
   { 
-    id: "bkash", 
-    name: "bKash Limited", 
-    logoText: "bKash", 
-    industry: "Fintech & MFS",
-    bgImage: "https://lh3.googleusercontent.com/d/18hYVE2ZOQ9ZM3Vd5tOEOQVKjGVTeus6P" 
-  },
-  { 
-    id: "unilever", 
-    name: "Unilever Bangladesh", 
-    logoText: "Unilever", 
-    industry: "FMCG",
-    bgImage: "https://lh3.googleusercontent.com/d/1u4CQoevJs4Qu_BC8V9FZ1jSecQT5i4Hq" 
-  },
-  { 
-    id: "robi", 
-    name: "Robi Axiata", 
-    logoText: "Robi", 
-    industry: "Telecom",
-    bgImage: "https://lh3.googleusercontent.com/d/1JN42KgMQV_-WIDyhfnvmeCdtT0OYkvfE" 
-  },
-  { 
-    id: "nido", 
-    name: "Nestlé Bangladesh", 
-    logoText: "Nestlé Nido", 
-    industry: "Nutrition",
-    bgImage: "https://lh3.googleusercontent.com/d/1dycqk_d5EP0KijIIyvh0UGHA02UI1W6d" 
-  },
-  { 
     id: "pathao", 
     name: "Pathao BD", 
     logoText: "Pathao", 
     industry: "Logistics Tech",
     bgImage: "https://lh3.googleusercontent.com/d/1lwTFZYNZhIFf-FEPBtQiKO4juKNnOsZT" 
-  },
-  { 
-    id: "cineplex", 
-    name: "Star Cineplex", 
-    logoText: "Cineplex", 
-    industry: "Entertainment",
-    bgImage: "https://lh3.googleusercontent.com/d/1x64czdrpqn_XqPeQiBsiAqnXkdKi2GJH" 
-  },
-  { 
-    id: "radhuni", 
-    name: "Square Food & Beverage", 
-    logoText: "Radhuni", 
-    industry: "FMCG Food",
-    bgImage: "https://lh3.googleusercontent.com/d/1nyy3E_j1K2Tsk-fVNqalYSS-HoAhsjLi" 
-  },
-  { 
-    id: "airtel", 
-    name: "Airtel Bangladesh", 
-    logoText: "Airtel", 
-    industry: "Telecom",
-    bgImage: "https://lh3.googleusercontent.com/d/1K5eET922-sEGb4VgatxeJu6515zMNzWi" 
-  },
-  { 
-    id: "apex", 
-    name: "Apex Footwear", 
-    logoText: "Apex", 
-    industry: "Fashion Retail",
-    bgImage: "https://lh3.googleusercontent.com/d/1vz7AjkSADvWxjJriUWJZFzHaaP92U3EY" 
   },
   { 
     id: "sheba", 
@@ -80,19 +24,32 @@ const CLIENTS_DATA: Client[] = [
     bgImage: "https://lh3.googleusercontent.com/d/1wjHZAJ9Q8_zuWqQY3DRm_FyAVvs-QX3N" 
   },
   { 
-    id: "british-council", 
-    name: "British Council BD", 
-    logoText: "British Council", 
-    industry: "Culture & Ed",
-    bgImage: "https://lh3.googleusercontent.com/d/1ACpyp6H8fdQM8HekVRVWfeuaPhS-QmJm" 
+    id: "bkash", 
+    name: "bKash Limited", 
+    logoText: "bKash", 
+    industry: "Fintech & MFS",
+    bgImage: "https://lh3.googleusercontent.com/d/18hYVE2ZOQ9ZM3Vd5tOEOQVKjGVTeus6P" 
   },
   { 
-    id: "ipdc", 
-    name: "IPDC Finance", 
-    logoText: "IPDC", 
-    industry: "Financial Services",
-    bgImage: "https://lh3.googleusercontent.com/d/1ZOXR1zppGd5R-ykO1St3_Mox0KtlEqmf" 
+    id: "gov-projects-bd", 
+    name: "Government Projects Promotions", 
+    logoText: "Govt. Projects", 
+    industry: "Public Sector",
+    bgImage: "/assets/government-seal-bd.svg" 
+  },
+  { 
+    id: "asix-bangladesh", 
+    name: "Asix Bangladesh", 
+    logoText: "ASIX", 
+    industry: "Sustainable Lifestyle",
+    bgImage: "/assets/asix-bangladesh-logo.png" 
   }
+];
+
+const MARQUEE_CLIENTS: Client[] = [
+  ...CLIENTS_DATA,
+  ...CLIENTS_DATA,
+  ...CLIENTS_DATA,
 ];
 
 
@@ -197,9 +154,9 @@ export default function Clients() {
         <div className="flex w-[200%] animate-infinite-scroll hover:[animation-play-state:paused] whitespace-nowrap">
           {/* First loop of clients */}
           <div className="flex justify-around items-center w-1/2 min-w-max space-x-12 px-6">
-            {CLIENTS_DATA.map((client) => (
+            {MARQUEE_CLIENTS.map((client, idx) => (
               <div
-                key={`${client.id}-marquee1`}
+                key={`${client.id}-marquee1-${idx}`}
                 className="flex items-center justify-center bg-white dark:bg-white border border-gray-200 dark:border-gray-100/20 px-6 py-3 hover:bg-[#e83e27]/5 hover:border-[#e83e27]/40 hover:shadow-md transition-all duration-300 h-16 w-36 rounded-md shadow-xs"
               >
                 {client.bgImage ? (
@@ -220,9 +177,9 @@ export default function Clients() {
           </div>
           {/* Second duplicate loop */}
           <div className="flex justify-around items-center w-1/2 min-w-max space-x-12 px-6">
-            {CLIENTS_DATA.map((client) => (
+            {MARQUEE_CLIENTS.map((client, idx) => (
               <div
-                key={`${client.id}-marquee2`}
+                key={`${client.id}-marquee2-${idx}`}
                 className="flex items-center justify-center bg-white dark:bg-white border border-gray-200 dark:border-gray-100/20 px-6 py-3 hover:bg-[#e83e27]/5 hover:border-[#e83e27]/40 hover:shadow-md transition-all duration-300 h-16 w-36 rounded-md shadow-xs"
               >
                 {client.bgImage ? (
@@ -246,7 +203,7 @@ export default function Clients() {
 
       {/* Structured Responsive Grid */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {CLIENTS_DATA.map((client) => (
             <div
               key={client.id}
@@ -264,7 +221,7 @@ export default function Clients() {
               )}
 
               <div className="relative z-10 mt-auto">
-                <p className="font-sans text-[11px] sm:text-xs text-gray-800 dark:text-gray-200 font-semibold tracking-wide">
+                <p className="font-sans text-[11px] sm:text-xs text-gray-800 dark:text-gray-200 font-semibold tracking-wide leading-snug">
                   {client.name}
                 </p>
               </div>
