@@ -26,6 +26,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
 
   const menuItems = [
     { label: "Home", id: "home" },
+    { label: "Services", id: "services" },
     { label: "Projects", id: "projects" },
     { label: "Clients", id: "clients" },
     { label: "About Us", id: "values" },
@@ -58,7 +59,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
           <button
             id="navbar-logo"
             onClick={() => handleItemClick("home")}
-            className="group flex items-center space-x-3 text-left cursor-pointer transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            className="group flex items-center space-x-3 text-left cursor-pointer transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] shrink-0"
           >
             <div className="relative w-9 h-9 md:w-10 md:h-10 bg-white/10 dark:bg-black/40 border border-white/20 rounded-lg p-1 flex items-center justify-center transition-transform group-hover:scale-105 duration-300 shadow-sm overflow-hidden">
               <img 
@@ -72,7 +73,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
               />
             </div>
             <div>
-              <span className="font-display font-black text-xl tracking-tight text-white block">
+              <span className="font-display font-black text-xl tracking-tight text-white block whitespace-nowrap">
                 Alt <span className="text-brand-primary">DOT</span>
               </span>
               <span className="font-mono text-[9px] tracking-widest text-gray-400 uppercase block -mt-1">
@@ -82,13 +83,13 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
           </button>
  
           {/* Desktop Nav Items */}
-          <nav id="desktop-nav" aria-label="Desktop navigation" className="hidden md:flex items-center space-x-6">
+          <nav id="desktop-nav" aria-label="Desktop navigation" className="hidden lg:flex items-center space-x-5 xl:space-x-6">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 id={`nav-item-${item.id}`}
                 onClick={() => handleItemClick(item.id)}
-                className={`text-sm font-medium transition-colors relative py-1 cursor-pointer ${
+                className={`text-sm font-medium transition-colors relative py-1 cursor-pointer whitespace-nowrap shrink-0 ${
                   activeSection === item.id
                     ? "text-white"
                     : "text-gray-400 hover:text-white"
@@ -108,7 +109,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
             <button
               id="nav-cta-contact"
               onClick={() => handleItemClick("contact")}
-              className="btn-liquid-glass-primary group flex items-center space-x-1.5 transition-all duration-200 rounded-full cursor-pointer px-5 py-2 hover:scale-[1.04] active:scale-[0.96] shadow-sm hover:shadow-md"
+              className="btn-liquid-glass-primary group flex items-center space-x-1.5 transition-all duration-200 rounded-full cursor-pointer px-5 py-2 hover:scale-[1.04] active:scale-[0.96] shadow-sm hover:shadow-md whitespace-nowrap shrink-0"
             >
               <span className="text-xs font-semibold">Let's Talk</span>
               <ArrowUpRight size={13} className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -116,7 +117,7 @@ export default function Navbar({ onNavigate, activeSection, onOpenFoodWork }: Na
           </nav>
 
           {/* Mobile Actions block */}
-          <div className="flex md:hidden items-center space-x-3">
+          <div className="flex lg:hidden items-center space-x-3">
             {/* Mobile Menu Button */}
             <button
               id="mobile-menu-toggle"

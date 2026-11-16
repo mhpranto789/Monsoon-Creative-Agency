@@ -17,10 +17,10 @@ const FAQ_DATA: FaqItem[] = [
     answer: "We reject boilerplates and pre-packaged international models. We begin with dense ethnographic local research—tuning into the authentic cultural codes, street semantics, and emotional frequencies that define Bangladeshi communities. We then translate these insights into highly original cinematic, digital, or physical experiences that feel deeply native yet internationally polished."
   },
   {
-    id: "experiential-activations",
+    id: "service-menu-pillars",
     category: "Services",
-    question: "What exact capabilities fall under your 'Experiential Activations' service?",
-    answer: "Experiential is where our engineering and art boards meet. We design custom projections (such as large-scale dynamic 3D mapping onto physical facades), immersive spatial layouts (premium red carpet systems, dome designs), local street-level installations, customized concerts / acoustic dome setups, and interactive hardware rigs powered by custom audio/visual sensor triggers."
+    question: "What core creative and digital services does Alt DOT Creative deliver?",
+    answer: "Our official Service Menu spans six integrated disciplines: (01) Content Creation including brand, product, lifestyle, UGC, and AI-powered content; (02) Video Pre & Post Production from scriptwriting and direction to VFX, color grading, and Reels/YouTube; (03) Graphic Design across social, ad creatives, packaging, and print; (04) Branding & Logo Design with full identity guidelines; (05) Web Design & Development for custom, corporate, and e-commerce sites; and (06) Social Media Marketing covering paid ads, community management, and analytics—alongside custom experiential activations."
   },
   {
     id: "design-philosophy",

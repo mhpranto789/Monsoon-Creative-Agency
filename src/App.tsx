@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Clients from "./components/Clients";
 import Values from "./components/Values";
@@ -14,6 +15,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'food-work'>('home');
   const [activeSection, setActiveSection] = useState("home");
   const [isWhatsAppOpen, setIsWhatsAppOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState<{ title: string; timestamp: number } | null>(null);
 
   // Force dark mode to be active at all times for a premium aesthetic
   useEffect(() => {
@@ -41,7 +43,7 @@ export default function App() {
     if (currentPage !== "home") return;
 
     const handleScroll = () => {
-      const sections = ["home", "projects", "clients", "values", "leaders", "faq", "contact"];
+      const sections = ["home", "services", "projects", "clients", "values", "leaders", "faq", "contact"];
       const headerHeight = 100; // Trigger threshold
       
       let currentSection = "home";
@@ -113,6 +115,11 @@ export default function App() {
       });
       setActiveSection(sectionId);
     }
+  };
+
+  const handleSelectService = (serviceTitle: string) => {
+    setSelectedService({ title: serviceTitle, timestamp: Date.now() });
+    handleNavigation("contact");
   };
 
   return (
@@ -243,6 +250,9 @@ export default function App() {
             <main id="main-content">
               <Hero onLearnMore={handleNavigation} />
               <div className="optimize-gpu">
+                <Services onSelectService={handleSelectService} />
+              </div>
+              <div className="optimize-gpu">
                 <Projects 
                   onNavigateToContact={() => handleNavigation("contact")} 
                   onOpenFoodWork={() => navigateToPage('food-work')}
@@ -255,7 +265,7 @@ export default function App() {
             </main>
       
             {/* Footer and Inquiry capture area */}
-            <Footer />
+            <Footer selectedService={selectedService} />
           </>
         )}
       </div>

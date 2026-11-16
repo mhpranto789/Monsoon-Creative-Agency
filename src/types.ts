@@ -62,3 +62,12 @@ export interface Leader {
   location?: string;
 }
 
+export interface ServiceCategory {
+  id: string;
+  number: string;
+  title: string;
+  leftItems: string[];
+  rightItems: string[];
+}
+
+

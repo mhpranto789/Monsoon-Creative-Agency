@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   Facebook, 
   Linkedin, 
@@ -16,19 +16,46 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 import { ContactInquiry } from "../types";
 
-export default function Footer() {
+interface FooterProps {
+  selectedService?: { title: string; timestamp: number } | null;
+}
+
+const STARTER_MESSAGE_PREFIX = "Hello Alt DOT Creative team! We are interested in your ";
+
+export default function Footer({ selectedService }: FooterProps) {
   const [formData, setFormData] = useState<ContactInquiry>({
     name: "",
     email: "",
     phone: "",
     company: "",
-    projectType: "Creative Strategy",
+    projectType: "Content Creation",
     message: ""
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [isServiceHighlighted, setIsServiceHighlighted] = useState(false);
+
+  useEffect(() => {
+    if (!selectedService) return;
+
+    setFormData((prev) => {
+      const shouldPrefillMessage =
+        !prev.message.trim() || prev.message.startsWith(STARTER_MESSAGE_PREFIX);
+      return {
+        ...prev,
+        projectType: selectedService.title,
+        message: shouldPrefillMessage
+          ? `${STARTER_MESSAGE_PREFIX}${selectedService.title} services and would like to discuss deliverables, scope, and timeline.`
+          : prev.message,
+      };
+    });
+
+    setIsServiceHighlighted(true);
+    const timer = setTimeout(() => setIsServiceHighlighted(false), 2600);
+    return () => clearTimeout(timer);
+  }, [selectedService]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -62,7 +89,7 @@ export default function Footer() {
           email: "",
           phone: "",
           company: "",
-          projectType: "Creative Strategy",
+          projectType: "Content Creation",
           message: ""
         });
         
@@ -329,21 +356,34 @@ export default function Footer() {
 
                 {/* Dropdown Project category */}
                 <div className="space-y-2">
-                  <label id="lbl-project-type" htmlFor="projectType" className="font-mono text-[10px] text-gray-555 dark:text-gray-350 uppercase tracking-widest block font-bold">
-                    Core Campaign Target
-                  </label>
+                  <div className="flex items-center justify-between gap-2">
+                    <label id="lbl-project-type" htmlFor="projectType" className="font-mono text-[10px] text-gray-555 dark:text-gray-350 uppercase tracking-widest block font-bold">
+                      Service Pillar / Campaign Target
+                    </label>
+                    {selectedService && (
+                      <span className="text-[11px] font-semibold text-[#e83e27]">
+                        Selected: {formData.projectType}
+                      </span>
+                    )}
+                  </div>
                   <select
                     id="projectType"
                     name="projectType"
                     value={formData.projectType}
                     onChange={handleInputChange}
-                    className="w-full bg-white dark:bg-black border border-gray-350 dark:border-white/10 px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors"
+                    className={`w-full bg-white dark:bg-black border px-4 py-3 text-sm text-black dark:text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-colors ${
+                      isServiceHighlighted
+                        ? "border-[#e83e27] ring-1 ring-[#e83e27]"
+                        : "border-gray-350 dark:border-white/10"
+                    }`}
                   >
-                    <option value="Creative Strategy">Creative Strategy & Brand ATL</option>
-                    <option value="Experiential Activation">Experiential BTL & Venue Activation</option>
-                    <option value="Digital PR & Sound Hub">Digital PR & Sounds Event Direction</option>
-                    <option value="Integrated Consultancy">Integrated Agency Consultancy</option>
-                    <option value="Custom Campaign">Custom Campaign</option>
+                    <option value="Content Creation">01 — Content Creation</option>
+                    <option value="Video Pre & Post Production">02 — Video Pre & Post Production</option>
+                    <option value="Graphic Design">03 — Graphic Design</option>
+                    <option value="Branding & Logo Design">04 — Branding & Logo Design</option>
+                    <option value="Web Design & Development">05 — Web Design & Development</option>
+                    <option value="Social Media Marketing">06 — Social Media Marketing</option>
+                    <option value="Custom Integrated Campaign">Custom / Full-Stack Integrated Campaign</option>
                   </select>
                 </div>
 
