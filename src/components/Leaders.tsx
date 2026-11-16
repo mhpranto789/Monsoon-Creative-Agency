@@ -10,7 +10,8 @@ const LEADERS_DATA: Leader[] = [
     role: "CEO & Founder",
     bio: "Over 15 years designing ground-breaking campaigns for premier international brands. Head of creative direction for massive live setups and experiential grand activations.",
     imageUrl: "https://lh3.googleusercontent.com/d/1bS5yEcU5BjhWz9BU0KihTCTxO0wB8pKl",
-    linkedinUrl: "https://linkedin.com",
+    email: "mhpranto789@gmail.com",
+    linkedinUrl: "https://www.linkedin.com/in/pranto789/",
     tag: "Strategy Architect",
     location: "Niketon, Dhaka"
   },
@@ -20,7 +21,8 @@ const LEADERS_DATA: Leader[] = [
     role: "Digital Marketing and Planning",
     bio: "Expert in navigating complex digital segments to elevate brands. Leveraging meticulous market research, competitive intelligence, and compelling copywriting to build end-to-end digital strategies that ensure sustainable brand expansion and market leadership.",
     imageUrl: "https://lh3.googleusercontent.com/d/1AW6rJ9dU9Jo4C26faHut1yANOMXd0RVH",
-    linkedinUrl: "https://linkedin.com",
+    email: "kaiserhamid297@gmail.com",
+    linkedinUrl: "https://www.linkedin.com/in/kaiser-hamid97/",
     tag: "GROWTH ARCHITECT"
   },
   {
@@ -29,7 +31,8 @@ const LEADERS_DATA: Leader[] = [
     role: "Business Analyst",
     bio: "Bridging market intelligence, operational analytics, and strategic business modeling to translate client objectives into measurable commercial outcomes and scalable agency growth.",
     imageUrl: "/assets/aistudio/Shabab_820c9ee8.png",
-    linkedinUrl: "https://linkedin.com",
+    email: "Sadmanshababkabir@gmail.com",
+    linkedinUrl: "https://www.linkedin.com/in/sadman-shabab-kabir",
     tag: "BUSINESS ANALYST"
   },
   {
@@ -38,7 +41,7 @@ const LEADERS_DATA: Leader[] = [
     role: "Media Professional",
     bio: "Pioneering high-impact marketing initiatives, consumer psychology frameworks, and scalable go-to-market strategies. Translating visionary creative ideas into measurable brand growth and market dominance across regional and global channels.",
     imageUrl: "https://lh3.googleusercontent.com/d/1Ia2OO2feecEU7Jm9Ucx-zC6GwzqN34Yw",
-    linkedinUrl: "https://linkedin.com",
+    email: "rabbifazla700@gmail.com",
     tag: "MARKETING STRATEGIST"
   },
   {
@@ -47,7 +50,6 @@ const LEADERS_DATA: Leader[] = [
     role: "Senior Video Editor",
     bio: "Mastering the rhythm of visual storytelling, high-precision cinematic pacing, sound synchronization, and advanced color grading across commercial films, brand narratives, and digital broadcast campaigns.",
     imageUrl: "https://lh3.googleusercontent.com/d/1SxY-t5uDQ4zY0L23XiI-oe9m4rWYe7eu",
-    linkedinUrl: "https://linkedin.com",
     tag: "EDITING DIRECTOR"
   }
 ];
@@ -116,24 +118,32 @@ export default function Leaders() {
                     {leader.location || "Niketon Hub Board"}
                   </span>
                   
-                  <div className="flex items-center space-x-2">
-                    <a
-                      href={leader.linkedinUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="p-2 bg-gray-50 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all rounded-none"
-                      aria-label={`Connect with ${leader.name} on LinkedIn`}
-                    >
-                      <Linkedin size={14} />
-                    </a>
-                    <a
-                      href="mailto:connect.altdotcreative@gmail.com"
-                      className="p-2 bg-gray-50 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all rounded-none"
-                      aria-label={`Send an email to ${leader.name}`}
-                    >
-                      <Mail size={14} />
-                    </a>
-                  </div>
+                  {(leader.linkedinUrl || leader.email) && (
+                    <div className="flex items-center space-x-2">
+                      {leader.linkedinUrl && (
+                        <a
+                          href={leader.linkedinUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={`${leader.name} on LinkedIn`}
+                          className="p-2 bg-gray-50 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all rounded-none"
+                          aria-label={`Connect with ${leader.name} on LinkedIn`}
+                        >
+                          <Linkedin size={14} />
+                        </a>
+                      )}
+                      {leader.email && (
+                        <a
+                          href={`mailto:${leader.email}`}
+                          title={leader.email}
+                          className="p-2 bg-gray-50 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all rounded-none"
+                          aria-label={`Send an email to ${leader.name} (${leader.email})`}
+                        >
+                          <Mail size={14} />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

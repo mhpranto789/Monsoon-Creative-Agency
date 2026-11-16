@@ -57,6 +57,7 @@ export interface Leader {
   role: string;
   bio: string;
   imageUrl: string;
+  email?: string;
   linkedinUrl?: string;
   tag?: string;
   location?: string;
