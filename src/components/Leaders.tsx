@@ -51,6 +51,14 @@ const LEADERS_DATA: Leader[] = [
     bio: "Mastering the rhythm of visual storytelling, high-precision cinematic pacing, sound synchronization, and advanced color grading across commercial films, brand narratives, and digital broadcast campaigns.",
     imageUrl: "https://lh3.googleusercontent.com/d/1SxY-t5uDQ4zY0L23XiI-oe9m4rWYe7eu",
     tag: "EDITING DIRECTOR"
+  },
+  {
+    id: "joy",
+    name: "Joy",
+    role: "Graphics Designer",
+    bio: "Crafting striking visual identities, brand collateral, and high-impact advertising creatives with precision typography, color harmony, and modern design aesthetics.",
+    imageUrl: "/assets/aistudio/Joy_887fe9d9.jpeg",
+    tag: "GRAPHICS DESIGNER"
   }
 ];
 
